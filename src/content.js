@@ -62,27 +62,27 @@
     }
   }
 
+  /**
+   * Only scripts the HTML asks for by name: <script src> plus the preload
+   * hints next to them.
+   *
+   * The preload hints are not optional. VitePress ships a near-empty entry
+   * <script> and puts the Vite runtime -- the chunk holding vite:preloadError
+   * -- behind <link rel="modulepreload">, so vuejs.org and vite.dev are not
+   * detectable as Vite without them.
+   *
+   * What this deliberately leaves out is everything the page fetched at
+   * runtime via import() or fetch(), which used to come from the resource
+   * timing API. Those are the same bundles reached a different way, and on a
+   * big site there are a lot of them.
+   */
   function collectScriptUrls() {
     const push = (raw) => {
       const url = absolute(raw);
-      if (!url) return;
-      if (!/^https?:/.test(url)) return;
-      seenUrls.add(url);
+      if (url && /^https?:/.test(url)) seenUrls.add(url);
     };
-
     for (const el of document.querySelectorAll('script[src]')) push(el.getAttribute('src'));
-    for (const el of document.querySelectorAll('link[rel="modulepreload"][href], link[rel="preload"][as="script"][href]')) {
-      push(el.getAttribute('href'));
-    }
-    // Chunks fetched after load never appear in the DOM as <script src>, but
-    // they do show up here.
-    try {
-      for (const entry of performance.getEntriesByType('resource')) {
-        if (entry.initiatorType === 'script' || /\.(m?js)(\?|$)/.test(entry.name)) push(entry.name);
-      }
-    } catch {
-      /* ignore */
-    }
+    for (const el of document.querySelectorAll('link[rel="modulepreload"][href]')) push(el.getAttribute('href'));
     return Array.from(seenUrls);
   }
 
