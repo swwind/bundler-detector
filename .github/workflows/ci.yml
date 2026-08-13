@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Matches the signature rules against the real bundle output committed
+      # under test/fixtures.
+      - name: Signature tests
+        run: npm test
+
+      - name: Build both browser targets
+        run: npm run build
+
+      # Catches a manifest that points at a file the build did not copy, or the
+      # two manifests drifting apart.
+      - name: Validate build output
+        run: npm run validate

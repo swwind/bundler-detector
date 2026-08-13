@@ -1,0 +1,15 @@
+{
+  "name": "bundler-detector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser extension that detects which JavaScript bundler built the current site",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "validate": "node tools/validate.mjs",
+    "icons": "node tools/gen-icons.mjs",
+    "test": "node test/run.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

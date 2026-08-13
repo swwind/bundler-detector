@@ -1,0 +1,1 @@
+var e=()=>`lazy-chunk-payload-`+Math.random();export{e as lazy};
