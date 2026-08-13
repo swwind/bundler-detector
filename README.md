@@ -138,7 +138,9 @@ rather than guessing.
   markers live at both ends — chunks register themselves on the first line, and
   webpack and Rspack put the runtime at the end of the entry chunk — so the
   middle is application code that costs time and yields nothing.
-- At most 24 scripts are read per page, most-likely-to-carry-the-runtime first.
+- Every script on the page is read, however many there are. They are fetched
+  cache-first and six at a time, so on a big site this is mostly CPU spent on
+  the regex pass rather than network.
 - The page can, in principle, forge the `postMessage` that carries page globals
   to the extension. The worst it achieves is a wrong icon; the script contents
   the background reads are unaffected.

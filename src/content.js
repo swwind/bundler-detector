@@ -14,7 +14,6 @@
 
   const MAX_INLINE_SCRIPTS = 12;
   const MAX_INLINE_BYTES = 256 * 1024;
-  const MAX_SCRIPT_URLS = 60; // the background applies its own, smaller budget
 
   /** URLs seen so far, accumulated across rescans (chunks load lazily). */
   const seenUrls = new Set();
@@ -84,7 +83,7 @@
     } catch {
       /* ignore */
     }
-    return Array.from(seenUrls).slice(0, MAX_SCRIPT_URLS);
+    return Array.from(seenUrls);
   }
 
   /**

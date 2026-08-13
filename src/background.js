@@ -19,10 +19,10 @@ const { analyze } = globalThis.BundlerSignatures;
 const ICONS = new Set(['vite', 'webpack', 'rspack', 'turbopack', 'parcel', 'rollup', 'esbuild', 'devil', 'unknown']);
 const ICON_SIZES = [16, 32, 48, 128];
 
-// Fetch budget. Bundles are already in the browser cache, so this is mostly a
-// guard against pathological pages.
-const MAX_FILES = 24;
+// Every script on the page is read. Bundles are already in the browser cache,
+// so this costs much less than it sounds.
 const MAX_CONCURRENCY = 6;
+// Within each file only the two ends are searched -- see fetchScript.
 const HEAD_BYTES = 256 * 1024;
 const TAIL_BYTES = 256 * 1024;
 const MAX_FILE_BYTES = 8 * 1024 * 1024;
@@ -97,7 +97,11 @@ async function fetchScript(url) {
   return tail.length ? head + '\n/*…*/\n' + tail.join('') : head;
 }
 
-/** Files most likely to carry the runtime go first, so the budget is well spent. */
+/**
+ * Files most likely to carry the runtime go first. Everything gets read either
+ * way; this only decides the order, and so which file a rule matched in several
+ * places cites as its evidence.
+ */
 function prioritize(urls) {
   const score = (url) => {
     let s = 0;
@@ -117,7 +121,7 @@ function prioritize(urls) {
 }
 
 async function fetchAll(urls) {
-  const queue = prioritize(urls).slice(0, MAX_FILES);
+  const queue = prioritize(urls);
   const sources = [];
   const failures = [];
   let bytes = 0;
@@ -137,7 +141,7 @@ async function fetchAll(urls) {
   }
 
   await Promise.all(Array.from({ length: Math.min(MAX_CONCURRENCY, queue.length) }, worker));
-  return { sources, failures, bytes, skipped: Math.max(0, urls.length - queue.length) };
+  return { sources, failures, bytes };
 }
 
 function shortLabel(url) {
@@ -164,7 +168,7 @@ async function handleScan(message, tabId) {
   const seq = (scanSeq.get(tabId) || 0) + 1;
   scanSeq.set(tabId, seq);
 
-  const { sources: fetched, failures, bytes, skipped } = await fetchAll(message.scriptUrls || []);
+  const { sources: fetched, failures, bytes } = await fetchAll(message.scriptUrls || []);
 
   const sources = [
     { kind: 'html', label: 'page markup', text: message.markup || '' },
@@ -191,7 +195,6 @@ async function handleScan(message, tabId) {
       scriptsSeen: (message.scriptUrls || []).length,
       scriptsRead: fetched.length,
       scriptsFailed: failures.length,
-      scriptsSkipped: skipped,
       inlineScripts: (message.inlineScripts || []).length,
       globals: (message.globals || []).length,
       bytes,
