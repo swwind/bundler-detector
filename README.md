@@ -20,7 +20,8 @@ Needs Node 20+. There is nothing to install: the build only copies files and
 picks the right manifest.
 
 ```sh
-git clone <this repo> && cd bundler-detector
+git clone https://github.com/swwind/bundler-detector.git
+cd bundler-detector
 npm run build
 ```
 
