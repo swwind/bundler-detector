@@ -10,7 +10,10 @@ page you are looking at, and turns the toolbar icon into that bundler's logo.
 Click the icon for the details: which bundler, which version (as precisely as the
 bundle allows), and the exact byte patterns that led to that conclusion.
 
-<!-- popup: verdict header, one card per bundler, expandable evidence list -->
+![The extension on rslint.rs: the toolbar icon has become the Rspack crab, and
+the popup reads "Rspack ≥ 2" with high confidence, notes that the page's
+webpack markers were attributed to Rspack, and offers three pieces of
+evidence](example.jpg)
 
 Not on any store — clone it and load it yourself.
 
