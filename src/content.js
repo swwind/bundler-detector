@@ -41,7 +41,7 @@
       try {
         for (const name of Object.getOwnPropertyNames(unwrapped)) {
           if (
-            /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite)/.test(
+            /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite|Astro$)/.test(
               name
             )
           ) {
@@ -91,12 +91,24 @@
    * A compact stand-in for the page HTML: just the tags the HTML rules care
    * about. Serialising the whole document would be far more expensive and no
    * more useful.
+   *
+   * `meta` carries the generator stamp some tools emit, and custom elements
+   * are how a framework announces its runtime in the markup (<astro-island>
+   * and friends) -- in both cases the tag and its attributes are the signal,
+   * never the contents, so every element is cloned shallow.
    */
   function collectMarkup() {
     const parts = [];
-    for (const el of document.querySelectorAll('script, link')) {
+    for (const el of document.querySelectorAll('script, link, meta[name]')) {
       parts.push(el.cloneNode(false).outerHTML);
       if (parts.length >= 400) break;
+    }
+    let custom = 0;
+    for (const el of document.getElementsByTagName('*')) {
+      if (el.tagName.indexOf('-') === -1) continue;
+      // Serialised props can run to kilobytes; the opening tag is enough.
+      parts.push(el.cloneNode(false).outerHTML.slice(0, 512));
+      if (++custom >= 20) break;
     }
     return parts.join('\n');
   }

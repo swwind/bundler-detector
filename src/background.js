@@ -16,7 +16,18 @@ const api = globalThis.browser && globalThis.browser.runtime ? globalThis.browse
 const { analyze } = globalThis.BundlerSignatures;
 
 /** Icons that exist in icons/. Anything else falls back to `unknown`. */
-const ICONS = new Set(['vite', 'webpack', 'rspack', 'turbopack', 'parcel', 'rollup', 'esbuild', 'devil', 'unknown']);
+const ICONS = new Set([
+  'vite',
+  'webpack',
+  'rspack',
+  'turbopack',
+  'parcel',
+  'rollup',
+  'esbuild',
+  'astro',
+  'devil',
+  'unknown',
+]);
 const ICON_SIZES = [16, 32, 48, 128];
 
 // Fetch budget. Bundles are already in the browser cache, so this is mostly a
@@ -106,7 +117,7 @@ function prioritize(urls) {
     if (/(runtime|webpack|rspack|turbopack|polyfill)/.test(base)) s += 30;
     if (/(main|index|entry|app|client|bundle)/.test(base)) s += 20;
     if (/(vendor|chunk|framework)/.test(base)) s += 10;
-    if (/\/(assets|static|_next|_nuxt|build|dist)\//.test(path)) s += 5;
+    if (/\/(assets|static|_next|_nuxt|_astro|build|dist)\//.test(path)) s += 5;
     if (/\.(m?js)$/.test(base)) s += 2;
     return s;
   };

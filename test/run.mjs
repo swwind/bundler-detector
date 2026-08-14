@@ -41,6 +41,12 @@ const CASES = [
   { dir: 'rspack1', primary: 'rspack', version: '1.5.8', only: true },
   { dir: 'rspack2', primary: 'rspack', version: '≥ 2', only: true },
   { dir: 'turbopack', primary: 'turbopack', version: null, only: true },
+  // Astro builds with Vite, so the Vite markers in its runtime must end up
+  // folded into the Astro detection rather than reported alongside it.
+  { dir: 'astro', primary: 'astro', version: '7.2.1', only: true },
+  // A zero-JS Astro page: no runtime, no scripts, nothing but the stylesheet
+  // link into /_astro/. That one path is the whole detection.
+  { dir: 'astro-static', primary: 'astro', version: null, only: true },
   { dir: 'parcel', primary: 'parcel', version: '≥ 2', only: true },
   // No runtime survives in plain Rollup ESM output, so we must stay silent
   // rather than guess.

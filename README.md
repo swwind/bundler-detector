@@ -5,6 +5,7 @@ page you are looking at, and turns the toolbar icon into that bundler's logo.
 
 - Built with Vite → the icon becomes the Vite lightning bolt.
 - Built with Rspack → the Rspack crab.
+- Built with Astro → the Astro rocket.
 - Two bundlers on one page → 😈, and the popup lists everything it found.
 
 Click the icon for the details: which bundler, which version (as precisely as the
@@ -77,6 +78,7 @@ Visit a few sites and watch the icon:
 | <https://stackoverflow.com> | webpack |
 | <https://rspack.rs> | Rspack |
 | <https://nextjs.org> | Turbopack |
+| <https://astro.build> | Astro |
 
 Those are the verdicts it actually produced when tested against the live sites.
 
@@ -91,6 +93,7 @@ Those are the verdicts it actually produced when tested against the live sites.
 | **Parcel** | `globalThis.parcelRequire*`, `$parcel$` helpers | major version |
 | **esbuild** | `__toESM` / `__commonJS` / `__esm` interop helpers | not exposed |
 | **Rollup** | `_interopNamespaceDefault` and friends | not exposed |
+| **Astro** | `<astro-island>` and its runtime, `astro:page-load` and the other lifecycle events, the `/_astro/` asset directory | **exact version** from the generator meta tag, otherwise none |
 
 Dev servers are recognised too (`/@vite/client`, `webpackHotUpdate`,
 `rspackHotUpdate`) and marked with a **dev server** pill.
@@ -116,6 +119,10 @@ the workarounds:
   missing marker never produces a wrong bound.
 - **webpack** splits at 5 on `webpackChunk` vs `webpackJsonp`. Nothing in the
   output identifies the minor version.
+- **Astro** renders `<meta name="generator" content="Astro v7.2.1">` whenever the
+  template keeps `Astro.generator`, which most do — an exact version, free. When
+  the template drops that tag nothing else in the output carries a version, so
+  the popup claims none.
 
 When the output does not support a claim, the popup says *version unknown*
 rather than guessing.
@@ -130,6 +137,14 @@ rather than guessing.
   instead of being reported as a second bundler. Same for Vite, which absorbs
   the Rollup and esbuild traces it necessarily leaves behind. The popup says so
   when this happens.
+- **Astro is reported instead of Vite.** Astro is a build pipeline rather than a
+  bundler and Vite does the bundling underneath, but it customises the output so
+  heavily — islands, its own runtime, its own `/_astro/` directory — that "built
+  with Astro" is the more useful answer. Its Vite, Rollup and esbuild markers are
+  folded into the Astro card the same way Rspack absorbs webpack's.
+- **A zero-JS Astro page rests on one marker.** With no islands and no client
+  router there is no runtime to find; the `/_astro/` stylesheet link is the only
+  evidence left. Change `build.assets` and the page becomes undetectable.
 - **Minified Rollup and esbuild output is undetectable.** Neither adds a runtime
   to a plain ESM bundle, and minification renames esbuild's interop helpers. A
   silent result is the honest one.
@@ -154,7 +169,8 @@ npm run icons        # re-render icons/src/* to PNG (needs @resvg/resvg-js)
 `test/fixtures/` holds genuine production builds of one small app — an entry
 module, a dynamic import and a CSS import — produced by Vite 2 through 8,
 webpack 4 and 5, Rspack 1.x and 2.x, Turbopack (via Next.js), Parcel, Rollup and
-esbuild, plus a Next.js webpack build. `npm test` asserts the bundler *and* the
+esbuild, plus a Next.js webpack build and two Astro builds (one with a hydrated
+island and the client router, one zero-JS static page). `npm test` asserts the bundler *and* the
 version string for each, so a rule that stops matching real output fails loudly.
 
 ### Layout
@@ -194,6 +210,7 @@ All bundler icons are the projects' own artwork:
 | vite, webpack, parcel, rollup, esbuild | [material-icon-theme](https://github.com/material-extensions/vscode-material-icon-theme) (MIT), unmodified |
 | rspack | the site favicon, `https://assets.rspack.rs/rspack/favicon-128x128.png` |
 | turbopack | the Turbo mark from the [vercel/turborepo](https://github.com/vercel/turborepo) README |
+| astro | the mark from `https://astro.build/favicon.svg`, recoloured so it stays visible on a dark toolbar |
 
 Only the devil (multi-bundler state) and the unknown-state cube are drawn for
 this project, since neither corresponds to a real project logo.

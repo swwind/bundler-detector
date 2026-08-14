@@ -30,6 +30,108 @@
    *   dev     match indicates a dev server rather than a production build
    */
   const BUNDLERS = [
+    // Astro is a build pipeline rather than a bundler -- Vite does the actual
+    // bundling underneath -- but it customises the output so heavily (islands,
+    // its own runtime, its own asset directory) that the page is far better
+    // described as "built with Astro". Its Vite traces are folded in by
+    // applyOverlaps().
+    {
+      id: 'astro',
+      name: 'Astro',
+      color: '#f041ff',
+      home: 'https://astro.build',
+      rules: [
+        // <meta name="generator" content={Astro.generator}>, which most
+        // templates keep. The only marker carrying an exact version.
+        // seen: 7.2.1
+        {
+          id: 'astro-generator',
+          where: ['html'],
+          re: /content=["']Astro v([0-9][\w.+-]*)["']/,
+          weight: STRONG,
+          exact: (m) => m[1],
+          desc: '<meta name="generator" content="Astro v…">',
+        },
+        // Default build.assets directory. The one marker a zero-JS Astro page
+        // still has: it shows up on the stylesheet <link> alone. seen: 7.2.1
+        {
+          id: 'astro-assets-dir',
+          where: ['html', 'url'],
+          str: '/_astro/',
+          weight: STRONG,
+          desc: '/_astro/ build asset directory',
+        },
+        {
+          id: 'astro-island-element',
+          where: ['html'],
+          re: /<astro-island[\s>]/,
+          weight: STRONG,
+          desc: '<astro-island> hydration wrapper in the markup',
+        },
+        // The island runtime is inlined into the page, so it arrives as an
+        // inline script rather than a fetched file. seen: 7.2.1
+        {
+          id: 'astro-island-runtime',
+          where: ['js', 'html'],
+          re: /customElements\.(define|get)\(\s*["'`]astro-island["'`]/,
+          weight: STRONG,
+          desc: 'customElements.define("astro-island") runtime',
+        },
+        {
+          id: 'astro-island-attrs',
+          where: ['js', 'html'],
+          re: /component-url|renderer-url|before-hydration-url/,
+          weight: MEDIUM,
+          desc: 'astro-island component-url/renderer-url attribute',
+        },
+        // ClientRouter (view transitions). seen: 7.2.1
+        {
+          id: 'astro-lifecycle-events',
+          where: ['js', 'html'],
+          re: /astro:(page-load|before-swap|after-swap|before-preparation|after-preparation|hydrate)/,
+          weight: STRONG,
+          desc: 'astro:* lifecycle event',
+        },
+        {
+          id: 'astro-transitions-meta',
+          where: ['js', 'html'],
+          str: 'astro-view-transitions-enabled',
+          weight: STRONG,
+          desc: 'astro-view-transitions-enabled marker',
+        },
+        {
+          id: 'astro-slot',
+          where: ['js', 'html'],
+          re: /["'`]astro-(static-)?slot["'`]/,
+          weight: MEDIUM,
+          desc: '<astro-slot> lookup in the renderer',
+        },
+        {
+          id: 'astro-global',
+          where: ['global'],
+          re: /^Astro$/,
+          weight: MEDIUM,
+          desc: 'window.Astro client-directive registry',
+        },
+        {
+          id: 'astro-dev-toolbar',
+          where: ['js', 'html'],
+          re: /astro-dev-toolbar|astro-dev-overlay/,
+          weight: STRONG,
+          dev: true,
+          desc: 'Astro dev toolbar',
+        },
+        {
+          id: 'astro-dev-scripts',
+          where: ['js', 'html', 'url'],
+          str: 'astro:scripts/',
+          weight: STRONG,
+          dev: true,
+          desc: 'astro:scripts/ dev server virtual module',
+        },
+      ],
+    },
+
     {
       id: 'vite',
       name: 'Vite',
@@ -417,6 +519,14 @@
    * evidence into it instead of reporting it separately.
    */
   const OVERLAPS = [
+    // Listed before the Vite entry so that Astro claims Rollup and esbuild
+    // directly; otherwise Vite absorbs them first and their evidence would be
+    // lost when Vite itself is absorbed.
+    {
+      id: 'astro',
+      absorbs: ['vite', 'rollup', 'esbuild'],
+      note: 'Astro builds with Vite, so the Vite/Rollup/esbuild markers on this page are attributed to Astro.',
+    },
     {
       id: 'rspack',
       absorbs: ['webpack'],

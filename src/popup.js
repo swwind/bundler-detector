@@ -5,7 +5,18 @@
 (function () {
   const api = globalThis.browser && globalThis.browser.runtime ? globalThis.browser : globalThis.chrome;
   const app = document.getElementById('app');
-  const KNOWN_ICONS = new Set(['vite', 'webpack', 'rspack', 'turbopack', 'parcel', 'rollup', 'esbuild', 'devil', 'unknown']);
+  const KNOWN_ICONS = new Set([
+    'vite',
+    'webpack',
+    'rspack',
+    'turbopack',
+    'parcel',
+    'rollup',
+    'esbuild',
+    'astro',
+    'devil',
+    'unknown',
+  ]);
 
   const el = (tag, props, children) => {
     const node = Object.assign(document.createElement(tag), props || {});
