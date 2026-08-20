@@ -194,13 +194,47 @@
           weight: STRONG,
           desc: 'window.__remixContext bootstrap assignment',
         },
-        // seen: remix.run (Remix 3 beta)
+        // Remix 3 dropped React for its own runtime; none of these exist in 2.x.
+        // seen: remix.run (3.0.0-beta.10)
         {
           id: 'remix-dom-attr',
           where: ['dom', 'html'],
           re: /\brmx-[a-z-]+[="]/,
           weight: MEDIUM,
+          min: 3,
           desc: 'rmx-… attribute in the markup',
+        },
+        {
+          id: 'remix3-managed-head',
+          where: ['dom', 'html'],
+          re: /\bdata-remix-(managed-head|stylesheet)[="]/,
+          weight: STRONG,
+          min: 3,
+          desc: 'data-remix-managed-head / data-remix-stylesheet attribute',
+        },
+        {
+          id: 'remix3-scoped-class',
+          where: ['dom', 'html'],
+          re: /\brmxc-[a-z0-9]{8,}/,
+          weight: MEDIUM,
+          min: 3,
+          desc: 'rmxc-… scoped style class',
+        },
+        {
+          id: 'remix3-ui-runtime',
+          where: ['url'],
+          re: /(%40|@)remix-run(%2B|\/)ui(%40|\/)/,
+          weight: STRONG,
+          min: 3,
+          desc: '@remix-run/ui runtime module request',
+        },
+        {
+          id: 'remix-package-url',
+          where: ['url'],
+          re: /[/%]remix(?:%40|@)([0-9][0-9a-zA-Z.+-]*)/,
+          weight: MEDIUM,
+          exact: (m) => m[1],
+          desc: 'remix@… package path in an asset URL',
         },
       ],
     },

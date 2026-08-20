@@ -102,7 +102,7 @@ const CASES = [
   // A page fixture carries no bundle text, so Vite -- which is only visible
   // inside the chunk that holds its preload helper -- is not found here.
   { dir: 'vitepress', primary: 'vitepress', version: '2.0.0-alpha.17', builtOn: ['vue'], only: true },
-  { dir: 'remix', primary: 'remix', version: null, only: true },
+  { dir: 'remix', primary: 'remix', version: '3.0.0-beta.10', only: true },
   // Rspress 2 and 1.x, each the tool's own starter built for production. The
   // Rsbuild/Rspack markers must arrive folded in; React and React Router live
   // in vendor chunks this fixture does not carry (see the react-router test
