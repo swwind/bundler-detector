@@ -63,13 +63,20 @@
       return i === -1 ? null : { index: i, match: [rule.str] };
     }
     if (rule.all) {
-      let first = Infinity;
+      let first = null;
       for (const part of rule.all) {
-        const i = text.indexOf(part);
-        if (i === -1) return null;
-        if (i < first) first = i;
+        let hit = null;
+        if (typeof part === 'string') {
+          const i = text.indexOf(part);
+          if (i !== -1) hit = { index: i, text: part };
+        } else {
+          const m = part.exec(text);
+          if (m) hit = { index: m.index, text: m[0] };
+        }
+        if (!hit) return null;
+        if (!first) first = hit;
       }
-      return { index: first, match: [rule.all[0]] };
+      return { index: first.index, match: [first.text] };
     }
     const m = rule.re.exec(text);
     return m ? { index: m.index, match: m } : null;

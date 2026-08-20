@@ -247,6 +247,14 @@ describe('signature engine', () => {
     assert.deepStrictEqual(conflicts, []);
   });
 
+  it('webpack interop helpers are not preact', () => {
+    const text =
+      'n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};' +
+      'r.d(t,{a:t});return t},r.__chunkIds=[],s.__bootstrap=1,o.__keyed=2';
+    const { detections } = analyze({ sources: [{ kind: 'js', label: 'banner.js', text }], globals: [] });
+    assert.deepStrictEqual(detections.map((d) => d.id), []);
+  });
+
   // window globals alone should be enough, with no script bodies at all.
   it('globals-only', () => {
     const { detections } = analyze({ sources: [], globals: ['webpackChunkmyapp'] });

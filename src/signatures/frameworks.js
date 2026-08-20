@@ -142,7 +142,7 @@
         {
           id: 'preact-vnode-props',
           where: ['js'],
-          all: ['.__k', '.__c', '.__e', '.__b'],
+          all: [/\.__k(?![\w$])/, /\.__c(?![\w$])/, /\.__e(?![\w$])/, /\.__b(?![\w$])/],
           weight: STRONG,
           desc: 'Preact mangled vnode internals (__k/__c/__e/__b together)',
         },
