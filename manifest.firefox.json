@@ -5,7 +5,7 @@
   "description": "Shows which frontend framework and bundler a site was built with — React, Vue, Svelte, Next.js, Vite, webpack and friends — as the toolbar icon.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "bundler-detector@swwind",
+      "id": "stack-detector@swwind",
       "strict_min_version": "115.0"
     }
   },

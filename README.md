@@ -26,8 +26,8 @@ Needs Node 20+. There is nothing to install: the build only copies files and
 picks the right manifest.
 
 ```sh
-git clone https://github.com/swwind/bundler-detector.git
-cd bundler-detector
+git clone https://github.com/swwind/stack-detector.git
+cd stack-detector
 npm run build
 ```
 
@@ -279,7 +279,7 @@ test/run.mjs            engine tests against committed bundle output and page ca
 ```
 
 The Firefox add-on id in `manifest.firefox.json` is still
-`bundler-detector@swwind`. It is an identity, not a name: changing it would make
+`stack-detector@swwind`. It is an identity, not a name: changing it would make
 Firefox treat this as a different add-on and lose every existing install.
 
 ### CI
