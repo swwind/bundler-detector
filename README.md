@@ -247,7 +247,7 @@ React is a normal Tuesday, not a contradiction.
 npm test             # match the engine against real bundle output and real pages
 npm run build        # assemble dist/chrome and dist/firefox
 npm run validate     # check both builds are loadable
-npm run icons        # re-render icons/src/* to icons/*-128.png (needs @resvg/resvg-js)
+npm run icons        # re-render icons/src/* to icons/*.png (needs @resvg/resvg-js)
 ```
 
 `test/fixtures/` holds two kinds of fixture, both real:
@@ -295,9 +295,9 @@ checks they are loadable. That is the whole of it.
    you checked it against. Set `category`, and add a relation at the bottom of
    the file if it is built on something else.
 3. Put the project's own logo in as `icons/src/<id>.svg` (or `.png` if that is
-   all they publish) and run `npm run icons`, which writes `icons/<id>-128.png`.
-   That one file is what the repo keeps; `npm run build` derives 48, 32 and 16
-   from it. A technology with no source file falls back to a lettermark on its
+   all they publish) and run `npm run icons`, which writes `icons/<id>.png` at
+   128 px. That one file is what the repo keeps; `npm run build` derives the
+   toolbar's 48, 32 and 16 from it. A technology with no source file falls back to a lettermark on its
    own `color` so the toolbar never shows the *wrong* logo, but that is a
    placeholder, not a finished icon.
 4. Add a fixture under `test/fixtures/<id>/` — a build, a `page.json` capture, or

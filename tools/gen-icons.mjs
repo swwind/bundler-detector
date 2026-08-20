@@ -11,9 +11,9 @@
  * toolbar showing the wrong logo. Drop a real `icons/src/<id>.svg` in later and
  * it takes over.
  *
- * Chrome cannot use SVG for action icons, so a PNG is committed -- but only the
- * 128 px one; `npm run build` derives 48, 32 and 16 from it. This only needs
- * re-running when a source or the technology list changes:
+ * Chrome cannot use SVG for action icons, so a PNG is committed -- but only one
+ * per technology, as icons/<id>.png; `npm run build` derives the toolbar sizes
+ * from it. This only needs re-running when a source or the list changes:
  *
  *   npm install --no-save @resvg/resvg-js && node tools/gen-icons.mjs
  */
@@ -24,7 +24,7 @@ import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
-const SIZE = 128; // the only size kept in the repo; the build derives the rest
+const SIZE = 128; // icons/<id>.png is rendered at this size; the build derives the rest
 
 let Resvg;
 try {
@@ -85,7 +85,7 @@ function render(id, svg) {
   })
     .render()
     .asPng();
-  writeFileSync(join(outDir, `${id}-${SIZE}.png`), png);
+  writeFileSync(join(outDir, `${id}.png`), png);
 }
 
 const sources = new Map();
@@ -99,11 +99,11 @@ for (const [id, file] of sources) {
     ? svgFromPng(readFileSync(join(srcDir, file)))
     : readFileSync(join(srcDir, file), 'utf8');
   render(id, svg);
-  console.log(`${id}-${SIZE}.png`);
+  console.log(`${id}.png`);
 }
 
 for (const tech of technologies) {
   if (sources.has(tech.id)) continue;
   render(tech.id, lettermark(tech.name, tech.color));
-  console.log(`${tech.id}-${SIZE}.png (generated lettermark — no icons/src/${tech.id}.svg)`);
+  console.log(`${tech.id}.png (generated lettermark — no icons/src/${tech.id}.svg)`);
 }

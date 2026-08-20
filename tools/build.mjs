@@ -8,8 +8,9 @@
  * worker (which pulls the engine in via importScripts), Firefox runs it as an
  * event page with a script list.
  *
- * Only the 128 px icon is kept in the repo. The toolbar sizes are produced from
- * it here, so adding a technology adds one file rather than four.
+ * Only one icon per technology is kept in the repo, at the largest size. The
+ * toolbar sizes are produced from it here, so adding a technology adds one file
+ * rather than four.
  */
 import { cpSync, mkdirSync, rmSync, copyFileSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -26,22 +27,26 @@ const TARGETS = [
 
 // Chrome cannot use SVG for an action icon, so every size has to exist as a PNG.
 const SIZES = [16, 32, 48, 128];
+const LARGEST = Math.max(...SIZES); // the size icons/<id>.png is committed at
 
 /**
  * Write every toolbar size for every committed icon, downscaling from the
- * 128 px original. The SVG sources in icons/src/ stay in the repo but are not
- * rendered here -- that needs a renderer, and `npm run icons` owns it.
+ * 128 px original in icons/<id>.png. The SVG sources in icons/src/ stay in the
+ * repo but are not rendered here -- that needs a renderer, and `npm run icons`
+ * owns it.
  */
 function emitIcons(outDir) {
   let count = 0;
   for (const file of readdirSync(join(root, 'icons'))) {
-    if (!file.endsWith('-128.png')) continue;
-    const id = file.slice(0, -'-128.png'.length);
-    const source = readFileSync(join(root, 'icons', file));
-    copyFileSync(join(root, 'icons', file), join(outDir, file));
-    const image = decodePng(source);
+    if (!file.endsWith('.png')) continue; // icons/src/ is a directory, so it skips itself
+    const id = file.slice(0, -'.png'.length);
+    const source = join(root, 'icons', file);
+    // The committed file is already the largest size; only the smaller ones
+    // have to be computed.
+    copyFileSync(source, join(outDir, `${id}-${LARGEST}.png`));
+    const image = decodePng(readFileSync(source));
     for (const size of SIZES) {
-      if (size === 128) continue;
+      if (size === LARGEST) continue;
       writeFileSync(join(outDir, `${id}-${size}.png`), encodePng(resize(image, size)));
     }
     count++;

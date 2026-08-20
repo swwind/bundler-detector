@@ -2,11 +2,11 @@
 /**
  * Just enough PNG to resize an icon, with no dependencies.
  *
- * Only the committed 128 px icon is kept in the repo; the toolbar sizes are
- * produced from it during the build. That means `npm run build` has to be able
- * to read and write a PNG, and it has to do it with nothing installed -- so
- * this is a decoder and an encoder for exactly the one shape @resvg writes:
- * 8-bit RGBA, non-interlaced.
+ * Only one icon per technology is kept in the repo, at the largest size; the
+ * toolbar sizes are produced from it during the build. That means `npm run
+ * build` has to be able to read and write a PNG, and it has to do it with
+ * nothing installed -- so this is a decoder and an encoder for exactly the one
+ * shape @resvg writes: 8-bit RGBA, non-interlaced.
  */
 import { inflateSync, deflateSync } from 'node:zlib';
 
