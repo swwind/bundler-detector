@@ -11,8 +11,9 @@
  * toolbar showing the wrong logo. Drop a real `icons/src/<id>.svg` in later and
  * it takes over.
  *
- * Chrome cannot use SVG for action icons, so the PNGs are committed and this
- * only needs re-running when a source or the technology list changes:
+ * Chrome cannot use SVG for action icons, so a PNG is committed -- but only the
+ * 128 px one; `npm run build` derives 48, 32 and 16 from it. This only needs
+ * re-running when a source or the technology list changes:
  *
  *   npm install --no-save @resvg/resvg-js && node tools/gen-icons.mjs
  */
@@ -23,7 +24,7 @@ import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
-const SIZES = [16, 32, 48, 128];
+const SIZE = 128; // the only size kept in the repo; the build derives the rest
 
 let Resvg;
 try {
@@ -75,18 +76,16 @@ function contrastInk(color) {
 }
 
 function render(id, svg) {
-  for (const size of SIZES) {
-    const png = new Resvg(svg, {
-      fitTo: { mode: 'width', value: size },
-      background: 'rgba(0,0,0,0)',
-      shapeRendering: 2,
-      textRendering: 2,
-      font: { loadSystemFonts: true },
-    })
-      .render()
-      .asPng();
-    writeFileSync(join(outDir, `${id}-${size}.png`), png);
-  }
+  const png = new Resvg(svg, {
+    fitTo: { mode: 'width', value: SIZE },
+    background: 'rgba(0,0,0,0)',
+    shapeRendering: 2,
+    textRendering: 2,
+    font: { loadSystemFonts: true },
+  })
+    .render()
+    .asPng();
+  writeFileSync(join(outDir, `${id}-${SIZE}.png`), png);
 }
 
 const sources = new Map();
@@ -100,11 +99,11 @@ for (const [id, file] of sources) {
     ? svgFromPng(readFileSync(join(srcDir, file)))
     : readFileSync(join(srcDir, file), 'utf8');
   render(id, svg);
-  console.log(`${id}: ${SIZES.join(', ')}`);
+  console.log(`${id}-${SIZE}.png`);
 }
 
 for (const tech of technologies) {
   if (sources.has(tech.id)) continue;
   render(tech.id, lettermark(tech.name, tech.color));
-  console.log(`${tech.id}: ${SIZES.join(', ')} (generated lettermark)`);
+  console.log(`${tech.id}-${SIZE}.png (generated lettermark — no icons/src/${tech.id}.svg)`);
 }

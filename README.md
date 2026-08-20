@@ -247,7 +247,7 @@ React is a normal Tuesday, not a contradiction.
 npm test             # match the engine against real bundle output and real pages
 npm run build        # assemble dist/chrome and dist/firefox
 npm run validate     # check both builds are loadable
-npm run icons        # re-render icons/src/* to PNG (needs @resvg/resvg-js)
+npm run icons        # re-render icons/src/* to icons/*-128.png (needs @resvg/resvg-js)
 ```
 
 `test/fixtures/` holds two kinds of fixture, both real:
@@ -274,7 +274,7 @@ src/content-main.js     MAIN-world script: page globals and DOM expando properti
 src/content.js          isolated script: markup, attributes, inline scripts, script URLs
 src/background.js       fetches scripts, matches, swaps the icon
 src/popup.*             the dialog
-tools/                  build, validate, icon rendering
+tools/                  build, validate, icon rendering, PNG resizing
 test/run.mjs            engine tests against committed bundle output and page captures
 ```
 
@@ -294,9 +294,12 @@ checks they are loadable. That is the whole of it.
 2. Add an entry to the right file in `src/signatures/`, with `seen:` noting what
    you checked it against. Set `category`, and add a relation at the bottom of
    the file if it is built on something else.
-3. Run `npm run icons`. A technology with no `icons/src/<id>.svg` gets a
-   lettermark on its own `color`, so it is never left showing the wrong logo;
-   drop a real logo in later and it takes over.
+3. Put the project's own logo in as `icons/src/<id>.svg` (or `.png` if that is
+   all they publish) and run `npm run icons`, which writes `icons/<id>-128.png`.
+   That one file is what the repo keeps; `npm run build` derives 48, 32 and 16
+   from it. A technology with no source file falls back to a lettermark on its
+   own `color` so the toolbar never shows the *wrong* logo, but that is a
+   placeholder, not a finished icon.
 4. Add a fixture under `test/fixtures/<id>/` — a build, a `page.json` capture, or
    both — and a case in `test/run.mjs`.
 
@@ -307,21 +310,27 @@ build validator all read the signature registry.
 
 Most icons are the projects' own artwork:
 
+Every icon is the project's own artwork.
+
 | Icon | Source |
 | --- | --- |
-| vite, webpack, parcel, rollup, esbuild, react, vue, angular, svelte, next, nuxt, gatsby, ember, qwik, remix | [material-icon-theme](https://github.com/material-extensions/vscode-material-icon-theme) (MIT) — unmodified, except `next` and `remix`, recoloured so they stay visible on both a light and a dark toolbar |
+| vite, webpack, parcel, rollup, esbuild, react, vue, angular, svelte, next, nuxt, gatsby, ember, qwik, remix | [material-icon-theme](https://github.com/material-extensions/vscode-material-icon-theme) (MIT) |
+| solid, lit, preact, docusaurus, vitepress, stimulus | the project's own published SVG — solidjs.com, lit.dev (the `flame` symbol out of its full lockup), the preactjs.com branding assets, docusaurus.io, vitepress.dev, stimulus.hotwired.dev |
+| jquery, alpine, htmx, angularjs, backbone | [devicon](https://github.com/devicons/devicon) (MIT) — those five publish a wide wordmark as their own asset, and devicon carries the square symbol from the same logo |
 | rspack | the site favicon, `https://assets.rspack.rs/rspack/favicon-128x128.png` |
 | turbopack | the Turbo mark from the [vercel/turborepo](https://github.com/vercel/turborepo) README |
-| astro | the mark from `https://astro.build/favicon.svg`, recoloured so it stays visible on a dark toolbar |
-| solid, preact, lit, alpine, htmx, angularjs, sveltekit | simplified marks drawn for this project after each project's own logo |
-| jquery, stimulus, backbone, knockout, docusaurus, vitepress | generated lettermarks on the project's brand colour — those projects publish a wordmark rather than a symbol, and a wordmark is unreadable at 16 px |
+| astro | the mark from `https://astro.build/favicon.svg` |
+
+Four are recoloured, shape untouched, because their published colour disappears
+against a toolbar: `astro` (dark on dark), `next` and `remix` (material-icon-theme
+ships them near-white, which vanishes on a light toolbar), and `stimulus` (whose
+SVG sets no fill at all, so it renders black).
 
 Only the devil (conflict state) and the unknown-state cube are invented, since
 neither corresponds to a real project.
 
 Rspack and Turbopack publish their marks as raster only, so `icons/src/` holds
-PNGs for those two and `npm run icons` resamples them; the rest are SVG and
-render crisply at every size.
+PNGs for those two and `npm run icons` resamples them; the rest are SVG.
 
 These files are the projects' trademarks, whatever the licence on the repository
 they were fetched from. Fine for personal use; worth checking before publishing
