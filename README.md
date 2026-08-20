@@ -22,12 +22,13 @@ Not on any store — clone it and load it yourself.
 
 ## Build
 
-Needs Node 20+. There is nothing to install: the build only copies files and
-picks the right manifest.
+Needs Node 20+. The build copies files, picks the right manifest and downscales
+the toolbar icons, which is the one thing that needs a dependency (sharp).
 
 ```sh
 git clone https://github.com/swwind/stack-detector.git
 cd stack-detector
+npm install
 npm run build
 ```
 

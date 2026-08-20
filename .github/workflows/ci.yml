@@ -14,6 +14,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+
+      # The build downscales the toolbar icons with sharp, so the dev
+      # dependencies have to be there before anything below runs.
+      - name: Install dependencies
+        run: npm ci
 
       # Matches the signature rules against the real bundle output committed
       # under test/fixtures.
