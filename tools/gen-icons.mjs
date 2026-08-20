@@ -17,23 +17,15 @@
  *
  *   npm install --no-save @resvg/resvg-js && node tools/gen-icons.mjs
  */
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readdirSync, readFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
-import { PNG } from 'pngjs';
+import sharp from 'sharp';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
 const SIZE = 128; // icons/<id>.png is rendered at this size; the build derives the rest
-
-let Resvg;
-try {
-  ({ Resvg } = await import('@resvg/resvg-js'));
-} catch {
-  console.error('Missing renderer. Run: npm install --no-save @resvg/resvg-js');
-  process.exit(1);
-}
 
 for (const file of ['bundlers', 'frameworks', 'meta']) require(join(root, 'src', 'signatures', file + '.js'));
 const technologies = globalThis.StackSignatures;
@@ -76,46 +68,17 @@ function contrastInk(color) {
   return luminance > 0.45 ? '#1b1d21' : '#ffffff';
 }
 
-function rasterise(svg, fitTo) {
-  return new Resvg(svg, {
-    fitTo,
-    background: 'rgba(0,0,0,0)',
-    shapeRendering: 2,
-    textRendering: 2,
-    font: { loadSystemFonts: true },
-  }).render();
-}
-
-/** Centre an image on a transparent square canvas, without scaling it. */
-function pad(srcPng, size) {
-  const out = new PNG({ width: size, height: size });
-  const offsetX = Math.floor((size - srcPng.width) / 2);
-  const offsetY = Math.floor((size - srcPng.height) / 2);
-  for (let y = 0; y < srcPng.height; y++) {
-    const target = ((y + offsetY) * size + offsetX) * 4;
-    srcPng.data.copy(out.data, target, y * srcPng.width * 4, (y + 1) * srcPng.width * 4);
-  }
-  return out;
-}
-
 /**
  * Render to a square, fitting the longest side and padding the other.
- *
- * Plenty of logos are not square -- Lit's flame is 160 tall by 128 wide, Solid's
- * ribbons are wider than they are tall. Writing those out at their own aspect
- * ratio would leave the build to squash them into a square icon.
  */
-function render(id, svg) {
-  let image = rasterise(svg, { mode: 'width', value: SIZE });
-  if (image.height > SIZE) image = rasterise(svg, { mode: 'height', value: SIZE });
-
-  const png = image.asPng();
-  if (image.width === SIZE && image.height === SIZE) {
-    writeFileSync(join(outDir, `${id}.png`), png);
-  } else {
-    const padded = pad(PNG.sync.read(png), SIZE);
-    writeFileSync(join(outDir, `${id}.png`), PNG.sync.write(padded));
-  }
+async function render(id, svgInput) {
+  const input = typeof svgInput === 'string' ? Buffer.from(svgInput) : svgInput;
+  await sharp(input)
+    .resize(SIZE, SIZE, {
+      fit: 'contain',
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
+    .toFile(join(outDir, `${id}.png`));
 }
 
 const sources = new Map();
@@ -128,12 +91,12 @@ for (const [id, file] of sources) {
   const svg = file.endsWith('.png')
     ? svgFromPng(readFileSync(join(srcDir, file)))
     : readFileSync(join(srcDir, file), 'utf8');
-  render(id, svg);
+  await render(id, svg);
   console.log(`${id}.png`);
 }
 
 for (const tech of technologies) {
   if (sources.has(tech.id)) continue;
-  render(tech.id, lettermark(tech.name, tech.color));
+  await render(tech.id, lettermark(tech.name, tech.color));
   console.log(`${tech.id}.png (generated lettermark — no icons/src/${tech.id}.svg)`);
 }
