@@ -228,23 +228,12 @@ describe('signature engine', () => {
     assert.deepStrictEqual(conflicts, []);
   });
 
-  // Rspress routes with React Router, which puts __reactRouterVersion on
-  // window. Left alone that is a second meta-framework on the page and so a
-  // conflict -- the devil icon on every Rspress site.
-  // seen: rspress.rs, whose lib-router chunk sets it to "7.18.2"
-  it('rspress absorbs react router', () => {
-    const { detections, conflicts } = analyze({
-      sources: [
-        { kind: 'html', label: 'page markup', text: '<meta name="generator" content="Rspress v2.0.19">' },
-      ],
-      globals: ['__reactRouterVersion', 'rspackChunk_rspress_docs'],
+  it('react router alone is not remix', () => {
+    const { detections } = analyze({
+      sources: [],
+      globals: ['__reactRouterVersion', 'webpackChunkapp'],
     });
-    assert.deepStrictEqual(detections.map((d) => d.id), ['rspress']);
-    assert.deepStrictEqual(
-      (detections[0].builtOn || []).map((b) => b.id),
-      ['rspack', 'remix']
-    );
-    assert.deepStrictEqual(conflicts, []);
+    assert.deepStrictEqual(detections.map((d) => d.id), ['webpack']);
   });
 
   it('webpack interop helpers are not preact', () => {

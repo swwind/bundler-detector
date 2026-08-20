@@ -182,7 +182,7 @@
         {
           id: 'react-router-globals',
           where: ['global'],
-          re: /^__reactRouter(Context|Manifest|RouteModules|Version)$/,
+          re: /^__reactRouter(Context|Manifest|RouteModules)$/,
           weight: STRONG,
           min: 7,
           desc: '__reactRouterContext hydration payload (React Router 7)',
@@ -510,8 +510,8 @@
     },
     {
       id: 'rspress',
-      builtOn: ['react', 'rspack', 'webpack', 'remix'],
-      note: 'Rspress is a React site generator built on Rsbuild/Rspack and routed by React Router, so those markers are attributed to Rspress.',
+      builtOn: ['react', 'rspack', 'webpack'],
+      note: 'Rspress is a React site generator built on Rsbuild/Rspack, so those markers are attributed to Rspress.',
     },
     {
       id: 'astro',
