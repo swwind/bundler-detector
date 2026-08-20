@@ -15,6 +15,7 @@
 import { cpSync, mkdirSync, rmSync, copyFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 import sharp from 'sharp';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -59,6 +60,13 @@ async function emitIcons(outDir) {
   return count;
 }
 
+// Zips the built extension folder so manifest.json sits at the archive root,
+// which is what the Chrome Web Store / AMO upload forms expect.
+function zipDir(out, zipPath) {
+  rmSync(zipPath, { force: true });
+  execFileSync('zip', ['-r', '-X', '-q', zipPath, '.'], { cwd: out });
+}
+
 rmSync(dist, { recursive: true, force: true });
 
 for (const target of TARGETS) {
@@ -71,4 +79,8 @@ for (const target of TARGETS) {
 
   copyFileSync(join(root, target.manifest), join(out, 'manifest.json'));
   console.log(`built dist/${target.name} (${icons} icons)`);
+
+  const zipPath = join(dist, `${target.name}.zip`);
+  zipDir(out, zipPath);
+  console.log(`zipped dist/${target.name}.zip`);
 }
