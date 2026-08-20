@@ -247,7 +247,7 @@ React is a normal Tuesday, not a contradiction.
 npm test             # match the engine against real bundle output and real pages
 npm run build        # assemble dist/chrome and dist/firefox
 npm run validate     # check both builds are loadable
-npm run icons        # re-render icons/src/* to icons/*.png (needs @resvg/resvg-js)
+npm run icons        # re-render icons/src/* to icons/*.png
 ```
 
 `test/fixtures/` holds two kinds of fixture, both real:

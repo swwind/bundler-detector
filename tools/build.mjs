@@ -32,8 +32,8 @@ const LARGEST = Math.max(...SIZES); // the size icons/<id>.png is committed at
 /**
  * Write every toolbar size for every committed icon, downscaling from the
  * 128 px original in icons/<id>.png. The SVG sources in icons/src/ stay in the
- * repo but are not rendered here -- that needs a renderer, and `npm run icons`
- * owns it.
+ * repo but are not rendered here -- icons/<id>.png is the committed artefact,
+ * and `npm run icons` owns producing it.
  */
 async function emitIcons(outDir) {
   let count = 0;

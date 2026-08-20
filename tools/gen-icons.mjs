@@ -4,7 +4,7 @@
  *
  * Sources are either SVG, or PNG for the logos only published as raster
  * (Rspack's favicon, Turbopack's README mark) -- those get wrapped in an SVG
- * so the renderer resamples them to each size.
+ * so both kinds go through the same fit-and-pad render below.
  *
  * Any technology in src/signatures/ without a source file gets a lettermark
  * generated from its own `color`, so registering a technology never leaves the
@@ -15,7 +15,7 @@
  * per technology, as icons/<id>.png; `npm run build` derives the toolbar sizes
  * from it. This only needs re-running when a source or the list changes:
  *
- *   npm install --no-save @resvg/resvg-js && node tools/gen-icons.mjs
+ *   npm run icons
  */
 import { readdirSync, readFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -34,7 +34,7 @@ const srcDir = join(root, 'icons', 'src');
 const outDir = join(root, 'icons');
 mkdirSync(outDir, { recursive: true });
 
-/** Wrap a raster logo in an SVG so it can be resampled to each icon size. */
+/** Wrap a raster logo in an SVG so it takes the same path as the vector ones. */
 function svgFromPng(buffer) {
   const href = 'data:image/png;base64,' + buffer.toString('base64');
   return (
@@ -69,7 +69,12 @@ function contrastInk(color) {
 }
 
 /**
- * Render to a square, fitting the longest side and padding the other.
+ * Render to a square, fitting the longest side and padding the other with
+ * transparency -- which is what `fit: 'contain'` does.
+ *
+ * Plenty of logos are not square -- Lit's flame is 160 tall by 128 wide, Solid's
+ * ribbons are wider than they are tall. Writing those out at their own aspect
+ * ratio would leave the build to squash them into a square icon.
  */
 async function render(id, svgInput) {
   const input = typeof svgInput === 'string' ? Buffer.from(svgInput) : svgInput;
