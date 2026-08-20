@@ -142,5 +142,31 @@ for (const c of CASES) {
   }
 }
 
+// Rspack's ESM chunk format has no rspackChunk global or data-rspack
+// attribute. This is the opening metadata from GitHub's referenced asset.
+{
+  const sources = [
+    {
+      kind: 'js',
+      label: 'app-runtime-7e66544b174a0994.js',
+      text: 'performance.mark("js-parse-end:app-runtime-7e66544b174a0994.js");export const __rspack_esm_id=77844;export const __rspack_esm_ids=[77844];export const __webpack_modules__={};',
+    },
+  ];
+  const { detections } = analyze({ sources, globals: [] });
+  const top = detections[0];
+  if (
+    detections.length === 1 &&
+    top.id === 'rspack' &&
+    top.version === null &&
+    top.evidence.some((e) => e.rule === 'rspack-esm-id')
+  ) {
+    passed++;
+    console.log('ok   rspack-esm         -> rspack (high)');
+  } else {
+    failed++;
+    console.log(`FAIL rspack-esm -> ${JSON.stringify(detections.map((d) => d.id))}`);
+  }
+}
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

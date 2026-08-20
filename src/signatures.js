@@ -285,6 +285,15 @@
           min: 2,
           desc: 'data-rspack attribute on injected <script>/<link>',
         },
+        // ESM chunks export their module ids instead of registering through a
+        // rspackChunk global. seen: github.com app-runtime-7e66544b174a0994.js
+        {
+          id: 'rspack-esm-id',
+          where: ['js'],
+          re: /\b__rspack_esm_ids?\s*=/,
+          weight: STRONG,
+          desc: '__rspack_esm_id ESM chunk metadata',
+        },
         // The jackpot: Rspack 1.x stamps its exact version into the runtime.
         // seen: 1.0.14, 1.5.8 (absent in 0.7.5 and in 2.1.9)
         {
