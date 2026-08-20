@@ -136,7 +136,7 @@ about a page than the **UI library** underneath it, which says more than the
 | --- | --- | --- |
 | **Vite** | `vite:preloadError`, `Unable to preload CSS for`, `__vite__mapDeps`, the `<script type="module" crossorigin src="/assets/…">` entry tag | major, narrowed to a range |
 | **webpack** | `self.webpackChunk*` (v5), `window.webpackJsonp` (≤4), `data-webpack`, `__webpack_require__` | major only |
-| **Rspack** | `self.rspackChunk*` and `data-rspack` (≥2), or the `ruid="bundler=rspack@x.y.z"` stamp (1.x) | **exact on 1.x**, `≥ 2` otherwise |
+| **Rspack** | `self.rspackChunk*` and `data-rspack` (≥2), `__rspack_esm_id`/`__rspack_esm_ids` in ESM chunks (≥2), or the `ruid="bundler=rspack@x.y.z"` stamp (1.x) | **exact on 1.x**, `≥ 2` otherwise |
 | **Turbopack** | `globalThis.TURBOPACK`, `TURBOPACK_ASSET_SUFFIX`, `__turbopack_context__` | not exposed |
 | **Parcel** | `globalThis.parcelRequire*`, `$parcel$` helpers | major |
 | **esbuild** | `__toESM` / `__commonJS` / `__esm` interop helpers | not exposed |
@@ -212,6 +212,9 @@ React is a normal Tuesday, not a contradiction.
   webpack-compatible runtime: 0.7 and 1.x emit `webpackChunk*` and
   `data-webpack` exactly like webpack 5. The `ruid` stamp rescues 1.0+, but an
   Rspack 0.x site is reported as webpack 5 and there is no signal to do better.
+  Rspack 2's ESM chunks are the opposite case: no chunk global and no
+  `data-rspack`, just the exported `__rspack_esm_id`/`__rspack_esm_ids` names —
+  which is what makes them worth matching on their own.
 - **Alpine vendors Vue's reactivity package**, so `__v_isRef` and `__v_isReactive`
   appear in Alpine bundles. Vue is matched on `__v_isVNode` instead, which lives
   in `runtime-core` and only ships with a real Vue app.

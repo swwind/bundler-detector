@@ -257,5 +257,17 @@ describe('signature engine', () => {
     assert.strictEqual(detections[0].id, 'webpack');
     assert.strictEqual(detections[0].version.text, '5');
   });
-});
 
+  // Rspack's ESM chunks carry no rspackChunk global and no data-rspack -- the
+  // exported module-id names are the whole signal, and either one alone is
+  // enough for the >= 2 bound.
+  for (const marker of ['export const __rspack_esm_id=77844;', 'export const __rspack_esm_ids=[77844];']) {
+    it(`rspack esm chunk (${marker.includes('_ids') ? '__rspack_esm_ids' : '__rspack_esm_id'})`, () => {
+      const text = `performance.mark("js-parse-end:app-runtime.js");${marker}export const __webpack_modules__={};`;
+      const { detections } = analyze({ sources: [{ kind: 'js', label: 'app-runtime.js', text }], globals: [] });
+      assert.deepStrictEqual(detections.map((d) => d.id), ['rspack']);
+      assert.strictEqual(detections[0].version.text, '≥ 2');
+      assert.ok(detections[0].evidence.some((e) => e.rule === 'rspack-esm-id'));
+    });
+  }
+});
