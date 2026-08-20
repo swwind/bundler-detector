@@ -2,6 +2,7 @@
   "name": "web-stack-detector",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "description": "Browser extension that detects the frontend framework and bundler behind the current site",
   "scripts": {
     "build": "node tools/build.mjs",

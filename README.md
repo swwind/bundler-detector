@@ -313,6 +313,11 @@ checks they are loadable. That is the whole of it.
 Nothing else needs touching: the icon list, the popup's category groups and the
 build validator all read the signature registry.
 
+## License
+
+MIT, for the code — see [LICENSE](LICENSE). The icons are a separate matter;
+see the credits below.
+
 ## Icon credits
 
 Most icons are the projects' own artwork:
