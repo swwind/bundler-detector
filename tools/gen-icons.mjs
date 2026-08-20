@@ -21,7 +21,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
-import { decodePng, encodePng, pad } from './png.mjs';
+import { PNG } from 'pngjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
@@ -86,6 +86,18 @@ function rasterise(svg, fitTo) {
   }).render();
 }
 
+/** Centre an image on a transparent square canvas, without scaling it. */
+function pad(srcPng, size) {
+  const out = new PNG({ width: size, height: size });
+  const offsetX = Math.floor((size - srcPng.width) / 2);
+  const offsetY = Math.floor((size - srcPng.height) / 2);
+  for (let y = 0; y < srcPng.height; y++) {
+    const target = ((y + offsetY) * size + offsetX) * 4;
+    srcPng.data.copy(out.data, target, y * srcPng.width * 4, (y + 1) * srcPng.width * 4);
+  }
+  return out;
+}
+
 /**
  * Render to a square, fitting the longest side and padding the other.
  *
@@ -98,10 +110,12 @@ function render(id, svg) {
   if (image.height > SIZE) image = rasterise(svg, { mode: 'height', value: SIZE });
 
   const png = image.asPng();
-  writeFileSync(
-    join(outDir, `${id}.png`),
-    image.width === SIZE && image.height === SIZE ? png : encodePng(pad(decodePng(png), SIZE))
-  );
+  if (image.width === SIZE && image.height === SIZE) {
+    writeFileSync(join(outDir, `${id}.png`), png);
+  } else {
+    const padded = pad(PNG.sync.read(png), SIZE);
+    writeFileSync(join(outDir, `${id}.png`), PNG.sync.write(padded));
+  }
 }
 
 const sources = new Map();
