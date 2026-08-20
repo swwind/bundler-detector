@@ -1,4 +1,4 @@
-# Stack Detector
+# Web Stack Detector
 
 A Firefox and Chrome extension that works out what the page you are looking at
 was built with — the framework, the UI library and the bundler — and turns the
@@ -26,8 +26,8 @@ Needs Node 20+. The build copies files, picks the right manifest and downscales
 the toolbar icons, which is the one thing that needs a dependency (sharp).
 
 ```sh
-git clone https://github.com/swwind/stack-detector.git
-cd stack-detector
+git clone https://github.com/swwind/web-stack-detector.git
+cd web-stack-detector
 npm install
 npm run build
 ```
@@ -51,7 +51,7 @@ The icon appears straight away and survives restarts. Chrome shows a
 *"Disable developer mode extensions"* warning on startup — that is the normal
 nag for any unpacked extension.
 
-Click the puzzle-piece icon and pin *Stack Detector* so the logo stays visible
+Click the puzzle-piece icon and pin *Web Stack Detector* so the logo stays visible
 in the toolbar, which is rather the point of it.
 
 After changing the source, run `npm run build` again and press **reload** ↻ on
@@ -67,9 +67,9 @@ Then **grant site access**, or it will detect much less: Firefox MV3 makes host
 permissions opt-in, so until you allow it the extension can read the page but
 never the script files themselves.
 
-- Click the puzzle-piece icon → the gear next to *Stack Detector* → **Always
+- Click the puzzle-piece icon → the gear next to *Web Stack Detector* → **Always
   Allow on All Sites**
-- Or `about:addons` → Stack Detector → **Permissions** → *Access your data for
+- Or `about:addons` → Web Stack Detector → **Permissions** → *Access your data for
   all websites*
 
 **Temporary add-ons disappear when Firefox restarts.** Loading it again is the
@@ -284,9 +284,10 @@ tools/                  build, validate, icon rendering, PNG resizing
 test/run.mjs            engine tests against committed bundle output and page captures
 ```
 
-The Firefox add-on id in `manifest.firefox.json` is still
-`stack-detector@swwind`. It is an identity, not a name: changing it would make
-Firefox treat this as a different add-on and lose every existing install.
+The Firefox add-on id in `manifest.firefox.json` is
+`web-stack-detector@swwind`. It is an identity, not a name: changing it again
+after publishing would make Firefox treat this as a different add-on and lose
+every existing install.
 
 ### CI
 

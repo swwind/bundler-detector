@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Stack Detector",
+  "name": "Web Stack Detector",
   "version": "1.0.0",
-  "description": "Shows which frontend framework and bundler a site was built with — React, Vue, Svelte, Next.js, Vite, webpack and friends — as the toolbar icon.",
+  "description": "Detects the frontend framework, UI library and bundler a site was built with, and shows it as the toolbar icon.",
   "minimum_chrome_version": "111",
   "permissions": [
     "storage"

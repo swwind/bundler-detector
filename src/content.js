@@ -9,8 +9,8 @@
  */
 (function () {
   const api = globalThis.browser && globalThis.browser.runtime ? globalThis.browser : globalThis.chrome;
-  const REQUEST = '__stack_detector_request__';
-  const REPLY = '__stack_detector_facts__';
+  const REQUEST = '__web_stack_detector_request__';
+  const REPLY = '__web_stack_detector_facts__';
 
   const MAX_INLINE_SCRIPTS = 12;
   const MAX_INLINE_BYTES = 256 * 1024;
@@ -175,7 +175,7 @@
   async function scan(reason) {
     await requestFacts();
     const payload = {
-      type: 'stack-detector:scan',
+      type: 'web-stack-detector:scan',
       reason,
       pageUrl: location.href,
       title: document.title,
@@ -195,7 +195,7 @@
 
   // The popup can ask for a fresh look at the page.
   api.runtime.onMessage.addListener((message) => {
-    if (message && message.type === 'stack-detector:rescan') scan('manual');
+    if (message && message.type === 'web-stack-detector:rescan') scan('manual');
   });
 
   scan('load');

@@ -20,8 +20,8 @@
  * this script never runs and content.js falls back to wrappedJSObject.
  */
 (function () {
-  const REQUEST = '__stack_detector_request__';
-  const REPLY = '__stack_detector_facts__';
+  const REQUEST = '__web_stack_detector_request__';
+  const REPLY = '__web_stack_detector_facts__';
 
   const MAX_GLOBALS = 300;
   const MAX_PROPS = 200;

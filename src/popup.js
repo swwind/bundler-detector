@@ -186,7 +186,7 @@
     rescan.addEventListener('click', async () => {
       rescan.disabled = true;
       rescan.textContent = 'Scanning…';
-      await api.runtime.sendMessage({ type: 'stack-detector:rescan', tabId: currentTabId }).catch(() => {});
+      await api.runtime.sendMessage({ type: 'web-stack-detector:rescan', tabId: currentTabId }).catch(() => {});
       setTimeout(load, 1200);
     });
 
@@ -199,7 +199,7 @@
     const [tab] = await api.tabs.query({ active: true, currentWindow: true });
     if (!tab) return render(null);
     currentTabId = tab.id;
-    const result = await api.runtime.sendMessage({ type: 'stack-detector:get', tabId: tab.id }).catch(() => null);
+    const result = await api.runtime.sendMessage({ type: 'web-stack-detector:get', tabId: tab.id }).catch(() => null);
     render(result || null);
   }
 

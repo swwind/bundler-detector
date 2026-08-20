@@ -256,21 +256,21 @@ async function getResult(tabId) {
 api.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (!message || typeof message.type !== 'string') return;
 
-  if (message.type === 'stack-detector:scan') {
+  if (message.type === 'web-stack-detector:scan') {
     const tabId = sender.tab && sender.tab.id;
     if (tabId == null) return;
-    handleScan(message, tabId).catch((error) => console.error('[stack-detector] scan failed', error));
+    handleScan(message, tabId).catch((error) => console.error('[web-stack-detector] scan failed', error));
     return; // no response needed
   }
 
-  if (message.type === 'stack-detector:get') {
+  if (message.type === 'web-stack-detector:get') {
     getResult(message.tabId).then(sendResponse);
     return true; // async response
   }
 
-  if (message.type === 'stack-detector:rescan') {
+  if (message.type === 'web-stack-detector:rescan') {
     api.tabs
-      .sendMessage(message.tabId, { type: 'stack-detector:rescan' })
+      .sendMessage(message.tabId, { type: 'web-stack-detector:rescan' })
       .then(() => sendResponse({ ok: true }))
       .catch((error) => sendResponse({ ok: false, error: String(error && error.message) }));
     return true;

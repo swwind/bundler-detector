@@ -1,5 +1,5 @@
 {
-  "name": "stack-detector",
+  "name": "web-stack-detector",
   "version": "1.0.0",
   "private": true,
   "description": "Browser extension that detects the frontend framework and bundler behind the current site",
