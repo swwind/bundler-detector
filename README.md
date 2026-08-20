@@ -107,7 +107,7 @@ about a page than the **UI library** underneath it, which says more than the
 | **Docusaurus** | `window.docusaurus`, `id="__docusaurus"` | **exact** from the generator meta tag |
 | **VitePress** | `__VITEPRESS__`, `__VP_HASH_MAP__` | **exact** from the generator meta tag |
 | **Rspress** | `id="__rspress_root"` (2.x), the `rspress-doc`/`rspress-nav` theme classes, the `rspress-theme-appearance` script | **exact** from the generator meta tag |
-| **Remix / React Router** | `__remixContext`, `__reactRouterContext`; Remix 3's `rmx-…`/`data-remix-…` attributes, `rmxc-…` classes and `@remix-run/ui` requests | **exact** for Remix 3, off the asset path; ≥7 for React Router |
+| **Remix** | `__remixContext`, `__reactRouterContext`; Remix 3's `rmx-…`/`data-remix-…` attributes, `rmxc-…` classes and `@remix-run/ui` requests | **exact** for Remix 3, off the asset path |
 
 ### UI libraries
 

@@ -166,7 +166,7 @@
 
     {
       id: 'remix',
-      name: 'Remix / React Router',
+      name: 'Remix',
       category: 'meta-framework',
       color: '#3992ff',
       home: 'https://remix.run',
@@ -184,7 +184,6 @@
           where: ['global'],
           re: /^__reactRouter(Context|Manifest|RouteModules)$/,
           weight: STRONG,
-          min: 7,
           desc: '__reactRouterContext hydration payload (React Router 7)',
         },
         {
