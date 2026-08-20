@@ -15,12 +15,14 @@
  * A page fixture keeps the whole harvest, analytics noise included, so a rule
  * that fires on somebody's tag manager fails here rather than in the wild.
  *
- *   node test/run.mjs
+ *   node --test test/run.mjs
  */
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import test, { describe, it } from 'node:test';
+import assert from 'node:assert/strict';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
@@ -137,110 +139,93 @@ function loadFixture(dir) {
   return { sources, globals };
 }
 
-let failed = 0;
-let passed = 0;
-
-for (const c of CASES) {
-  let fixture;
-  try {
-    fixture = loadFixture(c.dir);
-  } catch {
-    console.log(`SKIP ${c.dir} (fixture missing)`);
-    continue;
-  }
-  if (!fixture.sources.length) {
-    console.log(`SKIP ${c.dir} (fixture empty)`);
-    continue;
-  }
-
-  const { detections } = analyze(fixture);
-  const top = detections[0];
-  const problems = [];
-
-  if (c.primary === null) {
-    if (top) problems.push(`expected no detection, got ${detections.map((d) => d.id).join(', ')}`);
-  } else {
-    if (!top) problems.push(`expected ${c.primary}, got nothing`);
-    else if (top.id !== c.primary) problems.push(`expected ${c.primary}, got ${top.id}`);
-    else if (c.version !== undefined) {
-      const got = top.version ? top.version.text : null;
-      if (got !== c.version) problems.push(`version: expected ${JSON.stringify(c.version)}, got ${JSON.stringify(got)}`);
-    }
-
-    const ids = detections.map((d) => d.id);
-    for (const id of c.also || []) {
-      if (!ids.includes(id)) problems.push(`expected ${id} to be reported too, got ${ids.join(', ') || '(none)'}`);
-    }
-    const foldedIn = ((top && top.builtOn) || []).map((b) => b.id);
-    for (const id of c.builtOn || []) {
-      if (!foldedIn.includes(id)) {
-        problems.push(`expected ${id} folded into ${c.primary}, got ${foldedIn.join(', ') || '(none)'}`);
+describe('signature engine', () => {
+  for (const c of CASES) {
+    it(c.dir, (t) => {
+      let fixture;
+      try {
+        fixture = loadFixture(c.dir);
+      } catch {
+        t.skip('fixture missing');
+        return;
       }
-    }
-    if (c.only) {
-      const allowed = new Set([c.primary, ...(c.also || [])]);
-      const extra = ids.filter((id) => !allowed.has(id));
-      if (extra.length) problems.push(`expected only ${[...allowed].join(' + ')}, also got ${extra.join(', ')}`);
-    }
+      if (!fixture.sources.length) {
+        t.skip('fixture empty');
+        return;
+      }
+
+      const { detections } = analyze(fixture);
+      const top = detections[0];
+
+      if (c.primary === null) {
+        assert.strictEqual(
+          detections.length,
+          0,
+          `expected no detection, got ${detections.map((d) => d.id).join(', ')}`
+        );
+      } else {
+        assert.ok(top, `expected ${c.primary}, got nothing`);
+        assert.strictEqual(top.id, c.primary, `expected ${c.primary}, got ${top ? top.id : 'nothing'}`);
+
+        if (c.version !== undefined) {
+          const got = top.version ? top.version.text : null;
+          assert.strictEqual(got, c.version, `version: expected ${JSON.stringify(c.version)}, got ${JSON.stringify(got)}`);
+        }
+
+        const ids = detections.map((d) => d.id);
+        for (const id of c.also || []) {
+          assert.ok(
+            ids.includes(id),
+            `expected ${id} to be reported too, got ${ids.join(', ') || '(none)'}`
+          );
+        }
+        const foldedIn = ((top && top.builtOn) || []).map((b) => b.id);
+        for (const id of c.builtOn || []) {
+          assert.ok(
+            foldedIn.includes(id),
+            `expected ${id} folded into ${c.primary}, got ${foldedIn.join(', ') || '(none)'}`
+          );
+        }
+        if (c.only) {
+          const allowed = new Set([c.primary, ...(c.also || [])]);
+          const extra = ids.filter((id) => !allowed.has(id));
+          assert.deepStrictEqual(
+            extra,
+            [],
+            `expected only ${[...allowed].join(' + ')}, also got ${extra.join(', ')}`
+          );
+        }
+      }
+    });
   }
 
-  const label = top
-    ? `${top.id}${top.version ? ' ' + top.version.text : ''} (${top.confidence})` +
-      (top.builtOn ? ` on ${top.builtOn.map((b) => b.id).join('+')}` : '') +
-      (detections.length > 1 ? ` + ${detections.slice(1).map((d) => d.id).join(', ')}` : '')
-    : '(none)';
-  if (problems.length) {
-    failed++;
-    console.log(`FAIL ${c.dir.padEnd(18)} -> ${label}`);
-    for (const p of problems) console.log(`      ${p}`);
-  } else {
-    passed++;
-    console.log(`ok   ${c.dir.padEnd(18)} -> ${label}`);
-  }
-}
-
-// A page really running two bundlers must surface both (the devil case).
-{
-  const sources = [...loadFixture('vite8').sources, ...loadFixture('webpack5').sources];
-  const { detections, conflicts } = analyze({ sources, globals: [] });
-  const ids = detections.map((d) => d.id).sort();
-  if (ids.join(',') === 'vite,webpack' && conflicts.includes('bundler')) {
-    passed++;
-    console.log('ok   mixed vite+webpack  -> both reported, flagged as a conflict');
-  } else {
-    failed++;
-    console.log(`FAIL mixed vite+webpack  -> got ${ids.join(',') || '(none)'} conflicts=${conflicts.join(',')}`);
-  }
-}
-
-// jQuery beside a framework is normal, not a conflict -- that distinction is
-// what keeps the devil icon meaningful.
-{
-  const { detections, conflicts } = analyze({
-    sources: [],
-    globals: [{ name: 'jQuery', version: '3.7.1' }, { name: 'webpackChunkapp' }, { name: '__VUE__' }],
+  // A page really running two bundlers must surface both (the devil case).
+  it('mixed vite+webpack', () => {
+    const sources = [...loadFixture('vite8').sources, ...loadFixture('webpack5').sources];
+    const { detections, conflicts } = analyze({ sources, globals: [] });
+    const ids = detections.map((d) => d.id).sort();
+    assert.deepStrictEqual(ids, ['vite', 'webpack']);
+    assert.ok(conflicts.includes('bundler'), `expected bundler conflict, got ${conflicts.join(',')}`);
   });
-  const ids = detections.map((d) => d.id);
-  if (ids.join(',') === 'vue,jquery,webpack' && !conflicts.length) {
-    passed++;
-    console.log('ok   jquery beside vue   -> reported, no conflict');
-  } else {
-    failed++;
-    console.log(`FAIL jquery beside vue   -> ${ids.join(',')} conflicts=${conflicts.join(',')}`);
-  }
-}
 
-// window globals alone should be enough, with no script bodies at all.
-{
-  const { detections } = analyze({ sources: [], globals: ['webpackChunkmyapp'] });
-  if (detections.length === 1 && detections[0].id === 'webpack' && detections[0].version.text === '5') {
-    passed++;
-    console.log('ok   globals-only        -> webpack 5');
-  } else {
-    failed++;
-    console.log(`FAIL globals-only -> ${JSON.stringify(detections.map((d) => d.id))}`);
-  }
-}
+  // jQuery beside a framework is normal, not a conflict -- that distinction is
+  // what keeps the devil icon meaningful.
+  it('jquery beside vue', () => {
+    const { detections, conflicts } = analyze({
+      sources: [],
+      globals: [{ name: 'jQuery', version: '3.7.1' }, { name: 'webpackChunkapp' }, { name: '__VUE__' }],
+    });
+    const ids = detections.map((d) => d.id);
+    assert.deepStrictEqual(ids, ['vue', 'jquery', 'webpack']);
+    assert.deepStrictEqual(conflicts, []);
+  });
 
-console.log(`\n${passed} passed, ${failed} failed`);
-process.exit(failed ? 1 : 0);
+  // window globals alone should be enough, with no script bodies at all.
+  it('globals-only', () => {
+    const { detections } = analyze({ sources: [], globals: ['webpackChunkmyapp'] });
+    assert.strictEqual(detections.length, 1);
+    assert.strictEqual(detections[0].id, 'webpack');
+    assert.strictEqual(detections[0].version.text, '5');
+  });
+});
+
