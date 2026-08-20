@@ -1,4 +1,4 @@
-# FE Stack Detector
+# Stack Detector
 
 A Firefox and Chrome extension that works out what the page you are looking at
 was built with — the framework, the UI library and the bundler — and turns the
@@ -50,7 +50,7 @@ The icon appears straight away and survives restarts. Chrome shows a
 *"Disable developer mode extensions"* warning on startup — that is the normal
 nag for any unpacked extension.
 
-Click the puzzle-piece icon and pin *FE Stack Detector* so the logo stays visible
+Click the puzzle-piece icon and pin *Stack Detector* so the logo stays visible
 in the toolbar, which is rather the point of it.
 
 After changing the source, run `npm run build` again and press **reload** ↻ on
@@ -66,9 +66,9 @@ Then **grant site access**, or it will detect much less: Firefox MV3 makes host
 permissions opt-in, so until you allow it the extension can read the page but
 never the script files themselves.
 
-- Click the puzzle-piece icon → the gear next to *FE Stack Detector* → **Always
+- Click the puzzle-piece icon → the gear next to *Stack Detector* → **Always
   Allow on All Sites**
-- Or `about:addons` → FE Stack Detector → **Permissions** → *Access your data for
+- Or `about:addons` → Stack Detector → **Permissions** → *Access your data for
   all websites*
 
 **Temporary add-ons disappear when Firefox restarts.** Loading it again is the

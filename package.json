@@ -1,5 +1,5 @@
 {
-  "name": "fe-stack-detector",
+  "name": "stack-detector",
   "version": "2.0.0",
   "private": true,
   "description": "Browser extension that detects the frontend framework and bundler behind the current site",
