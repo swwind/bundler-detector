@@ -286,7 +286,7 @@
           desc: 'data-rspack attribute on injected <script>/<link>',
         },
         // ESM chunks export their module ids instead of registering through a
-        // rspackChunk global. seen: github.com app-runtime-7e66544b174a0994.js
+        // rspackChunk global.
         {
           id: 'rspack-esm-id',
           where: ['js'],
