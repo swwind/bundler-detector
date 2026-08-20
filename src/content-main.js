@@ -52,7 +52,7 @@
    * have historically mattered -- less complete, never wrong.
    */
   const FALLBACK_INTERESTING =
-    /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite|__VUE|Vue$|React$|ReactDOM$|preact$|jQuery$|angular$|Alpine$|htmx$|ko$|Backbone$|Ember|Stimulus$|__svelte|__sveltekit|__NEXT|__next|__NUXT|useNuxtApp|__remix|__reactRouter|___loader|docusaurus|__VITEPRESS|__VP_|qwikevents|litElementVersions|litHtmlVersions|reactiveElementVersions|Astro$)/;
+    /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite|__VUE|Vue$|React$|ReactDOM$|preact$|jQuery$|angular$|Alpine$|htmx$|ko$|Backbone$|Ember|Stimulus$|__svelte|__sveltekit|__NEXT|__next|__NUXT|useNuxtApp|__remix|___loader|docusaurus|__VITEPRESS|__VP_|qwikevents|litElementVersions|litHtmlVersions|reactiveElementVersions|Astro$)/;
 
   /**
    * A version string has to look like one. jQuery publishes "3.7.1" and Svelte

@@ -178,18 +178,10 @@
           weight: STRONG,
           desc: '__remixContext hydration payload on window',
         },
-        // React Router 7 is Remix's framework mode under a new name.
-        {
-          id: 'react-router-globals',
-          where: ['global'],
-          re: /^__reactRouter(Context|Manifest|RouteModules)$/,
-          weight: STRONG,
-          desc: '__reactRouterContext hydration payload (React Router 7)',
-        },
         {
           id: 'remix-payload',
           where: ['js', 'html'],
-          re: /window\.__remixContext|window\.__reactRouterContext/,
+          str: 'window.__remixContext',
           weight: STRONG,
           desc: 'window.__remixContext bootstrap assignment',
         },
