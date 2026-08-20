@@ -17,7 +17,7 @@
   // Prefixes worth reporting. Chunk registries are suffixed with a
   // project-specific name or hash, so these are prefix matches.
   const INTERESTING =
-    /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite|__VITE|__NEXT_DATA__|__next_f|__NUXT__|__remixContext|__SVELTEKIT)/;
+    /^(webpackChunk|webpackJsonp|webpackHotUpdate|rspackChunk|rspackHotUpdate|parcelRequire|TURBOPACK|__turbopack|__vite|__VITE|__NEXT_DATA__|__next_f|__NUXT__|__remixContext|__SVELTEKIT|Astro$)/;
 
   function collect() {
     const found = [];
