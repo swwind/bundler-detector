@@ -13,10 +13,10 @@ Click the icon for the details: what was found, which version (as precisely as
 the page allows), what it was built on, and the exact byte patterns that led to
 that conclusion.
 
-![The extension on nextjs.org: the toolbar icon has become the Next.js mark, and
-the popup reads "Next.js v16.3.1-canary.24" with high confidence, shows chips for
-the React, Turbopack and webpack markers folded into it, and offers 14 pieces of
-evidence](example.jpg)
+![The extension on anthropic.com: the toolbar icon has become the jQuery mark,
+and the popup reads "jQuery v3.5.1 - with Rspack", listing jQuery under UI
+LIBRARY and Rspack v1.3.9 under BUNDLER with a webpack 5 chip folded into it,
+both with high confidence and evidence to unfold](example.png)
 
 Not on any store — clone it and load it yourself.
 
