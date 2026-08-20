@@ -292,6 +292,7 @@
           where: ['js'],
           re: /\b__rspack_esm_ids?\s*=/,
           weight: STRONG,
+          min: 2,
           desc: '__rspack_esm_id ESM chunk metadata',
         },
         // The jackpot: Rspack 1.x stamps its exact version into the runtime.

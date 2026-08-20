@@ -92,7 +92,7 @@ Those are the verdicts it actually produced when tested against the live sites.
 | --- | --- | --- |
 | **Vite** | `vite:preloadError`, `Unable to preload CSS for`, `__vite__mapDeps`, the `<script type="module" crossorigin src="/assets/…">` entry tag | major version, narrowed to a range |
 | **webpack** | `self.webpackChunk*` (v5), `window.webpackJsonp` (≤4), `data-webpack` attribute, `__webpack_require__` | major version only |
-| **Rspack** | `__rspack_esm_id` ESM chunk metadata, `self.rspackChunk*` and `data-rspack` (≥2), or the `ruid="bundler=rspack@x.y.z"` runtime stamp (1.x) | **exact version** from `ruid`, `≥ 2` from the classic v2 runtime, otherwise unknown |
+| **Rspack** | `self.rspackChunk*` and `data-rspack` (≥2), `__rspack_esm_id` / `__rspack_esm_ids` ESM chunk metadata (≥2), or the `ruid="bundler=rspack@x.y.z"` runtime stamp (1.x) | **exact version** from `ruid`, `≥ 2` otherwise |
 | **Turbopack** | `globalThis.TURBOPACK` registry, `TURBOPACK_ASSET_SUFFIX`, `__turbopack_context__` | not exposed |
 | **Parcel** | `globalThis.parcelRequire*`, `$parcel$` helpers | major version |
 | **esbuild** | `__toESM` / `__commonJS` / `__esm` interop helpers | not exposed |
@@ -115,9 +115,12 @@ the workarounds:
 - **Rspack 1.x** stamps `__webpack_require__.ruid = "bundler=rspack@1.5.8"` into
   the runtime, so the popup shows the exact version. This is also the only thing
   that distinguishes Rspack 1.x from webpack 5 at all — see the caveats below.
+- **Rspack ≥ 2 classic chunks** use `rspackChunk*` and `data-rspack` instead of
+  webpack's `webpackChunk*` and `data-webpack`, so either marker establishes the
+  lower bound.
 - **Rspack ESM chunks** export `__rspack_esm_id` and `__rspack_esm_ids`. Those
-  names identify Rspack reliably, but carry no version, so the popup makes no
-  version claim from them alone.
+  names likewise identify Rspack ≥ 2, even when the classic chunk markers are
+  absent.
 - **Vite** is placed in a range by markers that entered the preload helper in a
   known release: `Unable to preload CSS` (≥2), `vite:preloadError` (≥4), the
   `meta[property=csp-nonce]` lookup (≥5), `import.meta.resolve` (≥8), and the
@@ -139,8 +142,8 @@ rather than guessing.
 - **Rspack's classic ≤ 1.x runtime is webpack, byte for byte.** Rspack ships a
   deliberately webpack-compatible runtime: 0.7 and 1.x emit `webpackChunk*`
   and `data-webpack` exactly like webpack 5. The `ruid` stamp rescues 1.0+, but
-  an Rspack 0.x site without the ESM metadata is reported as webpack 5 and
-  there is no signal to do better.
+  an Rspack 0.x site is reported as webpack 5 and there is no signal to do
+  better.
 - When Rspack *is* identified, its webpack markers are attributed to Rspack
   instead of being reported as a second bundler. Same for Vite, which absorbs
   the Rollup and esbuild traces it necessarily leaves behind. The popup says so

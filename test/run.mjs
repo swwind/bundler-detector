@@ -143,28 +143,27 @@ for (const c of CASES) {
 }
 
 // Rspack's ESM chunk format has no rspackChunk global or data-rspack
-// attribute. This is the opening metadata from GitHub's referenced asset.
+// attribute. Both exported id markers should independently identify >= 2.
 {
-  const sources = [
-    {
-      kind: 'js',
-      label: 'app-runtime-7e66544b174a0994.js',
-      text: 'performance.mark("js-parse-end:app-runtime-7e66544b174a0994.js");export const __rspack_esm_id=77844;export const __rspack_esm_ids=[77844];export const __webpack_modules__={};',
-    },
-  ];
-  const { detections } = analyze({ sources, globals: [] });
-  const top = detections[0];
-  if (
-    detections.length === 1 &&
-    top.id === 'rspack' &&
-    top.version === null &&
-    top.evidence.some((e) => e.rule === 'rspack-esm-id')
-  ) {
+  const variants = ['export const __rspack_esm_id=77844;', 'export const __rspack_esm_ids=[77844];'];
+  const results = variants.map((text) =>
+    analyze({ sources: [{ kind: 'js', label: 'rspack-esm.js', text }], globals: [] }).detections,
+  );
+  const valid = results.every((detections) => {
+    const top = detections[0];
+    return (
+      detections.length === 1 &&
+      top.id === 'rspack' &&
+      top.version.text === '≥ 2' &&
+      top.evidence.some((e) => e.rule === 'rspack-esm-id')
+    );
+  });
+  if (valid) {
     passed++;
-    console.log('ok   rspack-esm         -> rspack (high)');
+    console.log('ok   rspack-esm         -> rspack ≥ 2 (high)');
   } else {
     failed++;
-    console.log(`FAIL rspack-esm -> ${JSON.stringify(detections.map((d) => d.id))}`);
+    console.log(`FAIL rspack-esm -> ${JSON.stringify(results)}`);
   }
 }
 
