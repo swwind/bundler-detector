@@ -320,7 +320,7 @@ Every icon is the project's own artwork.
 | rspack | the site favicon, `https://assets.rspack.rs/rspack/favicon-128x128.png` |
 | turbopack | the Turbo mark from the [vercel/turborepo](https://github.com/vercel/turborepo) README |
 | astro | the mark from `https://astro.build/favicon.svg` |
-| knockout | the site favicon, `https://knockoutjs.com/img/favicon.ico` — the only square asset Knockout publishes, and only 16 px, so it is scaled up 8× nearest-neighbour; the toolbar's 16 px reproduces the original to within 1/255 |
+| knockout | the [Knockout organisation](https://github.com/knockout) avatar on GitHub — the same script K as their favicon, at 460 px instead of 16 |
 | sveltekit | the Svelte mark, which is SvelteKit's own branding too — the toolbar cannot tell the two apart, the popup can |
 
 Four are recoloured, shape untouched, because their published colour disappears
