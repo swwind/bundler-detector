@@ -255,6 +255,12 @@ describe('signature engine', () => {
     assert.deepStrictEqual(detections.map((d) => d.id), []);
   });
 
+  it('a bare data-action is not stimulus', () => {
+    const dom = ['data-action="delete"', 'data-action="click:menu#toggle"', 'data-remote="true"'].join('\n');
+    const { detections } = analyze({ sources: [{ kind: 'dom', label: 'page DOM', text: dom }], globals: [] });
+    assert.deepStrictEqual(detections.map((d) => d.id), []);
+  });
+
   // window globals alone should be enough, with no script bodies at all.
   it('globals-only', () => {
     const { detections } = analyze({ sources: [], globals: ['webpackChunkmyapp'] });

@@ -727,9 +727,9 @@
         {
           id: 'stimulus-action-attr',
           where: ['dom', 'html'],
-          re: /\bdata-action[="]/,
+          re: /\bdata-action=["'][^"']*->[\w.:-]+#[\w-]+/,
           weight: WEAK,
-          desc: 'data-action attribute',
+          desc: 'data-action="click->controller#method" descriptor',
         },
       ],
     },
