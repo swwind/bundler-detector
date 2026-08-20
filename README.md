@@ -106,6 +106,7 @@ about a page than the **UI library** underneath it, which says more than the
 | **Gatsby** | `___loader`, `___chunkMapping`, `id="___gatsby"`, `/page-data/` | **exact** from the generator meta tag |
 | **Docusaurus** | `window.docusaurus`, `id="__docusaurus"` | **exact** from the generator meta tag |
 | **VitePress** | `__VITEPRESS__`, `__VP_HASH_MAP__` | **exact** from the generator meta tag |
+| **Rspress** | `id="__rspress_root"` (2.x), the `rspress-doc`/`rspress-nav` theme classes, the `rspress-theme-appearance` script | **exact** from the generator meta tag |
 | **Remix / React Router** | `__remixContext`, `__reactRouterContext`, `rmx-…` attributes | ≥7 for React Router |
 
 ### UI libraries
@@ -255,7 +256,8 @@ npm run icons        # re-render icons/src/* to icons/*.png
 - **bundle fixtures** — production output of one small app (an entry module, a
   dynamic import and a CSS import) built with Vite 2 through 8, webpack 4 and 5,
   Rspack 1.x and 2.x, Turbopack, Parcel, Rollup and esbuild; plus each UI
-  framework's own Vite starter template, built and rendered.
+  framework's own Vite starter template, and each site generator's own starter
+  docs site, built and rendered.
 - **page fixtures** — `page.json`, the exact facts the content scripts harvest,
   captured from a real page in a real browser. Each one keeps the *whole*
   harvest, analytics noise included, so a rule that fires on somebody's tag

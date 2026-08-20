@@ -103,6 +103,14 @@ const CASES = [
   // inside the chunk that holds its preload helper -- is not found here.
   { dir: 'vitepress', primary: 'vitepress', version: '2.0.0-alpha.17', builtOn: ['vue'], only: true },
   { dir: 'remix', primary: 'remix', version: null, only: true },
+  // Rspress 2 and 1.x, each the tool's own starter built for production. The
+  // Rsbuild/Rspack markers must arrive folded in; React and React Router live
+  // in vendor chunks this fixture does not carry (see the react-router test
+  // below for that half).
+  { dir: 'rspress', primary: 'rspress', version: '2.0.19', builtOn: ['rspack'], only: true },
+  // 1.x builds with Rspack 1.x, whose webpack-compatible runtime carries the
+  // ruid stamp -- so the exact bundler version arrives as a chip.
+  { dir: 'rspress1', primary: 'rspress', version: '1.47.2', builtOn: ['rspack', 'webpack'], only: true },
   // Astro builds with Vite, so the Vite markers in its runtime must end up
   // folded into the Astro detection rather than reported alongside it.
   { dir: 'astro', primary: 'astro', version: '7.2.1', builtOn: ['vite'], only: true },
@@ -217,6 +225,25 @@ describe('signature engine', () => {
     });
     const ids = detections.map((d) => d.id);
     assert.deepStrictEqual(ids, ['vue', 'jquery', 'webpack']);
+    assert.deepStrictEqual(conflicts, []);
+  });
+
+  // Rspress routes with React Router, which puts __reactRouterVersion on
+  // window. Left alone that is a second meta-framework on the page and so a
+  // conflict -- the devil icon on every Rspress site.
+  // seen: rspress.rs, whose lib-router chunk sets it to "7.18.2"
+  it('rspress absorbs react router', () => {
+    const { detections, conflicts } = analyze({
+      sources: [
+        { kind: 'html', label: 'page markup', text: '<meta name="generator" content="Rspress v2.0.19">' },
+      ],
+      globals: ['__reactRouterVersion', 'rspackChunk_rspress_docs'],
+    });
+    assert.deepStrictEqual(detections.map((d) => d.id), ['rspress']);
+    assert.deepStrictEqual(
+      (detections[0].builtOn || []).map((b) => b.id),
+      ['rspack', 'remix']
+    );
     assert.deepStrictEqual(conflicts, []);
   });
 

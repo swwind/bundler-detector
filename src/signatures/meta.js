@@ -312,6 +312,56 @@
     },
 
     {
+      id: 'rspress',
+      name: 'Rspress',
+      category: 'meta-framework',
+      color: '#0095ff',
+      home: 'https://rspress.rs',
+      rules: [
+        // seen: rspress.rs and rspack.rs (2.0.19), modernjs.dev (2.0.13),
+        // v1.rspress.rs (1.47.2) -- every Rspress build stamps this.
+        {
+          id: 'rspress-generator',
+          where: ['html'],
+          re: /content=["']Rspress v?([0-9][\w.+-]*)["']/,
+          weight: STRONG,
+          exact: (m) => m[1],
+          desc: '<meta name="generator" content="Rspress …">',
+        },
+        // Rspress 2 renamed the app root and added a modal container beside it.
+        // 1.x rendered into a plain #root, which is nobody's evidence.
+        // seen: 2.0.19, modernjs.dev
+        {
+          id: 'rspress-root-id',
+          where: ['dom', 'html'],
+          re: /\bid="__rspress_(root|modal_container)"/,
+          weight: STRONG,
+          min: 2,
+          desc: 'id="__rspress_root" application root (Rspress 2)',
+        },
+        // The one default-theme class both majors write: 1.x named everything
+        // rspress-*, 2.0 moved to rp-* but kept rspress-doc on the article.
+        // seen: 1.47.2 (rspress-nav, rspress-doc), 2.0.19 ("rp-doc rspress-doc")
+        {
+          id: 'rspress-theme-class',
+          where: ['dom', 'html'],
+          re: /\brspress-(doc|nav|sidebar|logo|mobile-hamburger)\b/,
+          weight: MEDIUM,
+          desc: 'rspress-doc / rspress-nav default-theme class',
+        },
+        // The appearance script Rspress inlines into <head> so the theme is
+        // settled before first paint. seen: 1.47.2, 2.0.19
+        {
+          id: 'rspress-theme-storage',
+          where: ['js', 'html'],
+          str: 'rspress-theme-appearance',
+          weight: STRONG,
+          desc: "localStorage 'rspress-theme-appearance' theme script",
+        },
+      ],
+    },
+
+    {
       id: 'astro',
       name: 'Astro',
       category: 'meta-framework',
@@ -457,6 +507,11 @@
       id: 'vitepress',
       builtOn: ['vue', 'vite', 'rollup', 'esbuild'],
       note: 'VitePress is a Vue site generator built on Vite, so those markers are attributed to VitePress.',
+    },
+    {
+      id: 'rspress',
+      builtOn: ['react', 'rspack', 'webpack', 'remix'],
+      note: 'Rspress is a React site generator built on Rsbuild/Rspack and routed by React Router, so those markers are attributed to Rspress.',
     },
     {
       id: 'astro',
