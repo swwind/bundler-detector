@@ -45,6 +45,9 @@ function emitIcons(outDir) {
     // have to be computed.
     copyFileSync(source, join(outDir, `${id}-${LARGEST}.png`));
     const image = decodePng(readFileSync(source));
+    if (image.width !== image.height) {
+      throw new Error(`icons/${file} is ${image.width}x${image.height}; icons must be square or they come out stretched`);
+    }
     for (const size of SIZES) {
       if (size === LARGEST) continue;
       writeFileSync(join(outDir, `${id}-${size}.png`), encodePng(resize(image, size)));

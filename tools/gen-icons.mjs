@@ -21,6 +21,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import { decodePng, encodePng, pad } from './png.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
@@ -75,17 +76,32 @@ function contrastInk(color) {
   return luminance > 0.45 ? '#1b1d21' : '#ffffff';
 }
 
-function render(id, svg) {
-  const png = new Resvg(svg, {
-    fitTo: { mode: 'width', value: SIZE },
+function rasterise(svg, fitTo) {
+  return new Resvg(svg, {
+    fitTo,
     background: 'rgba(0,0,0,0)',
     shapeRendering: 2,
     textRendering: 2,
     font: { loadSystemFonts: true },
-  })
-    .render()
-    .asPng();
-  writeFileSync(join(outDir, `${id}.png`), png);
+  }).render();
+}
+
+/**
+ * Render to a square, fitting the longest side and padding the other.
+ *
+ * Plenty of logos are not square -- Lit's flame is 160 tall by 128 wide, Solid's
+ * ribbons are wider than they are tall. Writing those out at their own aspect
+ * ratio would leave the build to squash them into a square icon.
+ */
+function render(id, svg) {
+  let image = rasterise(svg, { mode: 'width', value: SIZE });
+  if (image.height > SIZE) image = rasterise(svg, { mode: 'height', value: SIZE });
+
+  const png = image.asPng();
+  writeFileSync(
+    join(outDir, `${id}.png`),
+    image.width === SIZE && image.height === SIZE ? png : encodePng(pad(decodePng(png), SIZE))
+  );
 }
 
 const sources = new Map();

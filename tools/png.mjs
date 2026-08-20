@@ -73,11 +73,15 @@ function paeth(a, b, c) {
 }
 
 /**
- * Box filter, averaging in premultiplied alpha.
+ * Box filter to a square, averaging in premultiplied alpha.
  *
  * Averaging straight RGBA would pull the colour of fully transparent pixels
  * into the edges, which on these icons means a dark halo -- @resvg leaves
  * black under transparent areas.
+ *
+ * A non-square input would come out stretched rather than letterboxed, which
+ * is why the icons are squared up when they are rendered and why the build
+ * refuses one that is not.
  */
 export function resize(image, size) {
   const { width, height, pixels } = image;
@@ -111,6 +115,18 @@ export function resize(image, size) {
       out[o + 2] = Math.round(b / a);
       out[o + 3] = Math.round(a / n);
     }
+  }
+  return { width: size, height: size, pixels: out };
+}
+
+/** Centre an image on a transparent square canvas, without scaling it. */
+export function pad(image, size) {
+  const out = Buffer.alloc(size * size * 4);
+  const offsetX = Math.floor((size - image.width) / 2);
+  const offsetY = Math.floor((size - image.height) / 2);
+  for (let y = 0; y < image.height; y++) {
+    const target = ((y + offsetY) * size + offsetX) * 4;
+    image.pixels.copy(out, target, y * image.width * 4, (y + 1) * image.width * 4);
   }
   return { width: size, height: size, pixels: out };
 }
