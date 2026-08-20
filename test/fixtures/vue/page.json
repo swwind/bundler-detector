@@ -1,0 +1,24 @@
+{
+ "note": "npm create vite@6 --template vue-ts, built and rendered on 2026-08-20",
+ "globals": [
+  {
+   "name": "__VUE_INSTANCE_SETTERS__"
+  },
+  {
+   "name": "__VUE_SSR_SETTERS__"
+  },
+  {
+   "name": "__VUE__"
+  }
+ ],
+ "props": [
+  "_vnode",
+  "__vue_app__",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-BtUFu34a.js\"\nid=\"app\"\ndata-v-app=\"\"\ndata-v-48d00746=\"\"\ntarget=\"_blank\"\nclass=\"logo\"\nalt=\"Vite logo\"\ndata-v-cc337d8c=\"\"\n.logo\n.vue\n.card\n.read-the-docs",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-BtUFu34a.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-UdvnZh6r.css\">",
+ "urls": [
+  "/assets/index-BtUFu34a.js"
+ ]
+}

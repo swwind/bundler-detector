@@ -1,140 +1,32 @@
 'use strict';
 /**
- * Bundler signature database + matching engine.
- *
- * This file is pure logic: no DOM, no extension APIs. It runs unchanged in the
- * background worker and under Node (see test/run.mjs), so every rule below can
- * be regression-tested against real bundle output.
+ * Bundler signatures.
  *
  * Every rule was derived by building a fixture app with the real tool and
  * reading the production output. The `seen` comment on a rule records the
- * version(s) the pattern was actually observed in.
+ * version(s) the pattern was actually observed in. See test/fixtures/.
+ *
+ * Rule fields:
+ *   where   source kinds to test: 'js' | 'html' | 'url' | 'dom' | 'prop' | 'global'
+ *   str     plain substring (fast path)
+ *   re      regular expression
+ *   all     every substring must appear in the same source
+ *   min/max inclusive major-version bounds implied by a match
+ *   exact   fn(match) -> version string read straight out of the page
+ *   dev     match indicates a dev server rather than a production build
  */
-(function (root, factory) {
-  const api = factory();
-  if (typeof module === 'object' && module.exports) module.exports = api;
-  else root.BundlerSignatures = api;
-})(typeof globalThis !== 'undefined' ? globalThis : self, function () {
-  // Scores are summed per bundler; see CONFIDENCE for how they map to labels.
-  const STRONG = 100; // only this bundler emits it
-  const MEDIUM = 55; // this bundler or a close relative emits it
-  const WEAK = 25; // suggestive, not conclusive
+(function (root) {
+  const STRONG = 100;
+  const MEDIUM = 55;
+  const WEAK = 25;
+  const list = (root.StackSignatures = root.StackSignatures || []);
+  const relations = (root.StackRelations = root.StackRelations || []);
 
-  /**
-   * Rule fields:
-   *   where   which source kinds to test: 'js' | 'html' | 'global' | 'url'
-   *   str     plain substring (fast path)  -- or --
-   *   re      regular expression
-   *   min/max inclusive major-version bounds implied by a match
-   *   exact   fn(match) -> version string read straight out of the bundle
-   *   dev     match indicates a dev server rather than a production build
-   */
-  const BUNDLERS = [
-    // Astro is a build pipeline rather than a bundler -- Vite does the actual
-    // bundling underneath -- but it customises the output so heavily (islands,
-    // its own runtime, its own asset directory) that the page is far better
-    // described as "built with Astro". Its Vite traces are folded in by
-    // applyOverlaps().
-    {
-      id: 'astro',
-      name: 'Astro',
-      color: '#f041ff',
-      home: 'https://astro.build',
-      rules: [
-        // <meta name="generator" content={Astro.generator}>, which most
-        // templates keep. The only marker carrying an exact version.
-        // seen: 7.2.1
-        {
-          id: 'astro-generator',
-          where: ['html'],
-          re: /content=["']Astro v([0-9][\w.+-]*)["']/,
-          weight: STRONG,
-          exact: (m) => m[1],
-          desc: '<meta name="generator" content="Astro v…">',
-        },
-        // Default build.assets directory. The one marker a zero-JS Astro page
-        // still has: it shows up on the stylesheet <link> alone. seen: 7.2.1
-        {
-          id: 'astro-assets-dir',
-          where: ['html', 'url'],
-          str: '/_astro/',
-          weight: STRONG,
-          desc: '/_astro/ build asset directory',
-        },
-        {
-          id: 'astro-island-element',
-          where: ['html'],
-          re: /<astro-island[\s>]/,
-          weight: STRONG,
-          desc: '<astro-island> hydration wrapper in the markup',
-        },
-        // The island runtime is inlined into the page, so it arrives as an
-        // inline script rather than a fetched file. seen: 7.2.1
-        {
-          id: 'astro-island-runtime',
-          where: ['js', 'html'],
-          re: /customElements\.(define|get)\(\s*["'`]astro-island["'`]/,
-          weight: STRONG,
-          desc: 'customElements.define("astro-island") runtime',
-        },
-        {
-          id: 'astro-island-attrs',
-          where: ['js', 'html'],
-          re: /component-url|renderer-url|before-hydration-url/,
-          weight: MEDIUM,
-          desc: 'astro-island component-url/renderer-url attribute',
-        },
-        // ClientRouter (view transitions). seen: 7.2.1
-        {
-          id: 'astro-lifecycle-events',
-          where: ['js', 'html'],
-          re: /astro:(page-load|before-swap|after-swap|before-preparation|after-preparation|hydrate)/,
-          weight: STRONG,
-          desc: 'astro:* lifecycle event',
-        },
-        {
-          id: 'astro-transitions-meta',
-          where: ['js', 'html'],
-          str: 'astro-view-transitions-enabled',
-          weight: STRONG,
-          desc: 'astro-view-transitions-enabled marker',
-        },
-        {
-          id: 'astro-slot',
-          where: ['js', 'html'],
-          re: /["'`]astro-(static-)?slot["'`]/,
-          weight: MEDIUM,
-          desc: '<astro-slot> lookup in the renderer',
-        },
-        {
-          id: 'astro-global',
-          where: ['global'],
-          re: /^Astro$/,
-          weight: MEDIUM,
-          desc: 'window.Astro client-directive registry',
-        },
-        {
-          id: 'astro-dev-toolbar',
-          where: ['js', 'html'],
-          re: /astro-dev-toolbar|astro-dev-overlay/,
-          weight: STRONG,
-          dev: true,
-          desc: 'Astro dev toolbar',
-        },
-        {
-          id: 'astro-dev-scripts',
-          where: ['js', 'html', 'url'],
-          str: 'astro:scripts/',
-          weight: STRONG,
-          dev: true,
-          desc: 'astro:scripts/ dev server virtual module',
-        },
-      ],
-    },
-
+  list.push(
     {
       id: 'vite',
       name: 'Vite',
+      category: 'bundler',
       color: '#a855f7',
       home: 'https://vite.dev',
       rules: [
@@ -256,6 +148,7 @@
     {
       id: 'rspack',
       name: 'Rspack',
+      category: 'bundler',
       color: '#f93920',
       home: 'https://rspack.rs',
       rules: [
@@ -279,7 +172,7 @@
         },
         {
           id: 'rspack-data-attr',
-          where: ['js', 'html'],
+          where: ['js', 'html', 'dom'],
           str: 'data-rspack',
           weight: STRONG,
           min: 2,
@@ -309,11 +202,9 @@
     {
       id: 'webpack',
       name: 'webpack',
+      category: 'bundler',
       color: '#8dd6f9',
       home: 'https://webpack.js.org',
-      // Rspack ships a deliberately webpack-compatible runtime, so everything
-      // here also matches an Rspack <= 1.x build. Resolved in applyOverlaps().
-      family: 'webpack',
       rules: [
         {
           id: 'webpack-chunk-global',
@@ -335,7 +226,7 @@
         },
         {
           id: 'webpack-data-attr',
-          where: ['js', 'html'],
+          where: ['js', 'html', 'dom'],
           str: 'data-webpack',
           weight: STRONG,
           min: 5,
@@ -394,6 +285,7 @@
     {
       id: 'turbopack',
       name: 'Turbopack',
+      category: 'bundler',
       color: '#e5426b',
       home: 'https://turbo.build/pack',
       rules: [
@@ -432,6 +324,7 @@
     {
       id: 'parcel',
       name: 'Parcel',
+      category: 'bundler',
       color: '#e7a83e',
       home: 'https://parceljs.org',
       rules: [
@@ -465,6 +358,7 @@
     {
       id: 'esbuild',
       name: 'esbuild',
+      category: 'bundler',
       color: '#ffcf00',
       home: 'https://esbuild.github.io',
       // Minified esbuild output renames these helpers, so this only fires on
@@ -490,6 +384,7 @@
     {
       id: 'rollup',
       name: 'Rollup',
+      category: 'bundler',
       color: '#ef3335',
       home: 'https://rollupjs.org',
       // Plain Rollup ESM output carries no runtime at all, so Rollup is only
@@ -510,224 +405,28 @@
           desc: 'Rollup banner comment',
         },
       ],
-    },
-  ];
+    }
+  );
 
-  /**
-   * Relationships that would otherwise produce bogus "multiple bundlers"
-   * verdicts. `absorbs` = when `id` is detected, fold the other tool's
-   * evidence into it instead of reporting it separately.
-   */
-  const OVERLAPS = [
-    // Listed before the Vite entry so that Astro claims Rollup and esbuild
-    // directly; otherwise Vite absorbs them first and their evidence would be
-    // lost when Vite itself is absorbed.
-    {
-      id: 'astro',
-      absorbs: ['vite', 'rollup', 'esbuild'],
-      note: 'Astro builds with Vite, so the Vite/Rollup/esbuild markers on this page are attributed to Astro.',
-    },
+  relations.push(
     {
       id: 'rspack',
-      absorbs: ['webpack'],
+      builtOn: ['webpack'],
       note: "Rspack ships a webpack-compatible runtime, so this page's webpack markers are attributed to Rspack.",
     },
     {
       id: 'vite',
-      absorbs: ['rollup', 'esbuild'],
+      builtOn: ['rollup', 'esbuild'],
       note: 'Vite builds with Rollup and pre-bundles with esbuild, so their traces are attributed to Vite.',
     },
     {
       id: 'turbopack',
-      absorbs: ['webpack'],
+      builtOn: ['webpack'],
       note: 'Next.js serves some webpack-format chunks alongside Turbopack output.',
       // Only absorb when webpack's evidence is weak; a real dual setup keeps both.
       onlyIfWeaker: true,
-    },
-  ];
-
-  const MIN_SCORE = 25; // below this we do not report at all
-
-  function confidenceOf(score) {
-    if (score >= 100) return 'high';
-    if (score >= 50) return 'medium';
-    return 'low';
-  }
-
-  function matchRule(rule, text) {
-    if (rule.str) {
-      const i = text.indexOf(rule.str);
-      return i === -1 ? null : { index: i, match: [rule.str] };
     }
-    const m = rule.re.exec(text);
-    return m ? { index: m.index, match: m } : null;
-  }
+  );
 
-  function snippet(text, index, len) {
-    const start = Math.max(0, index - 24);
-    const raw = text.slice(start, index + (len || 40) + 24);
-    return (start > 0 ? '…' : '') + raw.replace(/\s+/g, ' ').trim() + '…';
-  }
-
-  /**
-   * @param {object} input
-   * @param {Array<{kind:string,label:string,text:string}>} input.sources
-   *        kind is 'js' | 'html' | 'url'; label is shown to the user.
-   * @param {string[]} [input.globals] names observed on the page's window
-   * @returns {{detections: Array, notes: string[]}}
-   */
-  function analyze(input) {
-    const sources = input.sources || [];
-    const globals = input.globals || [];
-    const hitsByBundler = new Map();
-
-    const record = (bundler, rule, where, label, sample) => {
-      let list = hitsByBundler.get(bundler.id);
-      if (!list) hitsByBundler.set(bundler.id, (list = []));
-      // Keep the first hit per rule, but remember how many files showed it.
-      const existing = list.find((h) => h.rule === rule.id);
-      if (existing) {
-        existing.count++;
-        return;
-      }
-      list.push({
-        rule: rule.id,
-        desc: rule.desc,
-        where,
-        label,
-        sample,
-        weight: rule.weight,
-        min: rule.min,
-        max: rule.max,
-        exact: rule.exact ? rule.exact(sample.match) : undefined,
-        dev: !!rule.dev,
-        count: 1,
-      });
-    };
-
-    for (const bundler of BUNDLERS) {
-      for (const rule of bundler.rules) {
-        // Text sources
-        if (rule.where.some((w) => w !== 'global')) {
-          for (const src of sources) {
-            if (!rule.where.includes(src.kind)) continue;
-            const hit = matchRule(rule, src.text);
-            if (!hit) continue;
-            record(bundler, rule, src.kind, src.label, {
-              match: hit.match,
-              text: snippet(src.text, hit.index, hit.match[0].length),
-            });
-          }
-        }
-        // window globals
-        if (rule.where.includes('global')) {
-          for (const name of globals) {
-            const hit = matchRule(rule, name);
-            if (!hit) continue;
-            record(bundler, rule, 'global', 'window', {
-              match: hit.match,
-              text: 'window.' + name,
-            });
-          }
-        }
-      }
-    }
-
-    // Build detections
-    let detections = [];
-    for (const bundler of BUNDLERS) {
-      const hits = hitsByBundler.get(bundler.id);
-      if (!hits || !hits.length) continue;
-      const score = hits.reduce((sum, h) => sum + h.weight, 0);
-      if (score < MIN_SCORE) continue;
-
-      const ctx = {
-        hits,
-        fileWithRule(ruleId) {
-          const hit = hits.find((h) => h.rule === ruleId);
-          if (!hit) return null;
-          return sources.find((s) => s.label === hit.label) || null;
-        },
-      };
-      const refined = bundler.refine ? bundler.refine(ctx) : null;
-
-      detections.push({
-        id: bundler.id,
-        name: bundler.name,
-        color: bundler.color,
-        home: bundler.home,
-        family: bundler.family,
-        score,
-        confidence: confidenceOf(score),
-        version: summarizeVersion(hits, refined),
-        mode: hits.some((h) => h.dev) && !hits.some((h) => !h.dev) ? 'dev' : 'build',
-        evidence: hits
-          .slice()
-          .sort((a, b) => b.weight - a.weight)
-          .map((h) => ({
-            rule: h.rule,
-            desc: h.desc,
-            where: h.where,
-            label: h.label,
-            sample: h.sample.text,
-            count: h.count,
-          })),
-      });
-    }
-
-    const notes = [];
-    detections = applyOverlaps(detections, notes);
-    detections.sort((a, b) => b.score - a.score);
-    return { detections, notes };
-  }
-
-  function applyOverlaps(detections, notes) {
-    const byId = new Map(detections.map((d) => [d.id, d]));
-    const absorbed = new Set();
-    for (const rel of OVERLAPS) {
-      const primary = byId.get(rel.id);
-      if (!primary || primary.confidence === 'low') continue;
-      for (const otherId of rel.absorbs) {
-        const other = byId.get(otherId);
-        if (!other || absorbed.has(otherId)) continue;
-        if (rel.onlyIfWeaker && other.score >= primary.score) continue;
-        absorbed.add(otherId);
-        primary.absorbed = (primary.absorbed || []).concat({
-          id: other.id,
-          name: other.name,
-          version: other.version,
-          evidence: other.evidence,
-        });
-        if (notes.indexOf(rel.note) === -1) notes.push(rel.note);
-      }
-    }
-    return detections.filter((d) => !absorbed.has(d.id));
-  }
-
-  function summarizeVersion(hits, refined) {
-    const exact = hits.find((h) => h.exact);
-    if (exact) return { text: exact.exact, exact: true };
-
-    let min = null;
-    let max = null;
-    for (const h of hits) {
-      if (h.min != null) min = min == null ? h.min : Math.max(min, h.min);
-      if (h.max != null) max = max == null ? h.max : Math.min(max, h.max);
-    }
-    if (refined) {
-      if (refined.min != null) min = min == null ? refined.min : Math.max(min, refined.min);
-      if (refined.max != null) max = max == null ? refined.max : Math.min(max, refined.max);
-    }
-    // Contradictory bounds mean the page mixes builds; fall back to the lower one.
-    if (min != null && max != null && min > max) max = null;
-
-    if (min != null && max != null) {
-      return { text: min === max ? String(min) : `${min} – ${max}`, exact: false };
-    }
-    if (min != null) return { text: `≥ ${min}`, exact: false };
-    if (max != null) return { text: `≤ ${max}`, exact: false };
-    return null;
-  }
-
-  return { BUNDLERS, OVERLAPS, analyze, MIN_SCORE };
-});
+  if (typeof module === 'object' && module.exports) module.exports = list;
+})(typeof globalThis !== 'undefined' ? globalThis : self);

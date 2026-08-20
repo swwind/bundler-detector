@@ -1,0 +1,58 @@
+{
+ "note": "captured from https://svelte.dev on 2026-08-20",
+ "globals": [
+  {
+   "name": "__sveltekit_1gw33p1",
+   "version": "1786638912168"
+  },
+  {
+   "name": "__svelte",
+   "version": "5"
+  },
+  {
+   "name": "si"
+  },
+  {
+   "name": "vam"
+  },
+  {
+   "name": "va"
+  }
+ ],
+ "props": [
+  "0",
+  "__e",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\nclass\nstyle=\"--sk-banner-height: 4.2rem;\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width,initial-scale=1\"\nrel=\"manifest\"\nhref=\"/manifest.json\"\ntype=\"image/png\"\ntitle=\"Svelte\"\nas=\"font\"\ncrossorigin=\"\"\ndisabled=\"\"\nmedia=\"(max-width: 0)\"\nsrc=\"/51a6d87104faba1d/script.js\"\ndefer=\"\"\ndata-sdkn=\"@vercel/speed-insights/sveltekit\"\ndata-sdkv=\"2.1.0-canary\"\ndata-route=\"/\"\ndata-endpoint=\"/51a6d87104faba1d/vitals\"\ndata-sveltekit-preload-data=\"hover\"\nid=\"arrow-left\"\nviewBox=\"0 0 24 24\"\nx1=\"19\"\ny1=\"12\"\nx2=\"5\"\ny2=\"12\"\npoints=\"12 19 5 12 12 5\"\nfill=\"currentColor\"\nd\ncx=\"18\"\ncy=\"6\"\nr=\"3\"\nstroke=\"currentColor\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\nstroke-width=\"4\"\ntransform=\"translate(0, 1)\"\naria-label=\"Primary\"\nwidth=\"20\"\nheight=\"20\"\naction=\"/search\"\nplaceholder=\"Search\"\nspellcheck=\"false\"\ndata-icon=\"discord\"\naria-pressed=\"false\"\naria-expanded=\"false\"\nsrcset\nalt=\"The Svelte compiler packaging up your component code\"\nfetchpriority=\"high\"\nloop=\"\"\nplaysinline=\"\"\nkind=\"captions\"\nsrclang=\"en\"\ndefault=\"\"\ntarget=\"_blank\"\naria-live=\"assertive\"\naria-atomic=\"true\"\n.theme-default\n.typo-default\n.font-elegant\n.scrollbars-invisible\n.light\n.icon\n.svelte-1kjmc9y\n.svelte-wf8082\n.visible\n.home-link\n.desktop\n.links\n.dropdown\n.svelte-fwukmr\n.svelte-hfc14b\n.dropdown-content\n.hover-menu\n.svelte-1ftqc6l\n.secondary\n.menu\n.search-container\n.svelte-curb4c\n.shortcut\n.external-links\n.raised\n.svelte-ocz8b7\n.svelte-16r4un1\n.mobile\n.mobile-menu\n.search\n.menu-toggle\n.svelte-1ftfg6q\n.home\n.svelte-1uha8ag\n.visually-hidden\n.hero\n.svelte-2ha69v\n.hero-content\n.cta\n.machine\n.outer\n.svelte-gb0gm7\n.definition\n.pronunciation\n.description\n.adjective\n.blurb\n.screenshots\n.screenshot\n.companies\n.svelte-10v9vhs\n.wing\n.logos\n.logo\n.svelte-1rricuz\n.inner\n.video-player\n.svelte-6bum2k\n.progress-bar\n.top-controls\n.captions\n.unused\n.mute\n.play-pause\n.svelte-wu4rj6\n.collage\n.intro\n.svelte-1sfg2rp\n.wrapper\n.layout\n.supporters\n.supporter\n.copyright\n.svelte-xm567e\n.banner\n.svelte-1ssgw6y\n.large\n.small\n.primary",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<meta name=\"theme-color\" content=\"#ff3e00\">\n<link rel=\"manifest\" href=\"/manifest.json\">\n<link rel=\"icon\" type=\"image/png\" href=\"https://svelte.dev/favicon.png\">\n<meta name=\"twitter:site\" content=\"@sveltejs\">\n<meta name=\"twitter:creator\" content=\"@sveltejs\">\n<link rel=\"search\" type=\"application/opensearchdescription+xml\" href=\"/opensearch.xml\" title=\"Svelte\">\n<script></script>\n<link href=\"./_app/immutable/assets/eb-garamond-latin-400-normal.DSJrtJSV.woff2\" rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link href=\"./_app/immutable/assets/dm-serif-display-latin-400-normal.C5_t9oOD.woff2\" rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link href=\"./_app/immutable/assets/fira-sans-latin-400-normal.a0AnQzuD.woff2\" rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link href=\"./_app/immutable/entry/start.DKNFWkLU.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/kNaey6uv.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/entry/payload.DSmR2FwN.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/FKK5mAZN.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/DyU4c1Lz.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/BZtWyCfz.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/NZwnX3uc.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/DYrviY11.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/ADgAMhAY.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/entry/app.hSZVDu1D.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/C6WuQBXR.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/nodes/0.DHkWNVt6.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/DSa4zNE4.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/C8IyPcN4.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/Cyuzqnbw.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/CT1pIz1V.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/BH-e7qfU.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/G6Q6idGW.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/NPa8JjIR.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/CF9KOFuD.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/BvYsTj2T.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/DF3K1JG8.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/nodes/5.Bo0Yt7uC.js\" rel=\"modulepreload\">\n<link href=\"./_app/immutable/chunks/DINvc68v.js\" rel=\"modulepreload\">\n<meta name=\"twitter:card\" content=\"summary\">\n<meta name=\"twitter:image\" content=\"https://svelte.dev/images/twitter-thumbnail.jpg\">\n<meta name=\"og:image\" content=\"https://svelte.dev/images/twitter-thumbnail.jpg\">\n<script></script>\n<script></script>\n<meta name=\"twitter:title\" content=\"Svelte\">\n<meta name=\"twitter:description\" content=\"Web development for the rest of us\">\n<meta name=\"description\" content=\"Web development for the rest of us\">\n<link href=\"./_app/immutable/assets/stores.DoLKfBGK.css\" rel=\"stylesheet\" disabled=\"\" media=\"(max-width: 0)\">\n<link href=\"./_app/immutable/assets/search.Bf59X-yG.css\" rel=\"stylesheet\">\n<link href=\"./_app/immutable/assets/Text.Bgvayb8P.css\" rel=\"stylesheet\">\n<link href=\"./_app/immutable/assets/components.JI3lHpuz.css\" rel=\"stylesheet\">\n<link href=\"./_app/immutable/assets/0.qrmhJS98.css\" rel=\"stylesheet\">\n<link href=\"./_app/immutable/assets/5.OTlLV2Pl.css\" rel=\"stylesheet\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://svelte.dev/_app/immutable/nodes/1.CkN-v_fD.js\">\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"https://svelte.dev/_app/immutable/assets/1.CciMtt34.css\">\n<script src=\"/51a6d87104faba1d/script.js\" defer=\"\" data-sdkn=\"@vercel/speed-insights/sveltekit\" data-sdkv=\"2.1.0-canary\" data-route=\"/\" data-endpoint=\"/51a6d87104faba1d/vitals\"></script>\n<script src=\"/_vercel/insights/script.js\" data-sdkn=\"@vercel/analytics\" data-sdkv=\"2.2.0-canary\" defer=\"\"></script>\n<script></script>\n<script></script>\n<script></script>\n<svelte-css-wrapper style=\"display: contents; --max-width: 200rem;\"></svelte-css-wrapper>",
+ "urls": [
+  "/51a6d87104faba1d/script.js",
+  "/_vercel/insights/script.js",
+  "/_app/immutable/entry/start.DKNFWkLU.js",
+  "/_app/immutable/chunks/kNaey6uv.js",
+  "/_app/immutable/entry/payload.DSmR2FwN.js",
+  "/_app/immutable/chunks/FKK5mAZN.js",
+  "/_app/immutable/chunks/DyU4c1Lz.js",
+  "/_app/immutable/chunks/BZtWyCfz.js",
+  "/_app/immutable/chunks/NZwnX3uc.js",
+  "/_app/immutable/chunks/DYrviY11.js",
+  "/_app/immutable/chunks/ADgAMhAY.js",
+  "/_app/immutable/entry/app.hSZVDu1D.js",
+  "/_app/immutable/chunks/C6WuQBXR.js",
+  "/_app/immutable/nodes/0.DHkWNVt6.js",
+  "/_app/immutable/chunks/DSa4zNE4.js",
+  "/_app/immutable/chunks/C8IyPcN4.js",
+  "/_app/immutable/chunks/Cyuzqnbw.js",
+  "/_app/immutable/chunks/CT1pIz1V.js",
+  "/_app/immutable/chunks/BH-e7qfU.js",
+  "/_app/immutable/chunks/G6Q6idGW.js",
+  "/_app/immutable/chunks/NPa8JjIR.js",
+  "/_app/immutable/chunks/CF9KOFuD.js",
+  "/_app/immutable/chunks/BvYsTj2T.js",
+  "/_app/immutable/chunks/DF3K1JG8.js",
+  "/_app/immutable/nodes/5.Bo0Yt7uC.js",
+  "/_app/immutable/chunks/DINvc68v.js",
+  "/_app/immutable/nodes/1.CkN-v_fD.js"
+ ]
+}

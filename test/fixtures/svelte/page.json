@@ -1,0 +1,17 @@
+{
+ "note": "npm create vite@6 --template svelte-ts, built and rendered on 2026-08-20",
+ "globals": [
+  {
+   "name": "__svelte",
+   "version": "5"
+  }
+ ],
+ "props": [
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-Dm9duo5e.js\"\nid=\"app\"\ntarget=\"_blank\"\nclass=\"logo svelte-1n46o8q\"\nalt=\"Vite Logo\"\n.logo\n.svelte-1n46o8q\n.svelte\n.card\n.read-the-docs",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-Dm9duo5e.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-BzdrftXt.css\">",
+ "urls": [
+  "/assets/index-Dm9duo5e.js"
+ ]
+}

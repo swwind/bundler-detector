@@ -1,0 +1,53 @@
+{
+ "note": "captured from https://vuejs.org on 2026-08-20",
+ "globals": [
+  {
+   "name": "0"
+  },
+  {
+   "name": "__VP_HASH_MAP__"
+  },
+  {
+   "name": "__VP_SITE_DATA__"
+  },
+  {
+   "name": "__VUE_INSTANCE_SETTERS__"
+  },
+  {
+   "name": "__VUE_SSR_SETTERS__"
+  },
+  {
+   "name": "__vueuse_ssr_handlers__"
+  },
+  {
+   "name": "__VITEPRESS__"
+  },
+  {
+   "name": "__VUE__"
+  },
+  {
+   "name": "fathom"
+  }
+ ],
+ "props": [
+  "_vnode",
+  "__vue_app__",
+  "document:location"
+ ],
+ "dom": "lang=\"en-US\"\ndir=\"ltr\"\nclass=\"prefer-composition prefer-sfc\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width,initial-scale=1\"\nrel=\"preload stylesheet\"\nhref=\"/assets/style.ColQyr9k.css\"\nas=\"style\"\ntype=\"module\"\nsrc=\"/assets/app.-ijJFKIJ.js\"\ncrossorigin=\"\"\nproperty=\"og:url\"\ndata-site=\"XNOLWPLB\"\ndata-spa=\"auto\"\ndefer=\"\"\nasync=\"\"\nid=\"check-dark-mode\"\nstyle\nscrolling=\"no\"\nframeborder=\"0\"\nallowtransparency=\"true\"\ndata-v-6aa535aa=\"\"\ntabindex=\"-1\"\ndata-v-32b691a5=\"\"\ndata-v-bafd4b35=\"\"\ndata-v-4982c5e5=\"\"\ndata-v-3ceb79b0=\"\"\nviewBox=\"0 0 128 128\"\nwidth=\"24\"\nheight=\"24\"\nfill=\"#42b883\"\nd=\"M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z\"\naria-label=\"Search\"\nstroke=\"currentColor\"\nfill-rule=\"evenodd\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\naria-labelledby=\"main-nav-aria-label\"\ndata-v-e27c4648=\"\"\ndata-v-4ba22f22=\"\"\naria-haspopup=\"true\"\naria-expanded=\"false\"\nxmlns=\"http://www.w3.org/2000/svg\"\naria-hidden=\"true\"\nfocusable=\"false\"\ntarget=\"_blank\"\ndata-v-bb9e5d1a=\"\"\ndata-v-6229553e=\"\"\ntitle=\"简体中文 Repository\"\ndata-v-8d120252=\"\"\nrole=\"link\"\ndata-v-ab5fd6b1=\"\"\naria-checked=\"false\"\ndata-v-ee1d816b=\"\"\ndata-v-f650d778=\"\"\ncx=\"12\"\ncy=\"12\"\nr=\"2\"\naria-controls=\"VPNavScreen\"\ndata-v-4152668d=\"\"\ndata-v-b261839b=\"\"\nhidden=\"true\"\ndata-v-7d4b747f=\"\"\nalt=\"Vue.js Kawaii Logo by @icarusgkx\"\ndata-v-bf2d099b=\"\"\ndata-v-03eb1f1f=\"\"\nsrcset=\"https://automation.vuejs.org/images/vuemastery.avif\"\ndata-v-14930d23=\"\"\naria-live=\"polite\"\n.prefer-composition\n.prefer-sfc\n.VPApp\n.VPSkipLink\n.visually-hidden\n.VPNav\n.nav-bar\n.stick\n.VPNavBar\n.container\n.VPNavBarTitle\n.logo\n.text\n.content\n.VPNavBarSearch\n.search\n.DocSearch\n.DocSearch-Button\n.DocSearch-Button-Container\n.DocSearch-Search-Icon\n.DocSearch-Button-Placeholder\n.DocSearch-Button-Keys\n.DocSearch-Button-Key\n.VPNavBarMenu\n.menu\n.vt-flyout\n.VPNavBarMenuGroup\n.vt-flyout-button\n.vt-flyout-button-text\n.vt-flyout-button-text-icon\n.vt-flyout-menu\n.vt-menu\n.vt-menu-items\n.vt-link\n.link\n.vt-menu-link\n.vt-link-icon\n.VPNavBarMenuLink\n.vt-menu-group\n.vt-menu-group-title\n.active\n.VPNavBarLocale\n.vt-locales-btn-icon-container\n.vt-locales-btn-icon\n.css-c4d79v\n.x-padding\n.vt-locales-menu-item\n.vt-locales-menu-item-text\n.repo\n.vt-locales-menu-hr-divider\n.join-translations\n.VPNavBarAppearance\n.appearance\n.vt-switch\n.vt-switch-appearance\n.vt-switch-check\n.vt-switch-icon\n.vt-switch-appearance-sun\n.vt-switch-appearance-moon\n.vt-social-links\n.VPNavBarSocialLinks\n.social-links\n.vt-social-link\n.is-small\n.vt-social-link-icon\n.VPNavBarExtra\n.extra\n.vt-flyout-button-icon\n.vt-menu-item\n.item\n.vt-menu-label\n.vt-menu-action\n.action\n.vt-hamburger\n.VPNavBarHamburger\n.hamburger\n.vt-hamburger-container\n.vt-hamburger-top\n.vt-hamburger-middle\n.vt-hamburger-bottom\n.VPContent\n.VPContentPage\n.tagline\n.accent\n.description\n.actions\n.why-vue\n.icon-play\n.get-started\n.icon\n.setup\n.security\n.vt-box-container\n.vt-box\n.spsr-container\n.platinum\n.landing\n.spsr-item\n.gold\n.sitemap-col\n.VPFooter\n.license\n.copyright",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<meta name=\"description\" content=\"Vue.js - The Progressive JavaScript Framework\">\n<meta name=\"generator\" content=\"VitePress v2.0.0-alpha.17\">\n<link rel=\"preload stylesheet\" href=\"/assets/style.ColQyr9k.css\" as=\"style\">\n<link rel=\"preload stylesheet\" href=\"/vp-icons.css\" as=\"style\">\n<script type=\"module\" src=\"/assets/app.-ijJFKIJ.js\"></script>\n<link rel=\"preload\" href=\"/assets/inter-roman-latin.Cy4MYw_J.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/plugin-vue_export-helper.CHIaqsk5.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/preload-helper.DPeZQNDl.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/client.DMfQEf4t.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/PreferenceSwitch.DF6lUsNE.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/SponsorsGroup.BW1wIfzg.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/src.BgdEtdKT.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/runtime-core.esm-bundler.CNM4Lii6.js\">\n<link rel=\"modulepreload\" href=\"/assets/chunks/runtime-dom.esm-bundler.B-SVyafX.js\">\n<link rel=\"modulepreload\" href=\"/assets/index.md.Derl2x9j.lean.js\">\n<link rel=\"icon\" href=\"/logo.svg\">\n<meta name=\"theme-color\" content=\"#3c8772\">\n<meta property=\"og:url\" content=\"https://vuejs.org/\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:title\" content=\"Vue.js\">\n<meta property=\"og:description\" content=\"Vue.js - The Progressive JavaScript Framework\">\n<meta property=\"og:image\" content=\"https://vuejs.org/images/logo.png\">\n<meta name=\"twitter:site\" content=\"@vuejs\">\n<meta name=\"twitter:card\" content=\"summary\">\n<link rel=\"preconnect\" href=\"https://automation.vuejs.org\">\n<script></script>\n<script></script>\n<script src=\"https://cdn.usefathom.com/script.js\" data-site=\"XNOLWPLB\" data-spa=\"auto\" defer=\"\"></script>\n<script src=\"https://media.bitterbrains.com/main.js?from=vuejs&amp;type=top\" async=\"\"></script>\n<script id=\"check-dark-mode\"></script>\n<script id=\"check-mac-os\"></script>\n<link rel=\"preload\" href=\"/assets/inter-roman-latin.Cy4MYw_J.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"prefetch\" href=\"/assets/guide_quick-start.md.CaQwoadn.js\">\n<link rel=\"prefetch\" href=\"/assets/guide_introduction.md.BEa3JUq9.js\">\n<link rel=\"prefetch\" href=\"/assets/tutorial_index.md.BqjJTnGh.js\">\n<link rel=\"prefetch\" href=\"/assets/examples_index.md.D7Z_BkF6.js\">\n<link rel=\"prefetch\" href=\"/assets/api_index.md.Cdq5VVsr.js\">\n<link rel=\"prefetch\" href=\"/assets/glossary_index.md.DDbsXQdX.js\">\n<link rel=\"prefetch\" href=\"/assets/error-reference_index.md.BJLdK5Dx.js\">\n<link rel=\"prefetch\" href=\"/assets/ecosystem_themes.md.gdMOGk5i.js\">\n<link rel=\"prefetch\" href=\"/assets/guide_scaling-up_tooling.md.DQlCDrpk.js\">\n<link rel=\"prefetch\" href=\"/assets/about_faq.md.Bazpa8gC.js\">\n<link rel=\"prefetch\" href=\"/assets/about_team.md.DN7Z7cYS.js\">\n<link rel=\"prefetch\" href=\"/assets/about_releases.md.dy7YAOYU.js\">\n<link rel=\"prefetch\" href=\"/assets/about_community-guide.md.rjULVaMx.js\">\n<link rel=\"prefetch\" href=\"/assets/about_coc.md.DPoy4PF2.js\">\n<link rel=\"prefetch\" href=\"/assets/about_privacy.md.DkAhaBLC.js\">\n<link rel=\"prefetch\" href=\"/assets/sponsor_index.md.CWm7MZGp.js\">\n<link rel=\"prefetch\" href=\"/assets/partners_index.md.k5V1Rg7I.js\">\n<link rel=\"prefetch\" href=\"/assets/guide_introduction.md.BEa3JUq9.js\">\n<link rel=\"prefetch\" href=\"/assets/guide_quick-start.md.CaQwoadn.js\">\n<script></script>",
+ "urls": [
+  "/assets/app.-ijJFKIJ.js",
+  "/script.js",
+  "/main.js?from=vuejs&type=top",
+  "/assets/chunks/plugin-vue_export-helper.CHIaqsk5.js",
+  "/assets/chunks/preload-helper.DPeZQNDl.js",
+  "/assets/chunks/client.DMfQEf4t.js",
+  "/assets/chunks/PreferenceSwitch.DF6lUsNE.js",
+  "/assets/chunks/SponsorsGroup.BW1wIfzg.js",
+  "/assets/chunks/src.BgdEtdKT.js",
+  "/assets/chunks/runtime-core.esm-bundler.CNM4Lii6.js",
+  "/assets/chunks/runtime-dom.esm-bundler.B-SVyafX.js",
+  "/assets/index.md.Derl2x9j.lean.js"
+ ]
+}

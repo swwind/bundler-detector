@@ -1,0 +1,20 @@
+{
+ "note": "captured from https://stimulus.hotwired.dev on 2026-08-20",
+ "globals": [
+  {
+   "name": "Turbo"
+  },
+  {
+   "name": "plausible"
+  }
+ ],
+ "props": [
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ntype=\"text/css\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\nrel=\"canonical\"\nhref=\"https://stimulus.hotwired.dev/\"\nsizes=\"32x32\"\ncolor=\"#000000\"\nas=\"font\"\ncrossorigin=\"\"\nsrc=\"/assets/main.js\"\ndefer=\"\"\ndata-domain=\"stimulus.hotwired.dev\"\nclass=\"nav-skip\"\naria-label=\"Stimulus\"\nwidth=\"370\"\nheight=\"60\"\nviewBox=\"0 0 370 60\"\nxmlns=\"http://www.w3.org/2000/svg\"\nfill=\"#D9C6A4\"\nd\nid=\"hamburger\"\nfor=\"hamburger\"\ntitle\ndata-controller=\"hello\"\ndata-hello-target=\"name\"\nplaceholder=\"enter a name\"\ndata-action=\"click->hello#greet\"\naria-hidden=\"true\"\ntarget=\"_blank\"\nalt=\"Basecamp\"\n.nav-skip\n.jump\n.jump__list\n.jump__list-link\n.jump__list-link--hotwire\n.jump__list-link--active\n.page-header\n.nav-logo\n.logo\n.logo__icon\n.logo__wordmark\n.nav-checkbox\n.nav-mobile-button\n.nav\n.nav-mobile-button--close\n.nav__list\n.nav__list--horizontal\n.nav__list-link\n.nav__sublist\n.nav__sublist-link\n.grid\n.landing-intro\n.landing-intro__text\n.grid__item\n.grid__item--start-2\n.grid__item--span-10\n.landing-hero\n.grid__item--span-12\n.landing-hero__step\n.landing-hero__step--pointer\n.landing-hero__step-title\n.language-html\n.token\n.comment\n.tag\n.punctuation\n.attr-name\n.attr-value\n.attr-equals\n.language-js\n.keyword\n.string\n.class-name\n.operator\n.function\n.template-string\n.template-punctuation\n.interpolation\n.interpolation-punctuation\n.landing-hello\n.landing-hello__label\n.landing-hello__input\n.landing-hello__button\n.landing-hello__output\n.landing-version\n.landing-summary\n.landing-actions\n.landing-actions__item\n.landing-actions__icon\n.landing-actions__icon--guide\n.landing-actions__icon--install\n.landing-actions__icon--github\n.page-footer\n.footer\n.footer__headline\n.footer__links\n.footer__copyright",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"description\" content=\"Stimulus is a JavaScript framework with modest ambitions. It doesn’t seek to take over your entire front-end—in fact, it’s not concerned with rendering HTML at all. Instead, it’s designed to augment your HTML with just enough behavior to make it shine.\">\n<link rel=\"canonical\" href=\"https://stimulus.hotwired.dev/\">\n<link rel=\"alternate icon\" type=\"image/png\" sizes=\"32x32\" href=\"/assets/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/svg+xml\" href=\"/assets/favicon.svg\">\n<link rel=\"mask-icon\" href=\"/assets/favicon.svg\" color=\"#000000\">\n<link rel=\"apple-touch-icon\" href=\"/assets/favicon-196x196.png\">\n<link rel=\"preload\" href=\"/assets/fonts/Bitter-Roman.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"preload\" href=\"/assets/fonts/Bitter-Italic.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"preload\" href=\"/assets/fonts/Jost-Roman.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"preload\" href=\"/assets/fonts/Jost-Italic.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"preload\" href=\"/assets/fonts/RobotoMono-Roman.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"preload\" href=\"/assets/fonts/RobotoMono-Italic.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"\">\n<link rel=\"stylesheet\" href=\"/assets/main.css\">\n<script src=\"/assets/main.js\" type=\"module\"></script>\n<script defer=\"\" data-domain=\"stimulus.hotwired.dev\" src=\"https://plausible.io/js/script.js\"></script>",
+ "urls": [
+  "/assets/main.js",
+  "/js/script.js"
+ ]
+}

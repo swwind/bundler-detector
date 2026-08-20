@@ -9,35 +9,34 @@
  */
 
 // Chrome loads this file as a service worker (importScripts available);
-// Firefox lists signatures.js ahead of it in background.scripts.
-if (typeof importScripts === 'function') importScripts('/src/signatures.js');
+// Firefox lists the same files ahead of it in background.scripts.
+if (typeof importScripts === 'function') {
+  importScripts(
+    '/src/signatures/bundlers.js',
+    '/src/signatures/frameworks.js',
+    '/src/signatures/meta.js',
+    '/src/engine.js'
+  );
+}
 
 const api = globalThis.browser && globalThis.browser.runtime ? globalThis.browser : globalThis.chrome;
-const { analyze } = globalThis.BundlerSignatures;
+const { analyze, technologies } = globalThis.StackEngine;
 
-/** Icons that exist in icons/. Anything else falls back to `unknown`. */
-const ICONS = new Set([
-  'vite',
-  'webpack',
-  'rspack',
-  'turbopack',
-  'parcel',
-  'rollup',
-  'esbuild',
-  'astro',
-  'devil',
-  'unknown',
-]);
+/**
+ * Icons live in icons/ under the technology's id, so the set follows the
+ * signature registry: register a technology, run `npm run icons`, done.
+ */
+const ICONS = new Set(technologies().map((t) => t.id).concat(['devil', 'unknown']));
 const ICON_SIZES = [16, 32, 48, 128];
 
-// Every script on the page is read. Bundles are already in the browser cache,
-// so this costs much less than it sounds.
+// Every script the HTML names is read. Bundles are already in the browser
+// cache, so this costs much less than it sounds.
 const MAX_CONCURRENCY = 6;
 // Within each file only the two ends are searched -- see fetchScript.
 const HEAD_BYTES = 256 * 1024;
 const TAIL_BYTES = 256 * 1024;
 const MAX_FILE_BYTES = 8 * 1024 * 1024;
-const MAX_EVIDENCE_PER_BUNDLER = 12;
+const MAX_EVIDENCE_PER_TECH = 12;
 
 /** tabId -> result, mirrored into storage.session so it survives worker restarts. */
 const results = new Map();
@@ -109,7 +108,7 @@ async function fetchScript(url) {
 }
 
 /**
- * Files most likely to carry the runtime go first. Everything gets read either
+ * Files most likely to carry a runtime go first. Everything gets read either
  * way; this only decides the order, and so which file a rule matched in several
  * places cites as its evidence.
  */
@@ -119,9 +118,9 @@ function prioritize(urls) {
     const path = url.split('?')[0];
     const base = path.slice(path.lastIndexOf('/') + 1).toLowerCase();
     if (/(runtime|webpack|rspack|turbopack|polyfill)/.test(base)) s += 30;
-    if (/(main|index|entry|app|client|bundle)/.test(base)) s += 20;
-    if (/(vendor|chunk|framework)/.test(base)) s += 10;
-    if (/\/(assets|static|_next|_nuxt|_astro|build|dist)\//.test(path)) s += 5;
+    if (/(main|index|entry|app|client|bundle|framework)/.test(base)) s += 20;
+    if (/(vendor|chunk|react|vue|angular|jquery)/.test(base)) s += 10;
+    if (/\/(assets|static|_next|_nuxt|_astro|_app|build|dist)\//.test(path)) s += 5;
     if (/\.(m?js)$/.test(base)) s += 2;
     return s;
   };
@@ -167,9 +166,9 @@ function shortLabel(url) {
 
 function trim(detections) {
   for (const d of detections) {
-    if (d.evidence.length > MAX_EVIDENCE_PER_BUNDLER) d.evidence = d.evidence.slice(0, MAX_EVIDENCE_PER_BUNDLER);
-    for (const a of d.absorbed || []) {
-      if (a.evidence.length > MAX_EVIDENCE_PER_BUNDLER) a.evidence = a.evidence.slice(0, MAX_EVIDENCE_PER_BUNDLER);
+    if (d.evidence.length > MAX_EVIDENCE_PER_TECH) d.evidence = d.evidence.slice(0, MAX_EVIDENCE_PER_TECH);
+    for (const b of d.builtOn || []) {
+      if (b.evidence.length > MAX_EVIDENCE_PER_TECH) b.evidence = b.evidence.slice(0, MAX_EVIDENCE_PER_TECH);
     }
   }
   return detections;
@@ -183,16 +182,21 @@ async function handleScan(message, tabId) {
 
   const sources = [
     { kind: 'html', label: 'page markup', text: message.markup || '' },
+    { kind: 'dom', label: 'page DOM', text: message.dom || '' },
+    { kind: 'prop', label: 'DOM properties', text: (message.props || []).join('\n') },
     { kind: 'url', label: 'resource URLs', text: (message.scriptUrls || []).join('\n') },
     ...(message.inlineScripts || []),
     ...fetched,
   ];
 
-  const { detections, notes } = analyze({ sources, globals: message.globals || [] });
+  const { detections, notes, conflicts } = analyze({ sources, globals: message.globals || [] });
   trim(detections);
 
   const confident = detections.filter((d) => d.confidence !== 'low');
-  const icon = confident.length > 1 ? 'devil' : confident.length === 1 ? confident[0].id : 'unknown';
+  // Detections arrive in priority order -- framework before bundler -- so the
+  // first confident one is the most telling thing about the page. Two
+  // technologies that should not share a page get the devil instead.
+  const icon = conflicts.length ? 'devil' : confident.length ? confident[0].id : 'unknown';
 
   const result = {
     pageUrl: message.pageUrl,
@@ -201,6 +205,7 @@ async function handleScan(message, tabId) {
     reason: message.reason,
     detections,
     notes,
+    conflicts,
     icon,
     stats: {
       scriptsSeen: (message.scriptUrls || []).length,
@@ -208,6 +213,7 @@ async function handleScan(message, tabId) {
       scriptsFailed: failures.length,
       inlineScripts: (message.inlineScripts || []).length,
       globals: (message.globals || []).length,
+      props: (message.props || []).length,
       bytes,
     },
     failures: failures.slice(0, 5),
@@ -230,9 +236,9 @@ async function handleScan(message, tabId) {
 
 function titleFor(result) {
   const list = result.detections.filter((d) => d.confidence !== 'low');
-  if (!list.length) return 'No bundler detected — click for details';
-  const names = list.map((d) => d.name + (d.version ? ' ' + d.version.text : ''));
-  return names.join(' + ') + ' — click for details';
+  if (!list.length) return 'Nothing recognised — click for details';
+  const label = (d) => d.name + (d.version ? ' ' + d.version.text : '');
+  return list.map(label).join(' + ') + ' — click for details';
 }
 
 async function getResult(tabId) {
@@ -250,21 +256,21 @@ async function getResult(tabId) {
 api.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (!message || typeof message.type !== 'string') return;
 
-  if (message.type === 'bundler-detector:scan') {
+  if (message.type === 'stack-detector:scan') {
     const tabId = sender.tab && sender.tab.id;
     if (tabId == null) return;
-    handleScan(message, tabId).catch((error) => console.error('[bundler-detector] scan failed', error));
+    handleScan(message, tabId).catch((error) => console.error('[stack-detector] scan failed', error));
     return; // no response needed
   }
 
-  if (message.type === 'bundler-detector:get') {
+  if (message.type === 'stack-detector:get') {
     getResult(message.tabId).then(sendResponse);
     return true; // async response
   }
 
-  if (message.type === 'bundler-detector:rescan') {
+  if (message.type === 'stack-detector:rescan') {
     api.tabs
-      .sendMessage(message.tabId, { type: 'bundler-detector:rescan' })
+      .sendMessage(message.tabId, { type: 'stack-detector:rescan' })
       .then(() => sendResponse({ ok: true }))
       .catch((error) => sendResponse({ ok: false, error: String(error && error.message) }));
     return true;

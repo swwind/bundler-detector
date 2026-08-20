@@ -1,0 +1,29 @@
+{
+ "note": "captured from https://jquery.com on 2026-08-20",
+ "globals": [
+  {
+   "name": "$",
+   "version": "4.0.0"
+  },
+  {
+   "name": "jQuery",
+   "version": "4.0.0"
+  },
+  {
+   "name": "tsminibar"
+  }
+ ],
+ "props": [
+  "jQuery400052569501872878181",
+  "0",
+  "1",
+  "document:location"
+ ],
+ "dom": "class=\"js\"\nlang=\"en-US\"\ncharset=\"utf-8\"\nhttp-equiv=\"X-UA-Compatible\"\ncontent=\"IE=edge\"\nname=\"author\"\nrel=\"shortcut icon\"\nhref=\"https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico\"\nsrc=\"https://code.jquery.com/jquery-4.0.0.min.js\"\ndefer=\"\"\ntype=\"module\"\ntitle=\"oEmbed (JSON)\"\nid=\"global-styles-inline-css\"\nhidden=\"\"\naria-expanded=\"false\"\naria-haspopup=\"menu\"\nrole=\"menu\"\naria-labelledby=\"menu-trigger\"\ndata-origin=\"https://typesense.jquery.com\"\ndata-collection=\"jquery_com\"\ndata-key=\"Zh8mMgohXECel9wjPwqT7lekLSG3OCgz\"\ndata-foot=\"true\"\ndata-group=\"true\"\naction=\"https://jquery.com/\"\nmethod=\"get\"\naria-label=\"Search jQuery\"\nvalue=\"\"\nplaceholder=\"Search\"\nautocomplete=\"off\"\nviewBox=\"0 0 12 12\"\nwidth=\"20\"\nheight=\"20\"\naria-hidden=\"true\"\ntabindex=\"-1\"\nd=\"M9 3L3 9M3 3L9 9\"\nalt\nloading=\"lazy\"\n.js\n.jquery\n.home\n.wp-singular\n.page-template\n.page-template-page-fullwidth\n.page-template-page-fullwidth-php\n.page\n.page-id-10\n.wp-theme-jquery\n.wp-child-theme-jquerycom\n.page-slug-index\n.single-author\n.singular\n.constrain\n.projects\n.project\n.jquery-ui\n.jquery-mobile\n.sizzlejs\n.qunitjs\n.links\n.dropdown\n.wide\n.clearfix\n.logo\n.menu-top-container\n.button\n.menu-trigger\n.menu\n.menu-item\n.searchform\n.tsmb-form--slash\n.visuallyhidden\n.tsmb-icon-close\n.row\n.content-full\n.full-width\n.twelve\n.columns\n.download\n.four\n.push-eight\n.large\n.download-button-content\n.download-icon\n.download-message\n.download-version\n.download-options\n.support-notice\n.features-box\n.eight\n.pull-four\n.feature-box\n.lightweight-footprint\n.center-txt\n.feature-box-image\n.css3-compliant\n.cross-browser\n.block\n.syntaxhighlighter\n.javascript\n.gutter\n.line\n.n1\n.code\n.container\n.hljs-string\n.n2\n.n3\n.n4\n.hljs-keyword\n.hljs-function\n.hljs-params\n.n5\n.n6\n.n7\n.n8\n.n9\n.hljs-attr\n.hljs-number\n.simple\n.six\n.centered\n.books\n.legal\n.footer-site-links\n.icon-pencil\n.icon-comments\n.icon-twitter\n.icon-github\n.copyright\n.do-link\n.wp-link",
+ "markup": "<meta name=\"author\" content=\"OpenJS Foundation - openjsf.org\">\n<meta name=\"description\" content=\"jQuery: The Write Less, Do More, JavaScript Library\">\n<meta name=\"viewport\" content=\"width=device-width\">\n<link rel=\"shortcut icon\" href=\"https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico\">\n<link rel=\"stylesheet\" href=\"https://jquery.com/wp-content/themes/jquery/lib/typesense-minibar/typesense-minibar.css?v=c5fa9b9a\">\n<link rel=\"stylesheet\" href=\"https://jquery.com/wp-content/themes/jquery/css/base.css?v=4a1b65ae\">\n<link rel=\"stylesheet\" href=\"https://jquery.com/wp-content/themes/jquery.com/style.css?v=8acf125c\">\n<script src=\"https://code.jquery.com/jquery-4.0.0.min.js\"></script>\n<script src=\"https://jquery.com/wp-content/themes/jquery/js/main.js?v=10baaffd\"></script>\n<script defer=\"\" type=\"module\" src=\"https://jquery.com/wp-content/themes/jquery/lib/typesense-minibar/typesense-minibar.js?v=830f1ee1\"></script>\n<meta name=\"robots\" content=\"max-image-preview:large\">\n<link rel=\"alternate\" title=\"oEmbed (JSON)\" type=\"application/json+oembed\" href=\"https://jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjquery.com%2F\">\n<link rel=\"alternate\" title=\"oEmbed (XML)\" type=\"text/xml+oembed\" href=\"https://jquery.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjquery.com%2F&amp;format=xml\">\n<link rel=\"https://api.w.org/\" href=\"https://jquery.com/wp-json/\">\n<link rel=\"alternate\" title=\"JSON\" type=\"application/json\" href=\"https://jquery.com/wp-json/wp/v2/pages/10\">\n<meta name=\"generator\" content=\"WordPress 7.0.4\">\n<link rel=\"canonical\" href=\"https://jquery.com/\">\n<link rel=\"me\" href=\"https://social.lfx.dev/@jquery\">\n<script type=\"speculationrules\"></script>\n<typesense-minibar data-origin=\"https://typesense.jquery.com\" data-collection=\"jquery_com\" data-key=\"Zh8mMgohXECel9wjPwqT7lekLSG3OCgz\" data-foot=\"true\" data-group=\"true\"></typesense-minibar>",
+ "urls": [
+  "/jquery-4.0.0.min.js",
+  "/wp-content/themes/jquery/js/main.js?v=10baaffd",
+  "/wp-content/themes/jquery/lib/typesense-minibar/typesense-minibar.js?v=830f1ee1"
+ ]
+}

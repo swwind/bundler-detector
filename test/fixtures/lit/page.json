@@ -1,0 +1,38 @@
+{
+ "note": "npm create vite@6 --template lit-ts, built and rendered on 2026-08-20",
+ "globals": [
+  {
+   "name": "litPropertyMetadata"
+  },
+  {
+   "name": "reactiveElementVersions",
+   "version": "2.1.2"
+  },
+  {
+   "name": "litHtmlVersions",
+   "version": "3.3.3"
+  },
+  {
+   "name": "litElementVersions",
+   "version": "4.2.2"
+  }
+ ],
+ "props": [
+  "_$Ep",
+  "isUpdatePending",
+  "hasUpdated",
+  "_$Em",
+  "enableUpdating",
+  "_$ES",
+  "_$AL",
+  "renderOptions",
+  "_$Do",
+  "renderRoot",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-DKj8ZSn8.js\"",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-DKj8ZSn8.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-BN3zvx7y.css\">\n<my-element></my-element>",
+ "urls": [
+  "/assets/index-DKj8ZSn8.js"
+ ]
+}

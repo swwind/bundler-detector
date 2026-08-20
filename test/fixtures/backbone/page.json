@@ -1,0 +1,50 @@
+{
+ "note": "captured from https://backbonejs.org on 2026-08-20",
+ "globals": [
+  {
+   "name": "_",
+   "version": "1.8.3"
+  },
+  {
+   "name": "$",
+   "version": "1.8.3"
+  },
+  {
+   "name": "jQuery",
+   "version": "1.8.3"
+  },
+  {
+   "name": "$window"
+  },
+  {
+   "name": "Backbone",
+   "version": "1.6.0"
+  },
+  {
+   "name": "__cfBeacon",
+   "version": "2024.11.0"
+  },
+  {
+   "name": "$container"
+  },
+  {
+   "name": "jQuery183098571486862973"
+  }
+ ],
+ "props": [
+  "jQuery183098571486862973",
+  "loaded",
+  "document:location"
+ ],
+ "dom": "http-equiv=\"content-type\"\ncontent=\"text/html;charset=UTF-8\"\nname=\"viewport\"\nrel=\"canonical\"\nhref=\"https://backbonejs.org\"\nid=\"sidebar\"\nclass=\"interface\"\nplaceholder=\"Filter\"\ntype=\"text\"\nautofocus=\"\"\ndata-name=\"Introduction\"\nsrc=\"docs/images/backbone.png\"\nalt=\"Backbone.js\"\nstyle=\"padding-left: 7px; font-size:11px; font-weight: normal;\"\ntitle=\"Run\"\nwidth=\"400\"\nheight=\"427\"\ndata-original=\"docs/images/todos.jpg\"\nintegrity\ndata-cf-beacon\ncrossorigin=\"anonymous\"\n.interface\n.toc_title\n.version\n.toc_section\n.searchable_section\n.container\n.punch\n.text\n.figure\n.columns\n.col-50\n.run\n.runnable\n.header\n.alias\n.small\n.warning\n.example_retina\n.example_image",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width\">\n<link rel=\"canonical\" href=\"https://backbonejs.org\">\n<script src=\"test/vendor/underscore.js\"></script>\n<script src=\"test/vendor/jquery.js\"></script>\n<script src=\"docs/js/jquery.lazyload.js\"></script>\n<script src=\"test/vendor/json2.js\"></script>\n<script src=\"backbone.js\"></script>\n<script src=\"docs/search.js\"></script>\n<script></script>\n<script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496\" integrity=\"sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;e94344b38e9b4669b306b21d1cbf9f38&quot;,&quot;r&quot;:1}\" crossorigin=\"anonymous\"></script>",
+ "urls": [
+  "/test/vendor/underscore.js",
+  "/test/vendor/jquery.js",
+  "/docs/js/jquery.lazyload.js",
+  "/test/vendor/json2.js",
+  "/backbone.js",
+  "/docs/search.js",
+  "/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+ ]
+}

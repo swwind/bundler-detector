@@ -1,0 +1,77 @@
+{
+ "note": "captured from https://alpinejs.dev on 2026-08-20",
+ "globals": [
+  {
+   "name": "__core-js_shared__"
+  },
+  {
+   "name": "Livewire"
+  },
+  {
+   "name": "livewire"
+  },
+  {
+   "name": "livewire_app_url"
+  },
+  {
+   "name": "livewire_token"
+  },
+  {
+   "name": "deferLoadingAlpine"
+  },
+  {
+   "name": "docsearch"
+  },
+  {
+   "name": "Alpine",
+   "version": "3.16.2"
+  },
+  {
+   "name": "fathom"
+  },
+  {
+   "name": "__cfBeacon",
+   "version": "2024.11.0"
+  }
+ ],
+ "props": [
+  "__k",
+  "l",
+  "_x_marker",
+  "_x_attributeCleanups",
+  "_x_cleanups",
+  "_x_dataStack",
+  "_x_lookup",
+  "_x_lastRenderedEl",
+  "_x_effects",
+  "_x_runEffects",
+  "_x_refreshXForScope",
+  "_x_inlineBindings",
+  "_x_bindings",
+  "_x_undoAddedClasses",
+  "_x_doHide",
+  "_x_doShow",
+  "_x_isShown",
+  "_x_transition",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\nrel=\"stylesheet\"\nhref=\"https://cdn.jsdelivr.net/npm/@docsearch/css@3\"\ndefer=\"\"\nsrc\ndata-site=\"AROBLZOR\"\nclass\nid=\"docsearch\"\ntype=\"button\"\naria-label=\"Search (Ctrl+K)\"\nwidth=\"20\"\nheight=\"20\"\nviewBox=\"0 0 20 20\"\naria-hidden=\"true\"\nd\nstroke=\"currentColor\"\nfill=\"none\"\nfill-rule=\"evenodd\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\nstroke-width=\"1.2\"\ntarget=\"_blank\"\nxmlns=\"http://www.w3.org/2000/svg\"\nalt=\"\"\nstyle=\"z-index: -1; margin: 0\"\nx-data\nx-init\nx-for=\"([number, name], key) in steps\"\nhidden=\"\"\n:class=\"currentStep === key && 'bg-gray-800 text-white'\"\n@click=\"currentStep = key\"\nx-text=\"number\"\nx-bind:class=\"expanded || 'h-[450px]'\"\nx-show=\"! expanded\"\nx-bind\ndata-turbo-eval=\"false\"\ndata-turbolinks-eval=\"false\"\nintegrity\ndata-cf-beacon\ncrossorigin=\"anonymous\"\n.absolute\n.flex\n.w-full\n.items-center\n.justify-end\n.gap-4\n.px-6\n.py-4\n.font-medium\n.text-gray-800\n.DocSearch\n.DocSearch-Button\n.DocSearch-Button-Container\n.DocSearch-Search-Icon\n.DocSearch-Button-Placeholder\n.DocSearch-Button-Keys\n.DocSearch-Button-Key\n.DocSearch-Control-Key-Icon\n.hover:text-gray-600\n.block\n.h-5\n.w-5\n.fill-current\n.m-auto\n.flex-col\n.px-8\n.pt-32\n.pb-24\n.text-center\n.md:w-[650px]\n.font-title\n.pt-6\n.text-2xl\n.mx-auto\n.mt-10\n.justify-center\n.rounded-xl\n.border\n.border-transparent\n.bg-gray-900\n.py-3\n.text-lg\n.tracking-wide\n.text-white\n.transition-colors\n.hover:bg-gray-700\n.px-4\n.md:w-[775px]\n.md:px-0\n.relative\n.border-4\n.border-gray-800\n.bg-white\n.md:text-xl\n.space-y-2\n.overflow-x-auto\n.py-6\n.md:overflow-hidden\n.whitespace-pre\n.inset-0\n.left-6\n.-mr-16\n.h-full\n.translate-x-4\n.scale-y-95\n.transform\n.text-6xl\n.font-extrabold\n.space-y-6\n.pt-16\n.text-xl\n.space-x-2\n.px-3\n.py-1\n.ring-gray-800\n.focus:outline-none\n.focus:ring-1\n.bg-gray-800\n.bottom-0\n.left-0\n.right-0\n.z-10\n.h-[150px]\n.bg-gradient-to-t\n.from-white\n.to-transparent\n.items-end\n.py-12\n.pt-12\n.pb-16\n.md:w-[750px]\n.md:pb-0\n.lg:w-[1000px]\n.md:flex-row\n.md:w-[30%]\n.pt-8\n.pb-4\n.md:pb-8\n.font-bold\n.hidden\n.md:block\n.md:w-[10%]\n.md:w-[60%]\n.border-b-4\n.md:border-b-0\n.rounded-b-xl\n.md:rounded-b-none\n.border-l-4\n.border-r-4\n.border-t-4\n.rounded-t-xl\n.overflow-x-hidden\n.py-8\n.hover:overflow-x-auto\n.text-[#48a9c1]\n.left-3\n.top-3\n.box-content\n.md:rounded-t-none\n.md:border-t-0\n.md:pb-16\n.space-y-4\n.py-24\n.leading-relaxed\n.underline",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@docsearch/css@3\">\n<link rel=\"stylesheet\" href=\"https://alpinejs.dev/build/assets/app.dc202bf3.css\">\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/morph@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/sort@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/@alpinejs/ui@3.x.x/dist/cdn.min.js\"></script>\n<script defer=\"\" src=\"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js\"></script>\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&amp;display=swap\" rel=\"stylesheet\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"og:title\" content=\"Alpine.js\">\n<meta name=\"og:description\" content=\"A rugged, minimal framework for composing behavior directly in your markup.\">\n<meta name=\"og:image\" content=\"https://alpinejs.dev/social.jpg\">\n<meta name=\"description\" content=\"A rugged, minimal framework for composing behavior directly in your markup.\">\n<link rel=\"icon\" href=\"/favicon.png\">\n<script src=\"https://cdn.usefathom.com/script.js\" data-site=\"AROBLZOR\" defer=\"\"></script>\n<script src=\"/livewire/livewire.js?id=de3fca26689cb5a39af4\" data-turbo-eval=\"false\" data-turbolinks-eval=\"false\"></script>\n<script data-turbo-eval=\"false\" data-turbolinks-eval=\"false\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/@docsearch/js@3\"></script>\n<script></script>\n<script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496\" integrity=\"sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==\" data-cf-beacon=\"{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;d69104a59b7b48a28cb970743cd28453&quot;,&quot;r&quot;:1}\" crossorigin=\"anonymous\"></script>",
+ "urls": [
+  "/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/morph@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/resize@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/sort@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js",
+  "/npm/@alpinejs/ui@3.x.x/dist/cdn.min.js",
+  "/npm/alpinejs@3.x.x/dist/cdn.min.js",
+  "/script.js",
+  "/livewire/livewire.js?id=de3fca26689cb5a39af4",
+  "/npm/@docsearch/js@3",
+  "/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+ ]
+}

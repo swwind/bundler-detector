@@ -1,0 +1,138 @@
+{
+ "note": "captured from https://emberjs.com on 2026-08-20",
+ "globals": [
+  {
+   "name": "BABEL_POLYFILL_MODULES"
+  },
+  {
+   "name": "__babelPolyfillDefine"
+  },
+  {
+   "name": "__core-js_shared__"
+  },
+  {
+   "name": "clearImmediate"
+  },
+  {
+   "name": "setImmediate"
+  },
+  {
+   "name": "__eri_blurhash"
+  },
+  {
+   "name": "loader"
+  },
+  {
+   "name": "requireModule"
+  },
+  {
+   "name": "requirejs"
+  },
+  {
+   "name": "define"
+  },
+  {
+   "name": "require"
+  },
+  {
+   "name": "runningTests"
+  },
+  {
+   "name": "_classPrivateFieldInitSpec"
+  },
+  {
+   "name": "_checkPrivateRedeclaration"
+  },
+  {
+   "name": "_defineProperty"
+  },
+  {
+   "name": "_toPropertyKey"
+  },
+  {
+   "name": "_toPrimitive"
+  },
+  {
+   "name": "preferNative"
+  },
+  {
+   "name": "EmberENV"
+  },
+  {
+   "name": "webpackChunk_ember_auto_import_"
+  },
+  {
+   "name": "__ember_auto_import__"
+  },
+  {
+   "name": "_eai_r"
+  },
+  {
+   "name": "_eai_d"
+  },
+  {
+   "name": "emberAutoImportDynamic"
+  },
+  {
+   "name": "emberAutoImportSync"
+  },
+  {
+   "name": "__warpDrive_universalCache"
+  },
+  {
+   "name": "@warp-drive/core-types"
+  },
+  {
+   "name": "setWarpDriveLogging"
+  },
+  {
+   "name": "getWarpDriveRuntimeConfig"
+  },
+  {
+   "name": "GoogleAnalyticsObject"
+  },
+  {
+   "name": "ga"
+  },
+  {
+   "name": "L",
+   "version": "1.9.4"
+  },
+  {
+   "name": "google_tag_data"
+  },
+  {
+   "name": "gaplugins"
+  },
+  {
+   "name": "gaGlobal"
+  },
+  {
+   "name": "gaData"
+  },
+  {
+   "name": "dataLayer"
+  },
+  {
+   "name": "google_tag_manager"
+  }
+ ],
+ "props": [
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"utf-8\"\nname=\"description\"\ncontent\nproperty=\"og:description\"\nrel=\"preload\"\nas=\"font\"\ntype=\"font/woff2\"\nhref=\"/fonts/Inter-roman.var.woff2?v=3.15\"\ncrossorigin=\"\"\nintegrity=\"\"\nsizes=\"any\"\nclass=\"application index ember-application\"\nasync=\"\"\nsrc\nid=\"shoebox-ember-data-store\"\nnomodule=\"\"\nrole=\"banner\"\naria-label=\"Primary site navigation\"\nalt=\"home\"\nwidth=\"83\"\nheight=\"40\"\naria-expanded=\"false\"\naria-labelledby=\"hero-title\"\ntitle\nviewBox=\"0 0 647 646\"\nxmlns=\"http://www.w3.org/2000/svg\"\ncx=\"100%\"\ncy=\"0%\"\nfx=\"100%\"\nfy=\"0%\"\nr=\"100%\"\nstop-color=\"#444444\"\noffset=\"0%\"\nstop-opacity=\"0\"\nfill=\"url(#grid-dots-gradient-ember5\"\nfill-rule=\"evenodd\"\nd\ndata-test-image=\"Babel\"\nloading=\"lazy\"\naria-controls=\"ember-addons-panel-0\"\naria-selected=\"true\"\ndata-test-button=\"Manage State\"\ntabindex=\"0\"\ndata-test-panel=\"\"\ndata-test-link=\"http://ember-concurrency.com/\"\ntarget=\"_blank\"\nhidden=\"\"\nxmlns:xlink=\"http://www.w3.org/1999/xlink\"\nx=\"-2%\"\ny=\"-1.7%\"\nfilterUnits=\"objectBoundingBox\"\ndy=\"3\"\nin=\"SourceAlpha\"\nresult=\"shadowOffsetOuter1\"\nstdDeviation=\"2.5\"\nvalues=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0\"\nin2=\"SourceAlpha\"\nk2=\"-1\"\nk3=\"1\"\noperator=\"arithmetic\"\nradius=\"2\"\nx1=\"50%\"\nx2=\"50%\"\ny1=\"0%\"\ny2=\"100%\"\nrx=\"3\"\ntransform=\"translate(5 2)\"\nxlink:href=\"#window-svg-a\"\nfilter=\"url(#window-svg-b)\"\nmask=\"url(#window-svg-e)\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\nstroke=\"#337698\"\nstroke-width=\"2\"\nstroke-opacity=\".1\"\nfont-family=\"Helvetica\"\nfont-size=\"12\"\nopacity=\".4\"\nstyle=\"max-height: 200px\"\ngradientTransform=\"matrix(0 .9989 -1.152 0 .5 -.5)\"\nenable-background=\"new 0 0 1709 735\"\nfill-opacity=\"0.2\"\nclip-rule=\"evenodd\"\nversion=\"1.1\"\n.application\n.index\n.ember-application\n.es-header\n.es-navbar\n.navbar-brand-wrapper\n.navbar-brand\n.navbar-toggler\n.navbar-list\n.navbar-list-item\n.dropdown\n.navbar-list-item-dropdown-toggle\n.navbar-list-item-link\n.bg-shape-boxes-bottom\n.bg-dark\n.container\n.layout\n.lg:col-5\n.text-hero-xl\n.hide-on-mobile\n.text-hero-base\n.mb-2\n.cta-group\n.es-button\n.es-button-secondary\n.bg-light\n.lg:col-4\n.lg:start-2\n.text-center\n.mb-3\n.text-xl\n.max-width\n.bg-light-muted\n.mt-4\n.lg:start-3\n.img-fluid\n.lg:col-2\n.text-lg\n.bg-shape-swipe-bottom\n.lg:col-3\n.lg:start-4\n.ecosystem-icons-container\n.grid-dots\n.ecosystem-icons\n.ecosystem-icon\n.background\n.logo\n.rotate\n.addon-tabs\n.addon-tabs--header\n.addon-tabs--tab\n.active-tab\n.addon-tabs--content\n.addon-tabs--code\n.mt-3\n.bg-muted\n.bg-shape-swipe-top\n.text-light\n.homepage-image-grid\n.homepage-image-grid__scroll-wrapper\n.homepage-image-grid__img-short\n.homepage-image-grid__img\n.homepage-image-grid__img-tall-bottom\n.homepage-image-grid__img-tall-top\n.mb-1\n.ember-view\n.ml-1\n.my-3\n.grid\n.lg:grid-2\n.list-unstyled\n.card\n.card--link\n.card__icon\n.card__content\n.text-md\n.bg-shape-boxes\n.sm:col-3\n.mr-1\n.sm:col-1\n.flex-centered\n.es-footer\n.footer-info\n.footer-info-links\n.footer-logo\n.spacer\n.info-link\n.footer-social\n.undefined\n.st0\n.footer-help\n.py-1\n.footer-statement\n.footer-copyright\n.footer-spacer\n.py-0\n.footer-contributions-wrapper\n.pt-0\n.pb-3\n.footer-contributions\n.sponsor-icons\n.mr-2\n.footer-contributor-logo",
+ "markup": "<meta name=\"description\" content=\"Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast.\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta property=\"og:description\" content=\"Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast.\">\n<meta property=\"og:image\" content=\"https://blog.emberjs.com/images/logos/e-icon.png\">\n<meta name=\"twitter:card\" content=\"summary\">\n<meta name=\"twitter:site\" content=\"@emberjs\">\n<meta name=\"google-site-verification\" content=\"N9yOP2jCLcZBMHUet-JRqU2jnLVPeLDaePpkCqXGQXM\">\n<meta name=\"twitter:image\" content=\"https://blog.emberjs.com/images/logos/e-icon.png\">\n<meta name=\"ember-website/config/environment\" content=\"%7B%22modulePrefix%22%3A%22ember-website%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-history%22%2C%22historySupportMiddleware%22%3Atrue%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_NO_IMPLICIT_ROUTE_MODEL%22%3Atrue%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-website%22%2C%22version%22%3A%220.0.0%2Bfab0fdbc%22%7D%2C%22ember-algolia%22%3A%7B%22algoliaId%22%3A%22BH4D9OD16A%22%2C%22algoliaKey%22%3A%22760969ef081fcadc7e0e60faefdb0907%22%7D%2C%22ember-cli-mirage%22%3A%7B%22enabled%22%3Afalse%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22metricsAdapters%22%3A%5B%7B%22name%22%3A%22GoogleAnalytics%22%2C%22environments%22%3A%5B%22production%22%5D%2C%22config%22%3A%7B%22id%22%3A%22UA-27675533-1%22%2C%22require%22%3A%5B%22linkid%22%5D%7D%7D%5D%2C%22pageTitle%22%3A%7B%22separator%22%3A%22%20-%20%22%2C%22prepend%22%3Atrue%7D%7D\">\n<link rel=\"preload\" as=\"font\" type=\"font/woff2\" href=\"/fonts/Inter-roman.var.woff2?v=3.15\" crossorigin=\"\">\n<link integrity=\"\" rel=\"stylesheet\" href=\"/assets/vendor-d7387aa9e536bb3d0c4adeedb342b512.css\">\n<link integrity=\"\" rel=\"stylesheet\" href=\"/assets/ember-website-e39d9c02bb293d5b0f1ab43a2a25539c.css\">\n<link rel=\"apple-touch-icon\" href=\"/favicons/apple-touch-icon.png\">\n<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"any\">\n<link rel=\"icon\" href=\"/favicons/icon.svg\" type=\"image/svg+xml\">\n<link rel=\"manifest\" href=\"/favicons/manifest.webmanifest\">\n<meta name=\"ember-cli-head-start\" content=\"\">\n<meta property=\"st:title\" content=\"Ember.js - A framework for ambitious web developers\">\n<meta property=\"og:title\" content=\"Ember.js - A framework for ambitious web developers\">\n<meta name=\"twitter:title\" content=\"Ember.js - A framework for ambitious web developers\">\n<meta name=\"ember-cli-head-end\" content=\"\">\n<script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-M2EDG2TVWG&amp;cx=c&amp;_slc=1\"></script>\n<script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/plugins/ua/linkid.js\"></script>\n<script async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>\n<script type=\"fastboot/shoebox\" id=\"shoebox-ember-data-store\"></script>\n<script src=\"/assets/polyfill-shared-052646bf65f26fc552e7f31e77792131.js\" integrity=\"sha256-c9V/C4V6EwF+bzJd00KbJ/kGJBVcQA+vSAEDAqRucRo= sha512-8uBMNHliDMKgFu9NhkdJKf7poENPkkkNX3s5ti2qAdDFM+Qr0r6+6LmNz12nUY58Ry9OXcn6elSLMhANO/esOg==\"></script>\n<script src=\"/assets/polyfill-legacy-f4fdd05d521698f10b24eb135c5454a7.js\" nomodule=\"\" integrity=\"sha256-W/Kfyoz/ynBW95k1EpOxtqDqAJUetB9o+MHpVdxIDfo= sha512-FOvrKsLiCkQy8f9y1iGssYXBanpfhPDT4tGx9LhsyCaNg6zRUJ29POIdcjIFJV+zlylfO2zFd8m2QjqPcoK2CA==\"></script>\n<script src=\"/assets/polyfill-evergreen-2ac6bc8e6a5c535fe8849b8ff507775a.js\" integrity=\"sha256-b6Xpr3kQqbKDJzWwYKiqwT+S4HiERhEhhzxs0DRdcnU= sha512-le40K91ybNGn2MxGbdTYA0um7lpy585YubOPS4Cqy3aGokCNwwsUSIl2m9iY9Sj72mKzlSY67DgTxsn0LJsybw==\"></script>\n<script src=\"/assets/blurhash-91938ae4cff1dc3f3526f34ef87b20b2.js\" integrity=\"sha256-hjveSVYZxjK89tleWkpF1YgUPXK90U9zj2zEEbnQAtQ= sha512-8fxlHxKf18uqVgeeRjKIHCoPOJ76Wl27JFL5atnHs4laIIY2lFuaWDPkANoqY0H6wcs4ywh6SnsTh9n7SQKc1w==\"></script>\n<script src=\"/assets/vendor-a28e0f26e821ce4756d26665ba7784ce.js\" integrity=\"sha256-QjRUVqZrSJpSNiVOs6TsVEcKHCfSQzUA7DwAmHwYwu4= sha512-wu11BEpx+c4o/1jHX0OlMw6GTpoM6dksVa6asPZLWVY21kvljEE25QmAf1X5v+RmgswybqOYuZNoQMKyHc7F9Q==\"></script>\n<script src=\"/assets/chunk.908.9720616d9aa128fc172f.js\" integrity=\"sha256-yLTbu23c4Dt7kLFdfOrsV5MKffXdhebamwVpDW3ebQ8= sha512-Znw2bTzlnysHbkEzBLZB/Uw++9BmkytCwc+n5WO4qf0XM9uteKbcOyFwzebdle319t9fWk0+b7JN2MjwBWTwdA==\"></script>\n<script src=\"/assets/chunk.524.b30fd2dc2cd11b9ab4eb.js\" integrity=\"sha256-fIKXBz737wcMZj14TWQnxMIdRT1WIMnprfkmv+Sg3M4= sha512-df9ZZqfoy4QvS7aIyVSEvuIjW2ZVApOCdJ2OgGGiMMafYkimbgs/6srWsFnhqlkRbLBHQBuqeeYK19/HeRRoLg==\"></script>\n<script src=\"/assets/ember-website-5280589e6357be6e84ff72935fc67dae.js\" integrity=\"sha256-n9mlFekTFxZqtpjaXxwpTEl38SGw2haEuLkJzXiVCS0= sha512-oltzXHcL8txv1FpBbE6jdjlAzVDH1cIBzSNPjQOSo5r5kae2tsb5lwyJZ4OVqpXnPw3+Vyz9L6g+MOAWAh/NnA==\"></script>\n<script id=\"ember_responsive_image_meta\" type=\"application/json\"></script>",
+ "urls": [
+  "/gtag/js?id=G-M2EDG2TVWG&cx=c&_slc=1",
+  "/plugins/ua/linkid.js",
+  "/analytics.js",
+  "/assets/polyfill-shared-052646bf65f26fc552e7f31e77792131.js",
+  "/assets/polyfill-legacy-f4fdd05d521698f10b24eb135c5454a7.js",
+  "/assets/polyfill-evergreen-2ac6bc8e6a5c535fe8849b8ff507775a.js",
+  "/assets/blurhash-91938ae4cff1dc3f3526f34ef87b20b2.js",
+  "/assets/vendor-a28e0f26e821ce4756d26665ba7784ce.js",
+  "/assets/chunk.908.9720616d9aa128fc172f.js",
+  "/assets/chunk.524.b30fd2dc2cd11b9ab4eb.js",
+  "/assets/ember-website-5280589e6357be6e84ff72935fc67dae.js"
+ ]
+}

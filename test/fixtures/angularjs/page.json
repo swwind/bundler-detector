@@ -1,0 +1,93 @@
+{
+ "note": "captured from https://angularjs.org on 2026-08-20",
+ "globals": [
+  {
+   "name": "0"
+  },
+  {
+   "name": "1"
+  },
+  {
+   "name": "2"
+  },
+  {
+   "name": "$",
+   "version": "3.6.0"
+  },
+  {
+   "name": "jQuery",
+   "version": "3.6.0"
+  },
+  {
+   "name": "angular",
+   "version": "1.8.2"
+  },
+  {
+   "name": "r"
+  },
+  {
+   "name": "PR_SHOULD_USE_CONTINUATION"
+  },
+  {
+   "name": "prettyPrintOne"
+  },
+  {
+   "name": "prettyPrint"
+  },
+  {
+   "name": "PR"
+  },
+  {
+   "name": "Firebase"
+  },
+  {
+   "name": "jQuery360077662594655062291"
+  },
+  {
+   "name": "_gaq"
+  },
+  {
+   "name": "__twttrll"
+  },
+  {
+   "name": "twttr"
+  },
+  {
+   "name": "__twttr"
+  },
+  {
+   "name": "_gat"
+  },
+  {
+   "name": "gaGlobal"
+  }
+ ],
+ "props": [
+  "jQuery360077662594655062292",
+  "jQuery360077662594655062291",
+  "allowtransparency",
+  "document:location",
+  "document:jQuery360077662594655062291",
+  "document:jQuery360077662594655062292"
+ ],
+ "dom": "class=\"no-js\"\nlang=\"en\"\ntype=\"text/css\"\ncharset=\"utf-8\"\nhttp-equiv=\"X-UA-Compatible\"\ncontent=\"IE=edge\"\nname=\"viewport\"\nrel=\"icon\"\nhref=\"favicon.ico\"\nasync=\"\"\nsrc=\"https://ssl.google-analytics.com/ga.js\"\nid=\"angularScript\"\nng-controller=\"AppController\"\nwidth=\"117\"\nheight=\"30\"\nalt=\"AngularJS\"\nuib-dropdown=\"\"\nuib-dropdown-toggle=\"\"\naria-haspopup=\"true\"\naria-expanded=\"false\"\nuib-dropdown-menu=\"\"\nrole=\"main\"\ntarget=\"_blank\"\nng-click=\"showDownloadModal()\"\nscrolling=\"no\"\nframeborder=\"0\"\nallowtransparency=\"true\"\nallowfullscreen=\"true\"\ntitle=\"Twitter Follow Button\"\nstyle\ndata-screen-name=\"angular\"\napp-source=\"hello.html\"\nannotate=\"hello.annotation\"\nng-class=\"{'nav-stacked': vertical, 'nav-justified': justified}\"\nng-transclude=\"\"\nheading=\"index.html\"\nuib-tab-heading-transclude=\"\"\nng-repeat=\"tab in tabs\"\nuib-tab-content-transclude=\"tab\"\npopover-append-to-body=\"true\"\npopover-trigger=\"mouseenter\"\npopover-title=\"ng-app\"\nuib-popover-html=\"popover01\"\nhint=\"\"\nuib-popover\nplnkr=\"hello.html\"\napp-run=\"hello.html\"\nng-model=\"yourName\"\nplaceholder=\"Enter a name here\"\nmodule=\"todoApp\"\nng-submit=\"todoList.addTodo()\"\nsize=\"30\"\nvalue=\"add\"\ndata-dismiss=\"modal\"\ncount=\"beerCount\"\nwhen=\"beerForms\"\n.no-js\n.homepage\n.ng-scope\n.header\n.navbar\n.navbar-fixed-top\n.navbar-inner\n.container\n.brand\n.nav\n.dropdown\n.dropdown-toggle\n.dropdown-menu\n.site-notice\n.stage-container\n.hero\n.text-center\n.button\n.button-large\n.button-primary\n.has-shield\n.has-shadow\n.badge-new\n.button-secondary\n.download-btn\n.alert\n.announcement-bar\n.button-small\n.button-plain\n.icon-github-sign\n.icon-large\n.twitter-follow-button\n.twitter-follow-button-rendered\n.about-container\n.row\n.first\n.span4\n.text-display-1\n.text-body\n.example\n.span8\n.app-source\n.ng-isolate-scope\n.nav-tabs\n.uib-tab\n.active\n.ng-binding\n.tab-content\n.tab-pane\n.prettyprint\n.linenums\n.nocode\n.L0\n.dec\n.L1\n.tag\n.pln\n.atn\n.code-annotation\n.L2\n.L3\n.pun\n.atv\n.L4\n.L5\n.L6\n.L7\n.L8\n.L9\n.pull-right\n.btn\n.btn-primary\n.icon-white\n.icon-pencil\n.tabs-spacer\n.well\n.ng-pristine\n.ng-untouched\n.ng-valid\n.ng-empty\n.video-img\n.video\n.text-title\n.kwd\n.str\n.lit\n.unstyled\n.checkbox\n.ng-not-empty\n.done-true\n.done-false\n.modal\n.hide\n.fade\n.modal-header\n.close\n.modal-body\n.tabbable\n.span6\n.spacer\n.footer\n.hello-code\n.todo-code\n.tabs-code",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"Description\" content=\"AngularJS is what HTML would have been, had it been designed for building web-apps.\n                 Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great\n                 testability story all implemented with pure client-side JavaScript!\">\n<link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n<link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n<link href=\"https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700\" rel=\"stylesheet\" type=\"text/css\">\n<link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">\n<link rel=\"stylesheet\" href=\"css/docs.css\">\n<link rel=\"stylesheet\" href=\"css/font-awesome.css\">\n<link href=\"google-code-prettify/prettify.css\" type=\"text/css\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"css/angular.css\">\n<script type=\"text/javascript\" async=\"\" src=\"https://ssl.google-analytics.com/ga.js\"></script>\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\n<script id=\"angularScript\" src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js\"></script>\n<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js\"></script>\n<script charset=\"utf-8\" src=\"https://platform.twitter.com/js/button.2276a045429f6681b56da5eb1dcfa53c.js\"></script>\n<script type=\"text/ng-template\" id=\"hello.html\"></script>\n<script type=\"text/ng-template\" id=\"hello.annotation\"></script>\n<script id=\"todo.js\"></script>\n<script type=\"text/ng-template\" id=\"todo.html\"></script>\n<script type=\"text/ng-template\" id=\"todo.annotation\"></script>\n<script id=\"components.js\"></script>\n<script></script>\n<script id=\"app.js\"></script>\n<script type=\"text/ng-template\" id=\"tabs.html\"></script>\n<script type=\"text/ng-template\" id=\"tabs.annotation\"></script>\n<script src=\"google-code-prettify/prettify.min.js\"></script>\n<script src=\"js/homepage.js\"></script>\n<script src=\"js/download-data.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js\"></script>\n<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.min.js\"></script>\n<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js\"></script>\n<script src=\"https://cdn.firebase.com/js/client/2.0.4/firebase.js\"></script>\n<script src=\"https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js\"></script>\n<script src=\"https://code.angularjs.org/1.8.2/i18n/angular-locale_sk.js\"></script>\n<script></script>\n<script src=\"https://code.angularjs.org/1.8.2/i18n/angular-locale_en-us.js\"></script>\n<script></script>\n<script async=\"\" src=\"https://platform.twitter.com/widgets.js\"></script>\n<script type=\"text/javascript\"></script>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>\n<ng-pluralize count=\"beerCount\" when=\"beerForms\"></ng-pluralize>",
+ "urls": [
+  "/ga.js",
+  "/ajax/libs/jquery/3.6.0/jquery.min.js",
+  "/ajax/libs/angularjs/1.8.2/angular.min.js",
+  "/ajax/libs/angularjs/1.8.2/angular-animate.min.js",
+  "/js/button.2276a045429f6681b56da5eb1dcfa53c.js",
+  "/google-code-prettify/prettify.min.js",
+  "/js/homepage.js",
+  "/js/download-data.js",
+  "/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js",
+  "/ajax/libs/angularjs/1.8.2/angular-resource.min.js",
+  "/ajax/libs/angularjs/1.8.2/angular-route.min.js",
+  "/js/client/2.0.4/firebase.js",
+  "/libs/angularfire/0.9.0/angularfire.min.js",
+  "/1.8.2/i18n/angular-locale_sk.js",
+  "/1.8.2/i18n/angular-locale_en-us.js",
+  "/widgets.js"
+ ]
+}

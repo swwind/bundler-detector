@@ -1,8 +1,8 @@
 {
-  "name": "bundler-detector",
-  "version": "1.0.0",
+  "name": "fe-stack-detector",
+  "version": "2.0.0",
   "private": true,
-  "description": "Browser extension that detects which JavaScript bundler built the current site",
+  "description": "Browser extension that detects the frontend framework and bundler behind the current site",
   "scripts": {
     "build": "node tools/build.mjs",
     "validate": "node tools/validate.mjs",

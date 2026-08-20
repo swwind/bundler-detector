@@ -1,18 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "Bundler Detector",
-  "version": "1.0.0",
-  "description": "Shows which JavaScript bundler a site was built with — Vite, webpack, Rspack, Turbopack and friends — as the toolbar icon.",
+  "name": "FE Stack Detector",
+  "version": "2.0.0",
+  "description": "Shows which frontend framework and bundler a site was built with — React, Vue, Svelte, Next.js, Vite, webpack and friends — as the toolbar icon.",
   "browser_specific_settings": {
     "gecko": {
       "id": "bundler-detector@swwind",
       "strict_min_version": "115.0"
     }
   },
-  "permissions": ["storage"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
-    "scripts": ["src/signatures.js", "src/background.js"]
+    "scripts": [
+      "src/signatures/bundlers.js",
+      "src/signatures/frameworks.js",
+      "src/signatures/meta.js",
+      "src/engine.js",
+      "src/background.js"
+    ]
   },
   "action": {
     "default_popup": "src/popup.html",
@@ -31,15 +41,25 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/content-main.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/content-main.js"
+      ],
       "world": "MAIN",
       "run_at": "document_idle",
       "all_frames": false
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/content.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": false
     }

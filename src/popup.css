@@ -57,9 +57,13 @@ main {
 }
 
 .verdict img {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   flex: none;
+}
+
+.verdict-text {
+  min-width: 0;
 }
 
 .verdict h1 {
@@ -76,7 +80,25 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 260px;
+}
+
+/* ---------- category groups ---------- */
+
+.groups {
+  margin: 14px 0;
+}
+
+.group-label {
+  margin: 14px 0 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--fg-muted);
+}
+
+.groups > .group-label:first-child {
+  margin-top: 0;
 }
 
 /* ---------- detection cards ---------- */
@@ -84,8 +106,7 @@ main {
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 14px 0;
+  gap: 8px;
 }
 
 .card {
@@ -106,6 +127,44 @@ main {
   width: 26px;
   height: 26px;
   flex: none;
+}
+
+/* ---------- "built on" strip ---------- */
+
+.built-on {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px 10px;
+}
+
+.built-on-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--fg-muted);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px 2px 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: 11px;
+}
+
+.chip img {
+  width: 14px;
+  height: 14px;
+}
+
+.chip-version {
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .card-name {
@@ -233,17 +292,10 @@ summary:hover {
   word-break: break-all;
 }
 
-.absorbed {
-  padding: 8px 12px;
-  font-size: 11.5px;
-  color: var(--fg-muted);
-  border-top: 1px solid var(--border);
-}
-
 /* ---------- notes, empty state, footer ---------- */
 
 .notes {
-  margin: 0 0 12px;
+  margin: 12px 0;
   padding: 0;
   list-style: none;
 }

@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Bundler Detector</title>
+    <title>FE Stack Detector</title>
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <main id="app" class="loading">
       <p class="status">Scanning…</p>
     </main>
+    <script src="signatures/bundlers.js"></script>
+    <script src="signatures/frameworks.js"></script>
+    <script src="signatures/meta.js"></script>
+    <script src="engine.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+{
+ "note": "captured from https://knockoutjs.com on 2026-08-20",
+ "globals": [
+  {
+   "name": "$",
+   "version": "1.11.1"
+  },
+  {
+   "name": "jQuery",
+   "version": "1.11.1"
+  },
+  {
+   "name": "ko",
+   "version": "3.5.3"
+  },
+  {
+   "name": "Cufon"
+  },
+  {
+   "name": "XRegExp",
+   "version": "1.5.0"
+  },
+  {
+   "name": "SyntaxHighlighter"
+  },
+  {
+   "name": "requirejs",
+   "version": "2.1.14"
+  },
+  {
+   "name": "require",
+   "version": "2.1.14"
+  },
+  {
+   "name": "define"
+  },
+  {
+   "name": "TicketsViewModel"
+  },
+  {
+   "name": "_gaq"
+  },
+  {
+   "name": "_gat"
+  },
+  {
+   "name": "gaGlobal"
+  }
+ ],
+ "props": [
+  "cufid",
+  "__ko__1787203429947",
+  "0",
+  "1",
+  "2",
+  "3",
+  "jQuery111105458518713886896",
+  "__ko__hasDomDataOptionValue__",
+  "document:location"
+ ],
+ "dom": "class=\"cufon-active cufon-ready\"\nhttp-equiv=\"Content-Type\"\ncontent=\"text/html; charset=utf-8\"\nhref=\"css/tripoli.simple.css\"\ntype=\"text/css\"\nrel=\"stylesheet\"\nmedia=\"only screen and (max-device-width: 800px)\"\nasync=\"\"\nsrc=\"https://ssl.google-analytics.com/ga.js\"\ncharset=\"utf-8\"\ndata-requirecontext=\"_\"\ndata-requiremodule=\"text\"\nid=\"wrapper\"\nalt=\"Simplify \"\nstyle=\"width: 76px; height: 20px;\"\nwidth=\"94\"\nheight=\"29\"\ndata-bind\nvalue=\"\"\ndisabled=\"\"\n.cufon-active\n.cufon-ready\n.vspace\n.main-menu\n.active\n.clear\n.engraved\n.cufon\n.cufon-canvas\n.download-widget\n.download-button\n.smallprint\n.download-info\n.vspace-small\n.sticker\n.fullWidth\n.stickerHeading\n.titillium\n.heading\n.floatLeft\n.tickIcons\n.stickerList\n.floatRight\n.homepageExample\n.liveExample",
+ "markup": "<link href=\"css/tripoli.simple.css\" type=\"text/css\" rel=\"stylesheet\">\n<link rel=\"canonical\" href=\"/\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"css/styles.css\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"css/smallScreen.css\" media=\"only screen and (max-device-width: 800px)\">\n<link rel=\"shortcut icon\" href=\"img/favicon.ico\">\n<script type=\"text/javascript\" async=\"\" src=\"https://ssl.google-analytics.com/ga.js\"></script>\n<script type=\"text/javascript\" src=\"js/jquery-1.11.1.min.js\"></script>\n<script type=\"text/javascript\" src=\"downloads/knockout-latest.js\"></script>\n<script type=\"text/javascript\" src=\"js/cufon-yui.js\"></script>\n<script type=\"text/javascript\" src=\"js/titilliummaps.font.js\"></script>\n<script type=\"text/javascript\" src=\"js/json2.js\"></script>\n<script type=\"text/javascript\" src=\"js/syntaxhighlighter_3.0.83/scripts/shCore.js\"></script>\n<script type=\"text/javascript\" src=\"js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js\"></script>\n<script type=\"text/javascript\" src=\"js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js\"></script>\n<script type=\"text/javascript\" src=\"js/syntaxhighlighter_3.0.83/scripts/shBrushBash.js\"></script>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"js/syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css\">\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\" src=\"js/require.js\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\" charset=\"utf-8\" async=\"\" data-requirecontext=\"_\" data-requiremodule=\"text\" src=\"./js/require.text.js\"></script>\n<script type=\"text/javascript\" charset=\"utf-8\" async=\"\" data-requirecontext=\"_\" data-requiremodule=\"knockout\" src=\"./downloads/knockout-latest.js\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\"></script>",
+ "urls": [
+  "/ga.js",
+  "/js/jquery-1.11.1.min.js",
+  "/downloads/knockout-latest.js",
+  "/js/cufon-yui.js",
+  "/js/titilliummaps.font.js",
+  "/js/json2.js",
+  "/js/syntaxhighlighter_3.0.83/scripts/shCore.js",
+  "/js/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js",
+  "/js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js",
+  "/js/syntaxhighlighter_3.0.83/scripts/shBrushBash.js",
+  "/js/require.js",
+  "/js/require.text.js",
+  "/downloads/knockout-latest.js"
+ ]
+}

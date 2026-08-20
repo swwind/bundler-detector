@@ -1,0 +1,14 @@
+{
+ "note": "npm create vite@6 --template solid-ts, built and rendered on 2026-08-20",
+ "globals": [],
+ "props": [
+  "$$click",
+  "document:location",
+  "document:_$DX_DELEGATE"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-Dcp_iY5D.js\"\nid=\"root\"\ntarget=\"_blank\"\nclass=\"logo\"\nalt=\"Vite logo\"\n.logo\n.solid\n.card\n.read-the-docs",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-Dcp_iY5D.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-BjHQmIfi.css\">",
+ "urls": [
+  "/assets/index-Dcp_iY5D.js"
+ ]
+}

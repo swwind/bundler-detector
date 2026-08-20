@@ -1,0 +1,18 @@
+{
+ "note": "npm create vite@6 --template react-ts, built and rendered on 2026-08-20",
+ "globals": [],
+ "props": [
+  "__reactContainer$jn9d8vea0eo",
+  "_reactListeningr3w110nc16",
+  "__reactFiber$jn9d8vea0eo",
+  "__reactProps$jn9d8vea0eo",
+  "__reactEvents$jn9d8vea0eo",
+  "document:location",
+  "document:_reactListeningr3w110nc16"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-hT1nYlJ1.js\"\nid=\"root\"\ntarget=\"_blank\"\nclass=\"logo\"\nalt=\"Vite logo\"\n.logo\n.react\n.card\n.read-the-docs",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-hT1nYlJ1.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-COcDBgFa.css\">",
+ "urls": [
+  "/assets/index-hT1nYlJ1.js"
+ ]
+}

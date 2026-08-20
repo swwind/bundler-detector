@@ -1,0 +1,268 @@
+{
+ "note": "captured from https://nuxt.com on 2026-08-20",
+ "globals": [
+  {
+   "name": "getStorageValue"
+  },
+  {
+   "name": "getCookie"
+  },
+  {
+   "name": "__NUXT_COLOR_MODE__"
+  },
+  {
+   "name": "__NUXT_SITE_CONFIG__"
+  },
+  {
+   "name": "__VUE_INSTANCE_SETTERS__"
+  },
+  {
+   "name": "__VUE_SSR_SETTERS__"
+  },
+  {
+   "name": "__unctx__"
+  },
+  {
+   "name": "__unctx_async_handlers__"
+  },
+  {
+   "name": "__buildAssetsURL"
+  },
+  {
+   "name": "__publicAssetsURL"
+  },
+  {
+   "name": "$fetch"
+  },
+  {
+   "name": "__vueuse_ssr_handlers__"
+  },
+  {
+   "name": "global"
+  },
+  {
+   "name": "__VUE__"
+  },
+  {
+   "name": "useNuxtApp"
+  },
+  {
+   "name": "si"
+  },
+  {
+   "name": "vam"
+  },
+  {
+   "name": "va"
+  },
+  {
+   "name": "vaq"
+  },
+  {
+   "name": "__tsover_add"
+  },
+  {
+   "name": "__tsover_sub"
+  },
+  {
+   "name": "__tsover_mul"
+  },
+  {
+   "name": "__tsover_div"
+  },
+  {
+   "name": "__tsover_pow"
+  },
+  {
+   "name": "__tsover_mod"
+  },
+  {
+   "name": "__TYPEGPU_VERSION__"
+  },
+  {
+   "name": "__TYPEGPU_AUTONAME__"
+  },
+  {
+   "name": "__TYPEGPU_META__"
+  },
+  {
+   "name": "__zod_globalConfig"
+  },
+  {
+   "name": "__zod_globalRegistry"
+  },
+  {
+   "name": "sqlite3InitModuleState"
+  },
+  {
+   "name": "sqlite3InitModule"
+  }
+ ],
+ "props": [
+  "__v_skip",
+  "_value",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\nclass=\"dark\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1\"\ntype=\"importmap\"\nid=\"nuxt-ui-colors\"\nrel=\"stylesheet\"\nhref=\"/_nuxt/entry.tiwpl0Dx.css\"\ncrossorigin=\"\"\nas=\"fetch\"\nsrc=\"/_nuxt/BUCdK-jJ.js\"\nproperty=\"og:site_name\"\ndefer=\"\"\ndata-sdkn=\"@vercel/speed-insights/nuxt\"\ndata-sdkv=\"2.0.0\"\ndata-route=\"/\"\ndata-endpoint=\"/f771ed1f69e3eb32/vitals\"\ndata-disable-auto-track=\"1\"\ndata-view-endpoint=\"/9149e8baebe0316c/view\"\ndata-event-endpoint=\"/9149e8baebe0316c/event\"\ndata-session-endpoint=\"/9149e8baebe0316c/session\"\nstyle\ndata-slot=\"root\"\naria-current=\"page\"\naria-label=\"Back to home\"\nwidth=\"800\"\nheight=\"200\"\nviewBox=\"0 0 800 200\"\nfill=\"none\"\nxmlns=\"http://www.w3.org/2000/svg\"\ndata-state=\"closed\"\nd\naria-haspopup=\"menu\"\naria-expanded=\"false\"\ndata-disabled=\"\"\ndata-orientation=\"horizontal\"\ndir=\"ltr\"\ndata-reka-navigation-menu=\"\"\ndata-menu-item=\"\"\ndata-reka-collection-item=\"\"\naria-hidden=\"true\"\ndata-navigation-menu-trigger=\"\"\naria-controls=\"reka-navigation-menu-v-0-0-0-content-item-3\"\ndata-v-18501939=\"\"\nstroke=\"black\"\nstroke-width=\"12\"\nstroke-linecap=\"round\"\nmask=\"url(#nuxi-face-mask-v-0-0-1)\"\ndata-grace-area-trigger=\"\"\ntarget=\"_blank\"\nstroke-linejoin=\"round\"\nx1=\"4\"\ny1=\"6\"\nx2=\"20\"\ny2=\"6\"\nfill-opacity=\"0.22\"\ngradientUnits=\"userSpaceOnUse\"\nstop-color=\"currentColor\"\noffset=\"1\"\nstop-opacity=\"0\"\nvalue=\"npm create nuxt@latest\"\ndisabled=\"\"\nautocomplete=\"off\"\npadded=\"false\"\ntabindex=\"0\"\nrole=\"tablist\"\naria-orientation=\"horizontal\"\ndata-active=\"\"\naria-selected=\"true\"\naria-labelledby=\"reka-tabs-v-0-0-14-0-trigger-0\"\naria-level=\"1\"\ndata-indent=\"1\"\ndata-expanded=\"\"\ndata-selected=\"\"\nline=\"1\"\nemptylineplaceholder=\"true\"\nhidden=\"\"\ndata-nuxt-img=\"\"\nsrcset\nonerror=\"this.setAttribute('data-error', 1)\"\nalt=\"Louis Vuitton logo\"\nloading=\"lazy\"\naria-roledescription=\"carousel\"\ndata-v-388c4be0=\"\"\ntitle=\"See your own profile on Nuxters\"\ndata-v-b1490437=\"\"\nsizes=\"(max-width: 639px) 587px, (max-width: 1023px) 445px, 646px\"\nmethod=\"post\"\nfor=\"v-0-0-6\"\nplaceholder=\"you@domain.com\"\nrequired=\"\"\naria-invalid=\"false\"\naria-describedby=\"v-0-0-6-description\"\ndata-collapsible=\"offcanvas\"\ndata-variant=\"sidebar\"\ndata-side=\"right\"\ndata-renderer=\"shaders\"\ndata-shader-id=\"logoMask\"\nrows=\"2\"\ndata-nuxt-schema-org=\"true\"\ndata-hid=\"schema-org-graph\"\ndata-nuxt-data=\"nuxt-app\"\ndata-ssr=\"true\"\ndata-src=\"/_payload.json?_b=6a85e42b-300a-4dae-85e4-2c8d6fe71399\"\n.dark\n.isolate\n.nuxt-loading-indicator\n.flex\n.flex-1\n.min-w-0\n.bg-default/75\n.backdrop-blur\n.border-b\n.border-default\n.h-(--ui-header-height)\n.sticky\n.top-0\n.z-50\n.flex-col\n.w-full\n.max-w-(--ui-container)\n.mx-auto\n.px-4\n.sm:px-6\n.lg:px-8\n.items-center\n.justify-between\n.gap-3\n.h-full\n.lg:flex-1\n.gap-1.5\n.items-end\n.router-link-active\n.router-link-exact-active\n.text-highlighted\n.block\n.w-auto\n.h-6\n.inline-flex\n.disabled:cursor-not-allowed\n.aria-disabled:cursor-not-allowed\n.disabled:opacity-75\n.aria-disabled:opacity-75\n.transition-colors\n.py-1\n.text-primary\n.ring\n.ring-inset\n.ring-primary/25\n.bg-primary/10\n.disabled:bg-primary/10\n.aria-disabled:bg-primary/10\n.outline-primary/25\n.focus-visible:outline-3\n.focus-visible:ring-primary\n.-mb-[2px]\n.font-semibold\n.text-[12px]/3\n.rounded-sm\n.px-1.5\n.gap-0.5\n.truncate\n.hover:bg-primary/10\n.active:bg-primary/10\n.hidden\n.lg:flex\n.relative\n.[&>div]:min-w-0\n.py-2\n.group\n.font-medium\n.text-sm\n.before:absolute\n.before:z-[-1]\n.before:rounded-md\n.focus:outline-none\n.focus-visible:outline-none\n.focus-visible:before:outline-3\n.before:outline-primary/25\n.px-2.5\n.py-1.5\n.before:inset-x-px\n.before:inset-y-0\n.text-muted\n.hover:text-highlighted\n.data-[state=open]:text-highlighted\n.iconify\n.i-lucide:book-marked\n.shrink-0\n.size-5\n.text-dimmed\n.group-hover:text-default\n.group-data-[state=open]:text-default\n.i-lucide:puzzle\n.i-lucide:app-window\n.i-lucide:library\n.ms-auto\n.i-lucide:chevron-down\n.transform\n.group-data-[state=open]:rotate-180\n.transition-transform\n.duration-200\n.i-lucide:building-2\n.i-lucide:newspaper\n.absolute\n.top-full\n.start-0\n.justify-end\n.rounded-md\n.text-default\n.hover:bg-elevated\n.active:bg-elevated\n.outline-inverted/25\n.hover:disabled:bg-transparent\n.dark:hover:disabled:bg-transparent\n.hover:aria-disabled:bg-transparent\n.dark:hover:aria-disabled:bg-transparent\n.px-3\n.gap-2\n.max-sm:p-1.5\n.size-6\n.justify-center\n.max-sm:size-5\n.nuxi-eye\n.nuxi-mouth\n.nuxi-body--idle\n.nuxi-body\n.sm:inline-flex\n.p-1.5\n.i-lucide:search\n.lg:hidden\n.px-1\n.font-sans\n.uppercase\n.h-5\n.min-w-[20px]\n.text-[11px]\n.ring-accented\n.bg-elevated\n.i-lucide:moon\n.dark:inline-block\n.i-lucide:sun\n.dark:hidden\n.i-simple-icons:github\n.text-xs\n.-me-1.5\n.top-1/2\n.left-1/2\n.size-12\n.-translate-1/2\n.[@media(pointer:fine)]:hidden\n.outline-none\n.min-h-[calc(100vh-var(--ui-header-height))]\n.pointer-events-none\n.-top-px\n.transition-all\n.-z-10\n.duration-[400ms]\n.lg:grid\n.gap-16\n.sm:gap-y-24\n.lg:grid-cols-2\n.lg:items-center\n.!pb-20\n.py-24\n.sm:py-32\n.lg:py-40\n.lg:min-h-[540px]\n.mb-4\n.rounded-full\n.dark:hover:bg-primary-400/15\n.dark:hover:ring-primary-700\n.i-lucide:arrow-right\n.size-4\n.text-pretty\n.tracking-tight\n.font-bold\n.text-5xl\n.sm:text-7xl\n.text-lg\n.sm:text-xl/8\n.mt-6\n.mt-10\n.flex-wrap\n.gap-x-6\n.gap-y-3\n.gap-4\n.text-base\n.text-inverted\n.bg-primary\n.hover:bg-primary/75\n.active:bg-primary/75\n.disabled:bg-primary\n.aria-disabled:bg-primary\n.hover:bg-accented/75\n.active:bg-accented/75\n.disabled:bg-elevated\n.aria-disabled:bg-elevated\n.focus-visible:ring-inverted\n.i-lucide:play-circle\n.border-0\n.appearance-none\n.placeholder:text-dimmed\n.bg-default\n.ps-11\n.pe-11\n.inset-0\n.cursor-copy\n.inset-y-0\n.ps-3\n.i-lucide:terminal\n.end-0\n.pe-3\n.hover:text-default\n.active:text-default\n.disabled:text-muted\n.aria-disabled:text-muted\n.i-lucide:copy\n.bg-elevated/50\n.ring-default\n.overflow-auto\n.lg:absolute\n.[@media(min-width:2400px)]:relative\n.lg:-mt-16\n.[@media(min-width:2400px)]:mt-8\n.right-0\n.[@media(min-width:2400px)]:right-auto\n.w-screen\n.lg:w-[calc(50%-2rem)]\n.[@media(min-width:2400px)]:w-full\n.max-w-[800px]\n.[@media(min-width:2400px)]:mx-auto\n.rounded-none\n.lg:rounded-l-[calc(var(--ui-radius)*4)]\n.[@media(min-width:2400px)]:rounded-2xl\n.-mx-4\n.sm:-mx-6\n.lg:mx-0\n.gap-x-8\n.gap-y-4\n.p-4\n.sm:p-6\n.sm:pt-4.5\n.lg:pr-0\n.[@media(min-width:2400px)]:px-6\n.p-1\n.rounded-lg\n.px-0\n.bg-transparent\n.lg:pr-4\n.overflow-x-auto\n.transition-[translate,width]\n.shadow-xs\n.left-0\n.w-(--reka-tabs-indicator-size)\n.translate-x-(--reka-tabs-indicator-position)\n.inset-y-1\n.data-[state=inactive]:text-muted\n.hover:data-[state=inactive]:not-disabled:text-default\n.grow\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:content-['']\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:absolute\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:inset-0\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:rounded-md\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:shadow-xs\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:-z-10\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:isolate\n.data-[state=active]:text-highlighted\n.in-[[data-slot=list]:not(:has([data-slot=indicator]))]:data-[state=active]:before:bg-default\n.i-lucide:leaf\n.group-data-[state=active]:text-primary\n.i-lucide:milestone\n.i-lucide:unplug\n.i-lucide:wand-sparkles\n.i-lucide:pc-case\n.lg:h-[450px]\n.[@media(min-width:2400px)]:border-e\n.[@media(min-width:2400px)]:border-default\n.[@media(min-width:2400px)]:rounded-l-[calc(var(--ui-radius)*1.5)]\n.transition-opacity\n.duration-500\n.data-[state=inactive]:opacity-0\n.opacity-100\n.grid\n.lg:grid-cols-3\n.border\n.border-muted\n.m-0\n.lg:rounded-r-none\n.lg:border-r-0\n.dark:[--ui-border-muted:var(--color-gray-800)]\n.my-0!\n.p-2\n.lg:border-b-0\n.lg:border-e\n.overflow-y-auto\n.peer\n.before:inset-y-px\n.before:inset-x-0\n.hover:before:bg-elevated/50\n.before:transition-colors\n.i-lucide:folder-open\n.group-data-expanded:rotate-180\n.ms-4.5\n.border-s",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<script type=\"importmap\"></script>\n<link rel=\"stylesheet\" href=\"/_nuxt/entry.tiwpl0Dx.css\" crossorigin=\"\">\n<link rel=\"stylesheet\" href=\"/_nuxt/AgentNuxiIcon.CWc0ZLtP.css\" crossorigin=\"\">\n<link rel=\"stylesheet\" href=\"/_nuxt/ModuleItem.DQ69ijok.css\" crossorigin=\"\">\n<link rel=\"preload\" as=\"fetch\" crossorigin=\"anonymous\" href=\"/_payload.json?_b=6a85e42b-300a-4dae-85e4-2c8d6fe71399\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BUCdK-jJ.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CoUAYrd2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Ib1jYPSS.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BUba7gzX.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/uzxQQOYZ.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C0FnF6B9.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DTugtjhm.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DMxBbqNJ.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BW3xJdEx.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BKEWdbak.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CpVwzX98.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CZBJclty.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BnDTbt6S.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/dB4mNr7f.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DgvCULP-.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BC9gPJGV.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bwf5twtq.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DVK0AwJ7.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bc8dGO3i.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/wBEjEbwS.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B9_WQttI.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/HclGiUj8.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DPVomgC0.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CUD2IUr_.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D1r0tDua.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/JHfInJ7Q.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DtonihjX.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/7u2fg9lH.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/VZIBlfdo.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/rQTxC_iA.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BFUrbZOB2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/73-voKFt.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CFYkO_XE.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Cx1crcuf.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DWEoD8ZB.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DHihWhf5.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D6UMMftN2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CWibC7jz2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BGUXwuDa2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bng2rRDf.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DX9QqH-82.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/9zzQVcXL2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DVWNOnoX2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DUuVZpdb2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/ICB3snDO2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BhO0WYBr.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DSV0H8Tr.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DswX_X11.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B0vUPBXz2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D4TXyJo02.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/7usPHlg52.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/c0uk3kgc2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D5mYnOSv.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bu8LQVCP.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BQp7tQE72.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CLiPiqvB.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/y4Ii6pHm.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C624P-AP.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B5vLi0ub.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BukM2nBL.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/wq1kSq57.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Dbdf22K5.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/-XS1WVSt.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CFyEFoRc.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bm52e4br.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/-An9q9Bb.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D6eBiZ_U.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DNZ87jst.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DRLboRIe.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CVtaqvnd.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/c0yp3X6x.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DCXpl3ig.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BzmxfsEh.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C6WNy61i.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CesQ-Alr.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/LczgkNfS2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CkdwaJO62.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BnT5NoKh2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CwBuM5882.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DJa8Ap0N2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bg0IazpB2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/tsu6mhH22.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Dl9fNK_B2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/2lngBEtA.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DrgB-rk4.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DR-nxSLa2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CASGt-3b.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/91_eH9ZW.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DdzM6mKC2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/EfRZIKIG2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DVJLo81D2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B7X4MlaI2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C-ztp_hV2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B7xnplQV2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bqw1jNaQ2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/1nPmK2ot2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C5c-udK82.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BDNMzG2s2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/_3RXnoUS2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/6kbh7nJJ2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/kA5gCOak2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DGv5AAkU2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BJyGrPB92.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BU2ydYkT2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DrURUv0y2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DWngLs4B2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/TiEG7qGP2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DK5gXmqk2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C9Sn7EtL2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CcvBHvcT2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BsQ-xrSo2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B5qsV8ax.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DltRHZl_.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CoPvhfss.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/ClXrsgOD.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BGv1re3F.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/am7uCHT3.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DPet1wQL.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/tWe4N5272.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DuxK_cId2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/fXV5ninB2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Be0Kt2Cz.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bev1r_Oi.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BggqOGsx.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DgxqqQdA.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BGErvj5k.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CNs_Ozdc2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BUBwG7802.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D06rGRKf.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BVqM-hiy.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BMYRNjpj2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/RTQmxa1u2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CyFQkjGR.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DL3oDCgq2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CfqjJCVg2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DTG8f7zu2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Ba0ppG-y.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CJ8p9_j9.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Iky7CD2E.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DofowBUr2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/TjEax9-z2.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CSCcmcHI.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C5YFTSiC2.js\">\n<script type=\"module\" src=\"/_nuxt/BUCdK-jJ.js\" crossorigin=\"\"></script>\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Du7-54OV2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DTwq5U1I2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/uKyeiWiY2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Bgry7zke.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D-5SguGs.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D63bRaDA.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/qZDAA2HF2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/__eC2Qv62.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/iYmmyxKa2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BP53ue5D2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/xGbgto_m2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D4F2T0t6.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/C1kCY6OE.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/S1CUGvw7.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DPNmPA5S2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B463GmiY.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DfdDrtmS.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CGHUGu5B.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CDaBtXox.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BNbygDLP.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BhaOuLEJ.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/3G0Dyo3r.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Df4uY-Wg.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/Cbs7Rtz8.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DF_rUYwk.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BJakwE5M.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/D9d1Zy2p.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DmIxMNEv2.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/mE1qZDww.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/BtkO_cN6.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CKcXzyJb.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/B5kyRWfp.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/dOoaiHSI.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CY4utgz_.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/DzBhvbXW.js\">\n<link rel=\"prefetch\" as=\"script\" crossorigin=\"\" href=\"/_nuxt/CNnbnPdK.js\">\n<meta name=\"theme-color\" content=\"#020420\">\n<link rel=\"icon\" type=\"image/png\" href=\"/icon.png\">\n<meta property=\"og:site_name\" content=\"Nuxt\">\n<meta property=\"og:type\" content=\"website\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:site\" content=\"nuxt_js\">\n<meta name=\"description\" content=\"Build fast, production-ready web apps with Vue. File-based routing, auto-imports, and server-side rendering — all configured out of the box.\">\n<link rel=\"canonical\" href=\"https://nuxt.com\">\n<link rel=\"alternate\" type=\"text/markdown\" href=\"https://nuxt.com/raw/index.md\">\n<meta property=\"og:title\" content=\"Nuxt: The Full-Stack Vue Framework\">\n<meta property=\"og:description\" content=\"Build fast, production-ready web apps with Vue. File-based routing, auto-imports, and server-side rendering — all configured out of the box.\">\n<meta property=\"og:image\" content=\"https://nuxt.com/new-social.jpg\">\n<meta name=\"twitter:image\" content=\"https://nuxt.com/new-social.jpg\">\n<script></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/pages.yfjhJEBK.css\">\n<script src=\"/f771ed1f69e3eb32/script.js\" defer=\"\" data-sdkn=\"@vercel/speed-insights/nuxt\" data-sdkv=\"2.0.0\" data-route=\"/\" data-endpoint=\"/f771ed1f69e3eb32/vitals\"></script>\n<meta name=\"theme-color\" content=\"#020420\">\n<script src=\"/9149e8baebe0316c/script.js\" data-sdkn=\"@vercel/analytics/nuxt\" data-sdkv=\"2.0.1\" data-disable-auto-track=\"1\" data-view-endpoint=\"/9149e8baebe0316c/view\" data-event-endpoint=\"/9149e8baebe0316c/event\" data-session-endpoint=\"/9149e8baebe0316c/session\" defer=\"\"></script>\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/D9fMSyec.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/DDWTSlik.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/XoRrLxy_.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/CRJhzwTa.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/Chx8egB6.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/rtU5VG2F.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/9jUnmo5y.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/BlTy0Ysw.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/BPxzZ2RS.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/BHA_LLXR.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/DII5pHVR.js\">\n<link rel=\"modulepreload\" as=\"script\" crossorigin=\"\" href=\"https://nuxt.com/_nuxt/Doy3RlE3.js\">\n<script></script>\n<script></script>\n<script type=\"application/ld+json\" data-nuxt-schema-org=\"true\" data-hid=\"schema-org-graph\"></script>\n<script type=\"application/json\" data-nuxt-data=\"nuxt-app\" data-ssr=\"true\" id=\"__NUXT_DATA__\" data-src=\"/_payload.json?_b=6a85e42b-300a-4dae-85e4-2c8d6fe71399\"></script>",
+ "urls": [
+  "/_nuxt/BUCdK-jJ.js",
+  "/f771ed1f69e3eb32/script.js",
+  "/9149e8baebe0316c/script.js",
+  "/_nuxt/BUCdK-jJ.js",
+  "/_nuxt/CoUAYrd2.js",
+  "/_nuxt/Ib1jYPSS.js",
+  "/_nuxt/BUba7gzX.js",
+  "/_nuxt/uzxQQOYZ.js",
+  "/_nuxt/C0FnF6B9.js",
+  "/_nuxt/DTugtjhm.js",
+  "/_nuxt/DMxBbqNJ.js",
+  "/_nuxt/BW3xJdEx.js",
+  "/_nuxt/BKEWdbak.js",
+  "/_nuxt/CpVwzX98.js",
+  "/_nuxt/CZBJclty.js",
+  "/_nuxt/BnDTbt6S.js",
+  "/_nuxt/dB4mNr7f.js",
+  "/_nuxt/DgvCULP-.js",
+  "/_nuxt/BC9gPJGV.js",
+  "/_nuxt/Bwf5twtq.js",
+  "/_nuxt/DVK0AwJ7.js",
+  "/_nuxt/Bc8dGO3i.js",
+  "/_nuxt/wBEjEbwS.js",
+  "/_nuxt/B9_WQttI.js",
+  "/_nuxt/HclGiUj8.js",
+  "/_nuxt/DPVomgC0.js",
+  "/_nuxt/CUD2IUr_.js",
+  "/_nuxt/D1r0tDua.js",
+  "/_nuxt/JHfInJ7Q.js",
+  "/_nuxt/DtonihjX.js",
+  "/_nuxt/7u2fg9lH.js",
+  "/_nuxt/VZIBlfdo.js",
+  "/_nuxt/rQTxC_iA.js",
+  "/_nuxt/BFUrbZOB2.js",
+  "/_nuxt/73-voKFt.js",
+  "/_nuxt/CFYkO_XE.js",
+  "/_nuxt/Cx1crcuf.js",
+  "/_nuxt/DWEoD8ZB.js",
+  "/_nuxt/DHihWhf5.js",
+  "/_nuxt/D6UMMftN2.js",
+  "/_nuxt/CWibC7jz2.js",
+  "/_nuxt/BGUXwuDa2.js",
+  "/_nuxt/Bng2rRDf.js",
+  "/_nuxt/DX9QqH-82.js",
+  "/_nuxt/9zzQVcXL2.js",
+  "/_nuxt/DVWNOnoX2.js",
+  "/_nuxt/DUuVZpdb2.js",
+  "/_nuxt/ICB3snDO2.js",
+  "/_nuxt/BhO0WYBr.js",
+  "/_nuxt/DSV0H8Tr.js",
+  "/_nuxt/DswX_X11.js",
+  "/_nuxt/B0vUPBXz2.js",
+  "/_nuxt/D4TXyJo02.js",
+  "/_nuxt/7usPHlg52.js",
+  "/_nuxt/c0uk3kgc2.js",
+  "/_nuxt/D5mYnOSv.js",
+  "/_nuxt/Bu8LQVCP.js",
+  "/_nuxt/BQp7tQE72.js",
+  "/_nuxt/CLiPiqvB.js",
+  "/_nuxt/y4Ii6pHm.js",
+  "/_nuxt/C624P-AP.js",
+  "/_nuxt/B5vLi0ub.js",
+  "/_nuxt/BukM2nBL.js",
+  "/_nuxt/wq1kSq57.js",
+  "/_nuxt/Dbdf22K5.js",
+  "/_nuxt/-XS1WVSt.js",
+  "/_nuxt/CFyEFoRc.js",
+  "/_nuxt/Bm52e4br.js",
+  "/_nuxt/-An9q9Bb.js",
+  "/_nuxt/D6eBiZ_U.js",
+  "/_nuxt/DNZ87jst.js",
+  "/_nuxt/DRLboRIe.js",
+  "/_nuxt/CVtaqvnd.js",
+  "/_nuxt/c0yp3X6x.js",
+  "/_nuxt/DCXpl3ig.js",
+  "/_nuxt/BzmxfsEh.js",
+  "/_nuxt/C6WNy61i.js",
+  "/_nuxt/CesQ-Alr.js",
+  "/_nuxt/LczgkNfS2.js",
+  "/_nuxt/CkdwaJO62.js",
+  "/_nuxt/BnT5NoKh2.js",
+  "/_nuxt/CwBuM5882.js",
+  "/_nuxt/DJa8Ap0N2.js",
+  "/_nuxt/Bg0IazpB2.js",
+  "/_nuxt/tsu6mhH22.js",
+  "/_nuxt/Dl9fNK_B2.js",
+  "/_nuxt/2lngBEtA.js",
+  "/_nuxt/DrgB-rk4.js",
+  "/_nuxt/DR-nxSLa2.js",
+  "/_nuxt/CASGt-3b.js",
+  "/_nuxt/91_eH9ZW.js",
+  "/_nuxt/DdzM6mKC2.js",
+  "/_nuxt/EfRZIKIG2.js",
+  "/_nuxt/DVJLo81D2.js",
+  "/_nuxt/B7X4MlaI2.js",
+  "/_nuxt/C-ztp_hV2.js",
+  "/_nuxt/B7xnplQV2.js",
+  "/_nuxt/Bqw1jNaQ2.js",
+  "/_nuxt/1nPmK2ot2.js",
+  "/_nuxt/C5c-udK82.js",
+  "/_nuxt/BDNMzG2s2.js",
+  "/_nuxt/_3RXnoUS2.js",
+  "/_nuxt/6kbh7nJJ2.js",
+  "/_nuxt/kA5gCOak2.js",
+  "/_nuxt/DGv5AAkU2.js",
+  "/_nuxt/BJyGrPB92.js",
+  "/_nuxt/BU2ydYkT2.js",
+  "/_nuxt/DrURUv0y2.js",
+  "/_nuxt/DWngLs4B2.js",
+  "/_nuxt/TiEG7qGP2.js",
+  "/_nuxt/DK5gXmqk2.js",
+  "/_nuxt/C9Sn7EtL2.js",
+  "/_nuxt/CcvBHvcT2.js",
+  "/_nuxt/BsQ-xrSo2.js",
+  "/_nuxt/B5qsV8ax.js",
+  "/_nuxt/DltRHZl_.js",
+  "/_nuxt/CoPvhfss.js",
+  "/_nuxt/ClXrsgOD.js",
+  "/_nuxt/BGv1re3F.js",
+  "/_nuxt/am7uCHT3.js",
+  "/_nuxt/DPet1wQL.js",
+  "/_nuxt/tWe4N5272.js",
+  "/_nuxt/DuxK_cId2.js",
+  "/_nuxt/fXV5ninB2.js",
+  "/_nuxt/Be0Kt2Cz.js",
+  "/_nuxt/Bev1r_Oi.js",
+  "/_nuxt/BggqOGsx.js",
+  "/_nuxt/DgxqqQdA.js",
+  "/_nuxt/BGErvj5k.js",
+  "/_nuxt/CNs_Ozdc2.js",
+  "/_nuxt/BUBwG7802.js",
+  "/_nuxt/D06rGRKf.js",
+  "/_nuxt/BVqM-hiy.js",
+  "/_nuxt/BMYRNjpj2.js",
+  "/_nuxt/RTQmxa1u2.js",
+  "/_nuxt/CyFQkjGR.js",
+  "/_nuxt/DL3oDCgq2.js",
+  "/_nuxt/CfqjJCVg2.js",
+  "/_nuxt/DTG8f7zu2.js",
+  "/_nuxt/Ba0ppG-y.js",
+  "/_nuxt/CJ8p9_j9.js",
+  "/_nuxt/Iky7CD2E.js",
+  "/_nuxt/DofowBUr2.js",
+  "/_nuxt/TjEax9-z2.js",
+  "/_nuxt/CSCcmcHI.js",
+  "/_nuxt/C5YFTSiC2.js",
+  "/_nuxt/D9fMSyec.js",
+  "/_nuxt/DDWTSlik.js",
+  "/_nuxt/XoRrLxy_.js",
+  "/_nuxt/CRJhzwTa.js",
+  "/_nuxt/Chx8egB6.js",
+  "/_nuxt/rtU5VG2F.js",
+  "/_nuxt/9jUnmo5y.js",
+  "/_nuxt/BlTy0Ysw.js",
+  "/_nuxt/BPxzZ2RS.js",
+  "/_nuxt/BHA_LLXR.js",
+  "/_nuxt/DII5pHVR.js",
+  "/_nuxt/Doy3RlE3.js"
+ ]
+}

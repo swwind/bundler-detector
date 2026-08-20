@@ -61,15 +61,29 @@ const TARGETS = [
       check(!m.background.service_worker, 'firefox: background.service_worker must not be present');
       const gecko = (m.browser_specific_settings || {}).gecko || {};
       check(gecko.id, 'firefox: browser_specific_settings.gecko.id missing (AMO needs a stable id)');
-      // signatures.js has to be loaded before background.js, which expects it.
+      // background.js expects the engine to already be on globalThis.
       const scripts = m.background.scripts || [];
       check(
-        scripts.indexOf('src/signatures.js') === 0,
-        'firefox: src/signatures.js must be the first background script'
+        scripts[scripts.length - 1] === 'src/background.js',
+        'firefox: src/background.js must be the last background script'
       );
     },
   },
 ];
+
+/**
+ * The technology ids the built signature files register. Read out of the build
+ * itself rather than the repo, so a file the build forgot to copy is caught.
+ */
+function technologyIds(dir) {
+  const registry = [];
+  const sandbox = { StackSignatures: registry, StackRelations: [] };
+  for (const file of readdirSync(join(dir, 'src/signatures'))) {
+    const code = readFileSync(join(dir, 'src/signatures', file), 'utf8');
+    new Function('globalThis', 'self', code)(sandbox, sandbox);
+  }
+  return registry.map((t) => t.id);
+}
 
 const versions = new Set();
 
@@ -103,12 +117,9 @@ for (const target of TARGETS) {
   check(missing.length === 0, `${target.name}: manifest references missing files: ${missing.join(', ')}`);
   note(`manifest v${manifest.version}, ${refs.length} referenced files, ${missing.length} missing`);
 
-  // Icons the code can select at runtime must all exist in every size.
-  const background = readFileSync(join(dir, 'src/background.js'), 'utf8');
-  const ids = (background.match(/const ICONS = new Set\(\[([^\]]+)\]\)/) || [, ''])[1]
-    .split(',')
-    .map((s) => s.trim().replace(/['"]/g, ''))
-    .filter(Boolean);
+  // Every technology the engine can report needs an icon in every size, or
+  // the toolbar silently falls back to the unknown cube.
+  const ids = technologyIds(dir).concat(['devil', 'unknown']);
   const sizes = [16, 32, 48, 128];
   const missingIcons = [];
   for (const id of ids) {
@@ -118,6 +129,21 @@ for (const target of TARGETS) {
   }
   check(missingIcons.length === 0, `${target.name}: missing icons: ${missingIcons.join(', ')}`);
   note(`${ids.length} icon ids x ${sizes.length} sizes present`);
+
+  // The background worker loads the signature files itself on Chrome and has
+  // them loaded for it on Firefox; the two lists have to agree.
+  const background = readFileSync(join(dir, 'src/background.js'), 'utf8');
+  const imported = [...background.matchAll(/'(\/src\/[\w/.-]+\.js)'/g)].map((m) => m[1].slice(1));
+  const missingImports = imported.filter((f) => !existsSync(join(dir, f)));
+  check(missingImports.length === 0, `${target.name}: background imports missing files: ${missingImports.join(', ')}`);
+  if (target.name === 'firefox') {
+    const declared = (manifest.background.scripts || []).filter((f) => f !== 'src/background.js');
+    check(
+      declared.join() === imported.join(),
+      `firefox: background.scripts [${declared.join(', ')}] does not match background.js importScripts [${imported.join(', ')}]`
+    );
+  }
+  note(`${imported.length} engine files loaded before background.js`);
 
   const stray = readdirSync(dir).filter((f) => !['manifest.json', 'src', 'icons'].includes(f));
   check(stray.length === 0, `${target.name}: unexpected files in build output: ${stray.join(', ')}`);

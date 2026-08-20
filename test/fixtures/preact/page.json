@@ -1,0 +1,14 @@
+{
+ "note": "npm create vite@6 --template preact-ts, built and rendered on 2026-08-20",
+ "globals": [],
+ "props": [
+  "__k",
+  "l",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"UTF-8\"\nrel=\"icon\"\ntype=\"image/svg+xml\"\nhref=\"/vite.svg\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1.0\"\ncrossorigin=\"\"\nsrc=\"/assets/index-Dv_zs4FT.js\"\nid=\"app\"\ntarget=\"_blank\"\nclass=\"logo\"\nalt=\"Vite logo\"\n.logo\n.preact\n.card\n.read-the-docs",
+ "markup": "<link rel=\"icon\" type=\"image/svg+xml\" href=\"/vite.svg\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<script type=\"module\" crossorigin=\"\" src=\"/assets/index-Dv_zs4FT.js\"></script>\n<link rel=\"stylesheet\" crossorigin=\"\" href=\"/assets/index-vzlP5ejb.css\">",
+ "urls": [
+  "/assets/index-Dv_zs4FT.js"
+ ]
+}

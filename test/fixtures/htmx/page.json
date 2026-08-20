@@ -1,0 +1,33 @@
+{
+ "note": "captured from https://htmx.org on 2026-08-20",
+ "globals": [
+  {
+   "name": "0"
+  },
+  {
+   "name": "htmx",
+   "version": "2.0.10"
+  },
+  {
+   "name": "_hyperscript",
+   "version": "0.9.14"
+  }
+ ],
+ "props": [
+  "htmx-internal-data",
+  "preloadState",
+  "preloadAlways",
+  "0",
+  "1",
+  "document:location"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1\"\nrel=\"canonical\"\nhref=\"https://htmx.org/\"\ntype=\"application/atom+xml\"\ntitle=\"Sitewide Atom feed\"\nsrc=\"/js/htmx.js\"\nhx-ext=\"class-tools, preload\"\nclass=\"top-nav\"\n_=\"on click toggle .show on #nav\"\nviewBox=\"0 0 100 80\"\nwidth=\"25\"\nheight=\"25\"\nstyle=\"margin-bottom:-5px\"\nrx=\"10\"\ny=\"30\"\nid=\"nav\"\nhx-boost=\"true\"\npreload=\"mouseover\"\nhx-disable=\"\"\naction=\"https://google.com/search\"\nrole=\"search\"\naria-label=\"Sitewide\"\nvalue=\"+[inurl:https://htmx.org]\"\nplaceholder=\"🔍️\"\nhx-preserve=\"true\"\nalt\nclasses=\"add appear\"\ntarget=\"_blank\"\ndata-lang=\"html\"\ndata-github-account=\"commspace\"\nasync=\"\"\ndefer=\"\"\n.top-nav\n.c\n.menu\n.logo-wrapper\n.logo\n.light\n.hamburger\n.navigation\n.navigation-items\n.search-box\n.github-stars\n.content\n.ad\n.dark-hero\n.full-width\n.appear\n.main\n.dark\n.blue\n.no-mobile\n.wuw\n.uwu\n.language-html\n.dark-hidden\n.dark-visible\n.zola-anchor\n.dark-invert\n.row\n.6\n.col\n.footer-haiku\n.footer-menu",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<meta name=\"description\" content=\"htmx gives you access to AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes, so you can build modern user interfaces with the simplicity and power of hypertext\n\n    htmx is small (~14k min.gz’d), dependency-free, extendable, IE11 compatible &amp; has reduced code base sizes by 67% when compared with react\">\n<link rel=\"canonical\" href=\"https://htmx.org/\">\n<link rel=\"alternate\" type=\"application/atom+xml\" title=\"Sitewide Atom feed\" href=\"/atom.xml\">\n<link rel=\"stylesheet\" href=\"/css/site.css\">\n<link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n<script src=\"/js/htmx.js\"></script>\n<script src=\"/js/class-tools.js\"></script>\n<script src=\"/js/preload.js\"></script>\n<script src=\"/js/_hyperscript.js\"></script>\n<meta name=\"generator\" content=\"Zola v.TODO\">\n<script type=\"application/javascript\"></script>\n<script async=\"\" defer=\"\" src=\"https://buttons.github.io/buttons.js\"></script>",
+ "urls": [
+  "/js/htmx.js",
+  "/js/class-tools.js",
+  "/js/preload.js",
+  "/js/_hyperscript.js",
+  "/buttons.js"
+ ]
+}

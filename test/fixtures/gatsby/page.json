@@ -1,0 +1,93 @@
+{
+ "note": "captured from https://www.gatsbyjs.com on 2026-08-20",
+ "globals": [
+  {
+   "name": "dataLayer"
+  },
+  {
+   "name": "segmentSnippetLoaded"
+  },
+  {
+   "name": "segmentSnippetLoading"
+  },
+  {
+   "name": "segmentSnippetLoader"
+  },
+  {
+   "name": "analytics"
+  },
+  {
+   "name": "pagePath"
+  },
+  {
+   "name": "___webpackCompilationHash"
+  },
+  {
+   "name": "___chunkMapping"
+  },
+  {
+   "name": "webpackChunkgatsbyjs_com"
+  },
+  {
+   "name": "__core-js_shared__"
+  },
+  {
+   "name": "asyncRequires"
+  },
+  {
+   "name": "___emitter"
+  },
+  {
+   "name": "___loader"
+  },
+  {
+   "name": "___push"
+  },
+  {
+   "name": "___replace"
+  },
+  {
+   "name": "___navigate"
+  },
+  {
+   "name": "__SENTRY__"
+  },
+  {
+   "name": "Sentry"
+  },
+  {
+   "name": "regeneratorRuntime"
+  },
+  {
+   "name": "__THEME_UI__"
+  }
+ ],
+ "props": [
+  "__reactContainer$lzqitsz4iaj",
+  "_reactListening2env8n9hpty",
+  "__reactEvents$lzqitsz4iaj",
+  "__sentry_instrumentation_handlers__",
+  "_reactRootContainer",
+  "__reactFiber$lzqitsz4iaj",
+  "__reactProps$lzqitsz4iaj",
+  "0",
+  "1",
+  "_wrapperState",
+  "value",
+  "_valueTracker",
+  "document:location",
+  "document:__reactEvents$lzqitsz4iaj"
+ ],
+ "dom": "lang=\"en\"\ncharset=\"utf-8\"\nhttp-equiv=\"x-ua-compatible\"\ncontent=\"ie=edge\"\nname=\"viewport\"\nid=\"typography.js\"\ndata-gatsby-head=\"true\"\nproperty=\"og:title\"\ndata-href=\"/styles.fcef1de07bd52e2e6e7b.css\"\ndata-identity=\"gatsby-global-css\"\nrel=\"preload\"\nas=\"font\"\ncrossorigin=\"anonymous\"\ntype=\"font/woff2\"\nhref\nasync=\"\"\nsrc=\"https://www.googletagmanager.com/gtm.js?id=undefined\"\ndata-baseprotocol=\"https:\"\ndata-basehost=\"www.gatsbyjs.com\"\nsizes=\"48x48\"\ndata-emotion=\"css-global\"\ndata-emotion-css=\"bxzolu\"\nstyle=\"outline:none\"\ntabindex=\"-1\"\nclass=\"css-1jgzl0j\"\naria-current=\"page\"\naria-label=\"Link to home\"\nwidth=\"91\"\nheight=\"24\"\nfill=\"#663399\"\nviewBox=\"0 0 106 28\"\nd\nstroke=\"currentColor\"\nstroke-width=\"0\"\nxmlns=\"http://www.w3.org/2000/svg\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\nx1=\"3\"\ny1=\"12\"\nx2=\"21\"\ny2=\"12\"\ndata-gatsby-image-wrapper=\"\"\nalt=\"\"\nrole=\"presentation\"\naria-hidden=\"true\"\ndata-placeholder-image=\"\"\nsrcset\ndata-main-image=\"\"\ndecoding=\"async\"\nloading=\"lazy\"\ntarget=\"_blank\"\nnovalidate=\"\"\nfor=\"email\"\nrequired=\"\"\nplaceholder=\"you@example.xyz\"\nvalue=\"\"\naria-live=\"assertive\"\naria-atomic=\"true\"\nnomodule=\"\"\ndata-strategy=\"idle\"\n.css-1jgzl0j\n._1nrsguc\n._1hqpeon3m\n._1nrsgu0\n._1nrsgud\n._1nrsgu1\n.e861rl0\n.e861rl1\n.e861rl2\n._1nrsguf\n._1nrsgu3\n._1nrsgug\n._1nrsguh\n._1nrsgui\n._1nrsguj\n._1nrsguk\n._1nrsgul\n._1nrsgum\n._1nrsgun\n._1sqad3p0\n._1nrsgu6\n._1nrsgu5\n._1nrsgu4\n._1sqad3p1\n._1nrsgub\n._1nrsgua\n._1nrsguq\n._1nrsguo\n._1nrsgu2\n._1nrsgu9\n.withBanner\n.css-bxzolu\n.css-qx4jbu\n.css-1yf7zta\n.css-upiobr\n.css-1uil6of\n.css-1rx938q\n.css-1kej3ed\n.css-fk9kwp\n.css-f10nz3\n.css-h88ny3\n.css-1nefaia\n.css-skbmkr\n.css-14xpeiu\n.gatsby-image-wrapper\n.gatsby-image-wrapper-constrained\n.css-hwwb89\n.css-79elbk\n.css-1uq6a6v\n.css-jy0fry\n.css-1cve3k3\n.css-1shgosv\n.css-nodofe\n.css-14bwheu\n.css-8atqhb\n.css-2pj1d1\n.css-pzxd6z\n.css-1vhyicv\n.css-lrgepu\n.css-1qsqkaa\n.css-rbrba7\n.css-1kq98n9\n.css-1e2kbsm\n.css-13w1d11\n.css-zhgq71\n.css-g7lqkh\n.css-j6vqkv\n.css-1vym0s9\n.css-1ozgqm8\n.css-78568f\n.css-1k2fin6\n.css-jix6m\n.css-bkatzl\n.css-poyawq\n.css-1o60176\n.css-1cmx75u\n.css-ol3l68\n.css-7v2lmy\n.css-ln1sdc\n.css-1h3ns7l\n.css-1lb2m8i\n.css-q7vzzb\n.css-lr5hez\n.css-1l1mtm3\n.css-1sncdea\n.css-tu9on4\n.css-1hrdhpc\n.css-f0hjtx\n.css-17c8neb\n.css-1rewx2h\n.css-rczhnp",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n<meta name=\"generator\" content=\"Gatsby 4.24.6\">\n<meta name=\"description\" content=\"Gatsby is a React-based open source framework with performance, scalability and security built-in. Collaborate, build and deploy 1000x faster on Netlify.\" data-gatsby-head=\"true\">\n<meta name=\"image\" content=\"https://images.ctfassets.net/vkdbses00qqt/38yAjXH9hRko9noPZWrluI/4d1988b4b07acfab9ce93a87407930bd/Frame_3__2_.png\" data-gatsby-head=\"true\">\n<meta name=\"keywords\" content=\"gatsby, javascript, react, graphql, fast\" data-gatsby-head=\"true\">\n<meta property=\"og:title\" content=\"The Best React-Based Framework | Gatsby\" data-gatsby-head=\"true\">\n<meta property=\"og:description\" content=\"Gatsby is a React-based open source framework with performance, scalability and security built-in. Collaborate, build and deploy 1000x faster on Netlify.\" data-gatsby-head=\"true\">\n<meta property=\"og:image\" content=\"https://images.ctfassets.net/vkdbses00qqt/38yAjXH9hRko9noPZWrluI/4d1988b4b07acfab9ce93a87407930bd/Frame_3__2_.png\" data-gatsby-head=\"true\">\n<meta property=\"og:type\" content=\"website\" data-gatsby-head=\"true\">\n<meta property=\"og:site_name\" content=\"Gatsby\" data-gatsby-head=\"true\">\n<meta property=\"og:url\" content=\"https://www.gatsbyjs.com/\" data-gatsby-head=\"true\">\n<meta name=\"twitter:title\" content=\"The Best React-Based Framework | Gatsby\" data-gatsby-head=\"true\">\n<meta name=\"twitter:description\" content=\"Gatsby is a React-based open source framework with performance, scalability and security built-in. Collaborate, build and deploy 1000x faster on Netlify.\" data-gatsby-head=\"true\">\n<meta name=\"twitter:image\" content=\"https://images.ctfassets.net/vkdbses00qqt/38yAjXH9hRko9noPZWrluI/4d1988b4b07acfab9ce93a87407930bd/Frame_3__2_.png\" data-gatsby-head=\"true\">\n<meta name=\"twitter:card\" content=\"summary_large_image\" data-gatsby-head=\"true\">\n<meta name=\"twitter:site\" content=\"@gatsbyjs\" data-gatsby-head=\"true\">\n<meta name=\"twitter:creator\" content=\"@gatsbyjs\" data-gatsby-head=\"true\">\n<meta name=\"fb:app_id\" content=\"\" data-gatsby-head=\"true\">\n<meta name=\"theme-color\" content=\"#663399\">\n<link rel=\"preload\" as=\"font\" crossorigin=\"anonymous\" type=\"font/woff2\" href=\"/static/inter-v8-latin-700-65a568f2a9065247687ab85c6a88de9a.woff2\" data-gatsby-head=\"true\">\n<script async=\"\" src=\"https://www.googletagmanager.com/gtm.js?id=undefined\"></script>\n<script type=\"module\"></script>\n<link rel=\"canonical\" href=\"https://www.gatsbyjs.com/\" data-baseprotocol=\"https:\" data-basehost=\"www.gatsbyjs.com\">\n<script></script>\n<script></script>\n<link rel=\"icon\" href=\"/favicon-32x32.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\" type=\"image/png\">\n<link rel=\"manifest\" href=\"/manifest.webmanifest\" crossorigin=\"anonymous\">\n<link rel=\"apple-touch-icon\" sizes=\"48x48\" href=\"/icons/icon-48x48.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/icons/icon-72x72.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"96x96\" href=\"/icons/icon-96x96.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/icons/icon-144x144.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"192x192\" href=\"/icons/icon-192x192.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"256x256\" href=\"/icons/icon-256x256.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"384x384\" href=\"/icons/icon-384x384.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"apple-touch-icon\" sizes=\"512x512\" href=\"/icons/icon-512x512.png?v=3ad5294f3fa6c06e2d07ab07c76df2cf\">\n<link rel=\"sitemap\" type=\"application/xml\" href=\"/sitemap/sitemap-index.xml\">\n<script></script>\n<link href=\"/static/inter-v8-latin-variable-fa91dd85e27e102dcab0b26d1c17b466.woff2\" rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\">\n<script></script>\n<script type=\"module\"></script>\n<script id=\"gatsby-script-loader\"></script>\n<script id=\"gatsby-chunk-mapping\"></script>\n<script src=\"/polyfill-a5ba0734bc19cf074037.js\" nomodule=\"\"></script>\n<script src=\"/app-66f260220c0076326990.js\" async=\"\"></script>\n<script src=\"/dc6a8720040df98778fe970bf6c000a41750d3ae-1b0b21ce762f1107981f.js\" async=\"\"></script>\n<script src=\"/2465ece5-56b4a86c24b1214fbe9f.js\" async=\"\"></script>\n<script src=\"/framework-6840463d7dad80cd1230.js\" async=\"\"></script>\n<script src=\"/webpack-runtime-b419743dabe34cbed2bd.js\" async=\"\"></script>\n<script data-strategy=\"idle\" src=\"//undefined/js/forms2/js/forms2.min.js\"></script>",
+ "urls": [
+  "/gtm.js?id=undefined",
+  "/polyfill-a5ba0734bc19cf074037.js",
+  "/app-66f260220c0076326990.js",
+  "/dc6a8720040df98778fe970bf6c000a41750d3ae-1b0b21ce762f1107981f.js",
+  "/2465ece5-56b4a86c24b1214fbe9f.js",
+  "/framework-6840463d7dad80cd1230.js",
+  "/webpack-runtime-b419743dabe34cbed2bd.js",
+  "/js/forms2/js/forms2.min.js"
+ ]
+}

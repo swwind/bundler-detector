@@ -1,0 +1,128 @@
+{
+ "note": "captured from https://nextjs.org on 2026-08-20",
+ "globals": [
+  {
+   "name": "s"
+  },
+  {
+   "name": "n"
+  },
+  {
+   "name": "TURBOPACK"
+  },
+  {
+   "name": "$RB"
+  },
+  {
+   "name": "$RV"
+  },
+  {
+   "name": "$RC"
+  },
+  {
+   "name": "$RX"
+  },
+  {
+   "name": "__next_f"
+  },
+  {
+   "name": "$RT"
+  },
+  {
+   "name": "_debugIds"
+  },
+  {
+   "name": "NEXT_DEPLOYMENT_ID"
+  },
+  {
+   "name": "next",
+   "version": "16.3.1-canary.24"
+  },
+  {
+   "name": "__webpack_hash__"
+  },
+  {
+   "name": "vam"
+  },
+  {
+   "name": "va"
+  },
+  {
+   "name": "vaq"
+  },
+  {
+   "name": "MotionIsMounted"
+  },
+  {
+   "name": "si"
+  },
+  {
+   "name": "SignalsSDK"
+  },
+  {
+   "name": "__global__"
+  },
+  {
+   "name": "signals"
+  }
+ ],
+ "props": [
+  "__reactFiber$q9q0ezsadj",
+  "__reactProps$q9q0ezsadj",
+  "reactFragments",
+  "__reactMarker$q9q0ezsadj",
+  "__reactEvents$q9q0ezsadj",
+  "data-loaded-src",
+  "value",
+  "_valueTracker",
+  "document:location",
+  "document:__reactContainer$q9q0ezsadj",
+  "document:_reactListeningaae8qqwdixj",
+  "document:__reactResources$q9q0ezsadj",
+  "document:ontouchmove",
+  "document:ontouchstart",
+  "document:ontouchend"
+ ],
+ "dom": "class\nlang=\"en\"\nstyle=\"color-scheme: light; background-color: rgb(250, 250, 250);\"\nid=\"react-aria-pressable-style\"\ncharset=\"utf-8\"\nname=\"viewport\"\ncontent=\"width=device-width, initial-scale=1\"\nrel=\"preload\"\nas=\"image\"\nhref\ndata-precedence=\"next\"\nfetchpriority=\"low\"\nsrc=\"/_next/static/immutable/chunks/1f_9kr7m-q4zo.js\"\nasync=\"\"\ntype=\"text/markdown\"\nproperty=\"og:title\"\nsizes=\"48x48\"\nnomodule=\"\"\ncrossorigin=\"\"\ndata-sdkn=\"@vercel/analytics/next\"\ndata-sdkv=\"2.0.0-canary.1\"\ndata-disable-auto-track=\"1\"\ndata-view-endpoint=\"/e25c61660ad7a6b3/view\"\ndata-event-endpoint=\"/e25c61660ad7a6b3/event\"\ndata-session-endpoint=\"/e25c61660ad7a6b3/session\"\ndefer=\"\"\ndata-styled-jsx=\"\"\ndata-route=\"/\"\ndata-endpoint=\"/71950797d2e37b8a/vitals\"\nhidden=\"\"\ndata-testid=\"geistcn/skip-nav-link\"\ntabindex=\"0\"\ntarget=\"_blank\"\naria-label=\"Go to Vercel homepage\"\ntitle=\"Go to Vercel homepage\"\nalt=\"Vercel\"\ndata-slot=\"geist-logo\"\nloading=\"eager\"\nwidth=\"25\"\nheight=\"22\"\ndecoding=\"async\"\ndata-nimg=\"1\"\nviewBox=\"0 0 32 32\"\nd=\"M22 5L9 28\"\nstroke=\"var(--accents-2)\"\nstroke-linecap=\"round\"\nstroke-linejoin=\"round\"\ndata-zone=\"same\"\ndata-variant=\"large\"\nfill=\"currentColor\"\nfill-rule=\"evenodd\"\nclip-rule=\"evenodd\"\ndata-state=\"closed\"\naria-hidden=\"true\"\nrole=\"link\"\ndata-react-aria-pressable=\"true\"\ndata-geist-button=\"\"\ndata-prefix=\"true\"\ndata-suffix=\"false\"\ndata-version=\"v1\"\ndata-fade=\"top\"\ndata-side=\"left\"\nopacity=\"var(--line-opacity)\"\nstroke-dasharray=\"2 2\"\ncx=\"0\"\ncy=\"0\"\ngradientTransform=\"translate(37.5 37.5) rotate(90) scale(36.5)\"\ngradientUnits=\"userSpaceOnUse\"\nr=\"1\"\noffset=\"0.5\"\nstop-opacity=\"0.34\"\ndata-offset=\"true\"\ndata-open=\"true\"\ndata-main-heading=\"true\"\ndata-main-paragraph=\"true\"\ndata-columns=\"3\"\ndata-column=\"true\"\ndata-illustration=\"true\"\ndata-header=\"true\"\ndata-label=\"true\"\ndata-content=\"true\"\ndata-fill=\"true\"\nx1=\"92\"\nx2=\"92\"\ny1=\"7.5\"\ny2=\"87.5\"\ndata-animate=\"false\"\nfill-opacity=\"0.15\"\nx=\"0.333374\"\ny=\"63\"\ndata-title=\"true\"\ndata-subtitle=\"true\"\ndata-toolbar=\"true\"\ndata-control=\"true\"\ndata-column-first=\"true\"\ndata-avatar=\"true\"\ndata-line=\"true\"\ndata-size=\"full\"\ndata-column-second=\"true\"\ndata-btn=\"true\"\ndata-nav=\"true\"\ndata-rectangles=\"true\"\ndata-rectangle=\"true\"\ndata-position=\"bottom-left\"\nstroke-width=\"2\"\nstop-color=\"#3291FF\"\nsrcset\ndata-index=\"0\"\ndata-light=\"true\"\ndata-button=\"true\"\ndata-break=\"true\"\ndata-lines=\"true\"\nstroke-opacity=\"0.1\"\npathLength=\"1\"\nstroke-dashoffset=\"0\"\ndata-cpu-shine=\"true\"\ndata-connectors=\"true\"\ndata-connector=\"true\"\ndata-text=\"true\"\ndata-icon=\"true\"\ndata-color=\"purple\"\ndata-author=\"true\"\nxmlns=\"http://www.w3.org/2000/svg\"\nclip-path=\"url(#clip0_3077_14635)\"\ndata-logo=\"true\"\ndata-logo-link=\"\"\ndata-input-wrapper=\"true\"\naction=\"\"\nenctype=\"multipart/form-data\"\nmethod=\"POST\"\nvalue\ndata-1p-ignore=\"true\"\nplaceholder=\"you@domain.com\"\nrequired=\"\"\naria-checked=\"false\"\ndata-active=\"false\"\ndata-theme-switcher=\"true\"\ndata-nscript=\"afterInteractive\"\ndata-skip-transition=\"true\"\n.geist_mono_fe992356-module__VEU71W__className\n.geistsans_d5a4f12f-module__T9Ce0G__className\n.geist_mono_fe992356-module__VEU71W__variable\n.geistsans_d5a4f12f-module__T9Ce0G__variable\n.light-theme\n.bg-background-100\n.flex\n.translate-z-0\n.z-1000\n.flex-col\n.justify-around\n.items-center\n.w-full\n.h-full\n.ring-1\n.py-4\n.ring-gray-alpha-400\n.px-6\n.sticky\n.top-0\n.fixed\n.-m-px\n.overflow-hidden\n.whitespace-nowrap\n.border-0\n.top-16\n.left-12\n.z-[1000]\n.outline-none\n.text-[var(--geist-link-color)]\n.px-1\n.py-0\n.bg-[var(--geist-background)]\n.shadow-[0_0_0_2px_var(--geist-background),0_0_0_4px_var(--geist-link-color)]\n.rounded-[var(--geist-radius)]\n.opacity-0\n.pointer-events-none\n.focus:opacity-100\n.focus:[pointer-events:_all]\n.navbar-module__cV3TuW__nav\n.navbar-module__cV3TuW__mobileTop\n.flex-row\n.justify-start\n.gap-1\n.flex-initial\n.geist-hide-on-dark\n.geist-hide-on-light\n.navbar-module__cV3TuW__mobileLogo\n.navbar-module__cV3TuW__mobileTopRight\n.navbar-module__cV3TuW__search\n.navbar-module__cV3TuW__menuButton\n.menu-toggle-module__wBGbpa__wrap\n.navbar-module__cV3TuW__links\n.navbar-module__cV3TuW__logo\n.navbar-module__cV3TuW__externalArrow\n.navbar-module__cV3TuW__headerButtons\n.m-0\n.p-0\n.align-baseline\n.no-underline\n.group/trigger\n.relative\n.cursor-pointer\n.select-none\n.transform\n.text-[var(--themed-fg,_var(--ds-background-100))]\n.bg-[var(--themed-bg,_var(--ds-gray-1000))]\n.font-medium\n.!px-(--geist-gap-half)\n.max-w-full\n.justify-center\n.transition-[border-color,\n.background,color,transform,box-shadow]\n.duration-[time:150ms]\n.ease-in-out\n.data-[focus]:shadow-[var(--ds-focus-ring)]\n.[&_svg]:shrink-0\n.disabled:cursor-not-allowed\n.aria-disabled:cursor-not-allowed\n.disabled:text-[var(--ds-gray-700)]\n.disabled:bg-[var(--ds-gray-100)]\n.aria-disabled:text-[var(--ds-gray-700)]\n.aria-disabled:bg-[var(--ds-gray-100)]\n.disabled:![--themed-border:_var(--ds-gray-400)]\n.[--x-padding:6px]\n.[--height:32px]\n.!pl-[var(--x-padding)]\n.!pr-[var(--x-padding)]\n.rounded-md\n.[--themed-bg:_var(--ds-background-100)]\n.shadow-[0_0_0_1px_var(--themed-border,_transparent)]\n.[--themed-hover-bg:_var(--ds-gray-alpha-200)]\n.[--themed-fg:_var(--ds-gray-1000)]\n.[--themed-border:_var(--ds-gray-400)]\n.data-[focus]:shadow-[0_0_0_1px_var(--themed-border,_transparent),0_0_0_2px_var(--ds-background-100),0_0_0_4px_var(--ds-focus-color)]\n.data-[focus]:transition-none\n.text-(length:--geist-form-small-font)\n.[--spinner-size:16px]\n.h-[var(--height)]\n.data-hover:bg-[var(--ds-gray-100)]\n.dark-theme:data-hover:bg-[var(--ds-gray-200)]\n.data-hover:text-[var(--themed-fg)]\n.data-hover:disabled:bg-[var(--ds-gray-100)]\n.navbar-module__cV3TuW__deploy\n.mr-[3px]\n.min-w-5\n.shrink-0\n.[&_svg[data-slot=geist-icon]]:size-(--ds-control-decoration-size)\n.-mt-0.5\n.truncate\n.inline-block\n.px-1.5\n.geist-new-themed\n.geist-new-default\n.geist-new-default-fill\n.data-hover:bg-[var(--themed-hover-bg,_hsl(0,_0%,_22%))]\n.dark-theme:data-hover:bg-[var(--themed-hover-bg,_hsl(0,_0%,_80%))]\n.data-hover:[--themed-border:var(--themed-hover-bg,_var(--ds-gray-200))]\n.index-module__iesOna__root\n.intro-module__l-DIkW__root\n.intro-module__l-DIkW__header\n.intro-module__l-DIkW__gridContainerLine\n.intro-module__l-DIkW__intro\n.intro-module__l-DIkW__gridLineTop\n.intro-module__l-DIkW__gridCircle\n.intro-module__l-DIkW__title\n.intro-module__l-DIkW__gridLineBottom\n.intro-module__l-DIkW__break\n.intro-module__l-DIkW__subtitle\n.intro-module__l-DIkW__footer\n.gap-4\n.intro-module__l-DIkW__buttons\n.items-stretch\n.[--x-padding:10px]\n.[--height:var(--ds-size-medium)]\n.text-[14px]\n.intro-module__l-DIkW__copy\n.features-module__KQTBcq__root\n.features-module__KQTBcq__main\n.text-center\n.gap-2\n.lg:gap-4\n.lg:flex-row\n.lg:items-baseline\n.lg:text-left\n.text-heading-32\n.text-copy-20\n.text-gray-900\n.features-module__KQTBcq__grid\n.features-module__KQTBcq__card\n.animated-optimizations-module__hHmtpW__root\n.animated-optimizations-module__hHmtpW__window\n.animated-optimizations-module__hHmtpW__shine\n.animated-streaming-module__PB4uha__root\n.animated-streaming-module__PB4uha__grid\n.animated-streaming-module__PB4uha__window\n.justify-between\n.animated-streaming-module__PB4uha__pulse\n.features-module__KQTBcq__lightMode\n.features-module__KQTBcq__darkMode\n.features-module__KQTBcq__switchboard\n.text-white\n.foundation-module__fXK_Ja__root\n.foundation-module__fXK_Ja__main\n.foundation-module__fXK_Ja__title\n.foundation-module__fXK_Ja__illustration\n.foundation-module__fXK_Ja__mobileLines\n.foundation-module__fXK_Ja__cpu\n.md:flex-col\n.md:gap-4\n.lg:gap-8\n.foundation-module__fXK_Ja__cards\n.foundation-module__fXK_Ja__card\n.vercel-module__enIFoq__root\n.vercel-module__enIFoq__inner\n.max-md:hidden\n.vercel-module__enIFoq__main\n.md:justify-start\n.mb-12\n.md:flex-row\n.max-md:pb-6\n.vercel-module__enIFoq__content\n.md:text-left\n.max-md:items-center\n.md:items-baseline\n.vercel-module__enIFoq__meta\n.templates-module__f0q_8W__badges\n.templates-module__f0q_8W__badge\n.pt-6\n.md:pt-2\n.text-balance\n.vercel-module__enIFoq__subtitle\n.vercel-module__enIFoq__button\n.ml-1\n.mr-0.5\n.vercel-module__enIFoq__templates\n.templates-module__f0q_8W__templateCard\n.templates-module__f0q_8W__image\n.templates-module__f0q_8W__description\n.customers-module__2o1JUG__root\n.customers-module__2o1JUG__title\n.showcase-preview-module__ALHlCG__root\n.gap-8\n.showcase-preview-module__ALHlCG__gridDesktop\n.showcase-preview-module__ALHlCG__preview\n.showcase-preview-module__ALHlCG__title\n.text-[rgba(177,\n.177,\n.177)]\n.flex-1\n.showcase-preview-module__ALHlCG__gridMobile\n.customers-module__2o1JUG__subtitle\n.customers-module__2o1JUG__quotes\n.visually-hidden\n.customers-module__2o1JUG__quote\n.jsx-2146603970\n.footer-module__rV1DKq__root\n.mx-auto\n.max-w-(--geist-page-width-with-margin)\n.px-(--geist-page-margin)\n.footer-module__rV1DKq__footer\n.footer-module__rV1DKq__grid\n.gap-3\n.footer-module__rV1DKq__socialsDesktop\n.footer-module__rV1DKq__newsletter\n.footer-module__rV1DKq__copyright\n.footer-module__rV1DKq__socials\n.theme-switcher-module__R4aA1q__root\n.theme-switcher-module__R4aA1q__switch\n.inset-0\n.z-[100000]\n.min-w-max\n.transition-all\n.duration-150\n.ease-[easing-function:cubic-bezier(0.3,_0.57,_0.07,_0.95)]\n.will-change-[transform,width,height]\n.motion-reduce:!transition-none\n.absolute\n.bg-clip-padding\n.rounded-[6px]\n.overflow-visible\n.z-[1000000]\n.shadow-[var(--ds-shadow-tooltip),0_0_0_1px_var(--ds-background-100)]\n.w-fit\n.[--context-card-tip-stroke:#DBDBDB]\n.dark-theme:[--context-card-tip-stroke:#252525]\n.!transition-none\n.w-[14px]\n.h-[7px]\n.grid\n.place-content-center\n.z-[999999999]\n.origin-center\n.top-full\n.-translate-x-1/2\n.rotate-0",
+ "markup": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-github-light.3dl3lqjq1azpp.svg\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-github-dark.1k-70sin_m3qn.svg\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-twitter-x-light.0dvkch_c5dvys.svg\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-twitter-x-dark.1-i769nzu94hl.svg\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-bluesky-light.2may7hm2y7g6v.svg\">\n<link rel=\"preload\" as=\"image\" href=\"/_next/static/immutable/media/logo-bluesky-dark.39tbulfg2p-1z.svg\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/2nxm7s3anya2q.css\" data-precedence=\"next\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/23j5h2aygz7gu.css\" data-precedence=\"next\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/2zbz34dqqn953.css\" data-precedence=\"next\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/3hcatbgun-7ra.css\" data-precedence=\"next\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/3qdogvjdzhund.css\" data-precedence=\"next\">\n<link rel=\"stylesheet\" href=\"/_next/static/immutable/chunks/38ji0tyaf5arx.css\" data-precedence=\"next\">\n<link rel=\"preload\" as=\"script\" fetchpriority=\"low\" href=\"/_next/static/immutable/chunks/1mg76t-pdtu5f.js\">\n<script src=\"/_next/static/immutable/chunks/1f_9kr7m-q4zo.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/3j3fgyxjhml7c.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/22-w05n3ou-j5.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/20je-m8gbcwjo.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/turbopack-2qd2im748oz_r.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1w8lckx2b9qau.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/3-fzb9tu4cdkr.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/0z3xx-j-qjaky.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/2ygcjx267-xq9.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1u1-jwaiggb_-.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1cf6414m_pycm.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/02d8cjfmymkn1.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/3xwrynj_t1byz.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/0lb24oijqt3xr.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/0y4uj2i-sz6e1.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1mobjj4s7t0xw.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1ryngilhcgiac.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/0qu5thqt_mbfq.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1y13r8ad1qq12.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/2uy2gst5ofqy2.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/1-xz99jgjue52.js\" async=\"\"></script>\n<script src=\"/_next/static/immutable/chunks/34x0s7ang5063.js\" async=\"\"></script>\n<meta name=\"next-size-adjust\" content=\"\">\n<meta name=\"description\" content=\"Next.js by Vercel is the full-stack React framework for the web.\">\n<link rel=\"canonical\" href=\"https://nextjs.org\">\n<link rel=\"alternate\" type=\"text/markdown\" href=\"https://nextjs.org/llms.md\">\n<meta property=\"og:title\" content=\"Next.js by Vercel - The React Framework\">\n<meta property=\"og:description\" content=\"Next.js by Vercel is the full-stack React framework for the web.\">\n<meta property=\"og:url\" content=\"https://nextjs.org\">\n<meta property=\"og:image\" content=\"https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/nextjs/twitter-card.png\">\n<meta property=\"og:type\" content=\"website\">\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:site\" content=\"@vercel\">\n<meta name=\"twitter:title\" content=\"Next.js by Vercel - The React Framework\">\n<meta name=\"twitter:description\" content=\"Production grade React applications that scale. The world's leading companies use Next.js by Vercel to build static and dynamic websites and web applications.\">\n<meta name=\"twitter:image\" content=\"https://h8dxkfmaphn8o0p3.public.blob.vercel-storage.com/nextjs/twitter-card.png\">\n<link rel=\"icon\" href=\"/favicon.ico?favicon.38folom4sz_yx.ico\" sizes=\"48x48\" type=\"image/x-icon\">\n<script id=\"theme-script\"></script>\n<script src=\"/_next/static/immutable/chunks/0c0hxoamwjsbw.js\" nomodule=\"\"></script>\n<link rel=\"preload\" href=\"/_next/static/immutable/media/797e433ab948586e.p.1v5bejj26fx9h.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\">\n<link rel=\"preload\" href=\"/_next/static/immutable/media/Geist_Variable-s.p.2v-cf9syxr5ni.woff2\" as=\"font\" crossorigin=\"\" type=\"font/woff2\">\n<script src=\"/_next/static/immutable/chunks/2hpbn00zce72s.js\"></script>\n<script src=\"/e25c61660ad7a6b3/script.js\" data-sdkn=\"@vercel/analytics/next\" data-sdkv=\"2.0.0-canary.1\" data-disable-auto-track=\"1\" data-view-endpoint=\"/e25c61660ad7a6b3/view\" data-event-endpoint=\"/e25c61660ad7a6b3/event\" data-session-endpoint=\"/e25c61660ad7a6b3/session\" defer=\"\"></script>\n<meta name=\"theme-color\" content=\"#FAFAFA\">\n<script src=\"/71950797d2e37b8a/script.js\" defer=\"\" data-sdkn=\"@vercel/speed-insights/next\" data-sdkv=\"2.0.0-canary.1\" data-route=\"/\" data-endpoint=\"/71950797d2e37b8a/vitals\"></script>\n<script src=\"/_next/static/immutable/chunks/2sqqmkxv8r6h0.js\"></script>\n<script src=\"/_next/static/immutable/chunks/3pe4cri624m8s.js\"></script>\n<script src=\"/_next/static/immutable/chunks/1dm29wu1yn3__.js\"></script>\n<script src=\"/_next/static/immutable/chunks/0os-arpucmsid.js\"></script>\n<script src=\"/_next/static/immutable/chunks/3cqm3euq-p-jt.js\"></script>\n<script src=\"/_next/static/immutable/chunks/2kvb6whgsve9t.js\"></script>\n<script src=\"/_next/static/immutable/chunks/1-j1llqm-oowy.js\"></script>\n<script src=\"/_next/static/immutable/chunks/2nhz8w1ico0pi.js\"></script>\n<script src=\"/_next/static/immutable/chunks/1e-xzs268w824.js\"></script>\n<script src=\"/_next/static/immutable/chunks/28y0nzrwmm28q.js\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"text/javascript\"></script>\n<script type=\"application/ld+json\"></script>\n<script></script>\n<script id=\"_R_\"></script>\n<script src=\"/_next/static/immutable/chunks/1mg76t-pdtu5f.js\" async=\"\"></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script></script>\n<script id=\"prefetch-zones-links\" type=\"speculationrules\" data-nscript=\"afterInteractive\"></script>\n<script src=\"https://cdn.cr-relay.com/v1/site/f6dd8ada-7a97-4d9d-8ec4-9c2bff6cd234/signals.js\" id=\"script-common-room-analytics\" data-nscript=\"lazyOnload\"></script>\n<next-route-announcer style=\"position: absolute;\"></next-route-announcer>",
+ "urls": [
+  "/_next/static/immutable/chunks/1f_9kr7m-q4zo.js",
+  "/_next/static/immutable/chunks/3j3fgyxjhml7c.js",
+  "/_next/static/immutable/chunks/22-w05n3ou-j5.js",
+  "/_next/static/immutable/chunks/20je-m8gbcwjo.js",
+  "/_next/static/immutable/chunks/turbopack-2qd2im748oz_r.js",
+  "/_next/static/immutable/chunks/1w8lckx2b9qau.js",
+  "/_next/static/immutable/chunks/3-fzb9tu4cdkr.js",
+  "/_next/static/immutable/chunks/0z3xx-j-qjaky.js",
+  "/_next/static/immutable/chunks/2ygcjx267-xq9.js",
+  "/_next/static/immutable/chunks/1u1-jwaiggb_-.js",
+  "/_next/static/immutable/chunks/1cf6414m_pycm.js",
+  "/_next/static/immutable/chunks/02d8cjfmymkn1.js",
+  "/_next/static/immutable/chunks/3xwrynj_t1byz.js",
+  "/_next/static/immutable/chunks/0lb24oijqt3xr.js",
+  "/_next/static/immutable/chunks/0y4uj2i-sz6e1.js",
+  "/_next/static/immutable/chunks/1mobjj4s7t0xw.js",
+  "/_next/static/immutable/chunks/1ryngilhcgiac.js",
+  "/_next/static/immutable/chunks/0qu5thqt_mbfq.js",
+  "/_next/static/immutable/chunks/1y13r8ad1qq12.js",
+  "/_next/static/immutable/chunks/2uy2gst5ofqy2.js",
+  "/_next/static/immutable/chunks/1-xz99jgjue52.js",
+  "/_next/static/immutable/chunks/34x0s7ang5063.js",
+  "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+  "/_next/static/immutable/chunks/2hpbn00zce72s.js",
+  "/e25c61660ad7a6b3/script.js",
+  "/71950797d2e37b8a/script.js",
+  "/_next/static/immutable/chunks/2sqqmkxv8r6h0.js",
+  "/_next/static/immutable/chunks/3pe4cri624m8s.js",
+  "/_next/static/immutable/chunks/1dm29wu1yn3__.js",
+  "/_next/static/immutable/chunks/0os-arpucmsid.js",
+  "/_next/static/immutable/chunks/3cqm3euq-p-jt.js",
+  "/_next/static/immutable/chunks/2kvb6whgsve9t.js",
+  "/_next/static/immutable/chunks/1-j1llqm-oowy.js",
+  "/_next/static/immutable/chunks/2nhz8w1ico0pi.js",
+  "/_next/static/immutable/chunks/1e-xzs268w824.js",
+  "/_next/static/immutable/chunks/28y0nzrwmm28q.js",
+  "/_next/static/immutable/chunks/1mg76t-pdtu5f.js",
+  "/v1/site/f6dd8ada-7a97-4d9d-8ec4-9c2bff6cd234/signals.js"
+ ]
+}
