@@ -531,12 +531,12 @@
     {
       id: 'vitepress',
       builtOn: ['vue', 'vite', 'rollup', 'esbuild'],
-      note: 'VitePress is a Vue site generator built on Vite, so those markers are attributed to VitePress.',
+      note: 'VitePress is a Vue site generator that uses Vite, so those markers are attributed to VitePress.',
     },
     {
       id: 'rspress',
       builtOn: ['react', 'rspack', 'webpack'],
-      note: 'Rspress is a React site generator built on Rsbuild/Rspack, so those markers are attributed to Rspress.',
+      note: 'Rspress is a React site generator that uses Rsbuild/Rspack, so those markers are attributed to Rspress.',
     },
     {
       id: 'astro',

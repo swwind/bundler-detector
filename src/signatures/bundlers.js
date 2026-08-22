@@ -422,7 +422,7 @@
     {
       id: 'rspack',
       builtOn: ['webpack'],
-      note: "Rspack ships a webpack-compatible runtime, so this page's webpack markers are attributed to Rspack.",
+      note: "Rspack ships webpack-compatible runtime markers, so this page's webpack traces are attributed to Rspack.",
     },
     {
       id: 'vite',

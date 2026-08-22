@@ -53,8 +53,8 @@ const CASES = [
   // A Next.js webpack build: the Next markers in the chunk registry win over
   // the plain webpack reading, and webpack arrives folded in.
   { dir: 'next-webpack', primary: 'next', version: null, builtOn: ['webpack'], only: true },
-  // Rspack 1.x stamps its exact version into the runtime, which is the only
-  // thing separating it from webpack 5 -- its runtime is webpack's otherwise.
+  // Rspack 1.x stamps its exact version into a webpack-compatible runtime,
+  // which is what separates these markers from plain webpack 5.
   { dir: 'rspack1', primary: 'rspack', version: '1.5.8', builtOn: ['webpack'], only: true },
   { dir: 'rspack2', primary: 'rspack', version: '≥ 2', only: true },
   { dir: 'turbopack', primary: 'turbopack', version: null, only: true },

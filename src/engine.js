@@ -34,7 +34,7 @@
     return root.StackSignatures || [];
   }
 
-  /** Relations pushed by the signature files: `id` is built on `builtOn`. */
+  /** Relations pushed by the signature files: `id` absorbs `builtOn`. */
   function relations() {
     return root.StackRelations || [];
   }
@@ -232,12 +232,12 @@
   }
 
   /**
-   * Fold a technology's evidence into the thing that is built on top of it.
+   * Fold one technology's evidence into a more specific finding.
    *
    * Next.js *is* React and ships webpack or Turbopack; reporting all three as
    * separate findings would be technically true and useless. Only intrinsic
-   * relationships belong here -- React on webpack is a choice, not a fact
-   * about React, so those stay two findings.
+   * relationships and deliberate compatibility traces belong here -- React on
+   * webpack is a choice, not a fact about React, so those stay two findings.
    */
   function applyRelations(detections, notes) {
     const byId = new Map(detections.map((d) => [d.id, d]));

@@ -10,8 +10,8 @@ toolbar icon into that project's logo.
 - Two rival frameworks on one page → 😈, and the popup lists everything.
 
 Click the icon for the details: what was found, which version (as precisely as
-the page allows), what it was built on, and the exact byte patterns that led to
-that conclusion.
+the page allows), what evidence was absorbed, and the exact byte patterns that
+led to that conclusion.
 
 ![The extension on anthropic.com: the toolbar icon has become the jQuery mark,
 and the popup reads "jQuery v3.5.1 - with Rspack", listing jQuery under UI
@@ -81,10 +81,10 @@ Visit a few sites and watch the icon:
 
 | Site | Expected |
 | --- | --- |
-| <https://nextjs.org> | Next.js, built on React + Turbopack |
-| <https://vuejs.org> | VitePress, built on Vue + Vite |
+| <https://nextjs.org> | Next.js, absorbing React + Turbopack traces |
+| <https://vuejs.org> | VitePress, absorbing Vue + Vite traces |
 | <https://angular.dev> | Angular 22.1.3 |
-| <https://svelte.dev> | SvelteKit, built on Svelte 5 + Vite |
+| <https://svelte.dev> | SvelteKit, absorbing Svelte 5 + Vite traces |
 | <https://jquery.com> | jQuery 4.0.0 |
 | <https://stackoverflow.com> | Svelte 5, with jQuery, Stimulus and webpack |
 
@@ -185,12 +185,12 @@ first entry of an array (Lit's `litElementVersions`) and `.v` as a `Set`
 which is what stops SvelteKit's build id, a 13-digit timestamp sitting in a
 property called `version`, being reported as a release.
 
-### Built on
+### Absorbed evidence
 
 Next.js *is* React and ships webpack or Turbopack. Reporting all three as
 separate findings would be technically true and useless, so a meta-framework
-absorbs what is intrinsic to it and the popup shows those as chips under the
-card, evidence and all.
+absorbs what is intrinsic to it and the popup shows those traces as chips under
+the card, evidence and all.
 
 Only intrinsic relationships are folded in. React on webpack is a *choice*, not
 a fact about React, so those stay two findings — and Astro keeps its islands
@@ -209,9 +209,9 @@ React is a normal Tuesday, not a contradiction.
   hardly ever the most interesting thing about a page, so anything else found
   beside it wins. Everything else sorts on the weight of its evidence, which is
   what puts Alpine ahead of the Preact-based search widget on alpinejs.dev.
-- **Rspack ≤ 1.x is webpack, byte for byte.** Rspack ships a deliberately
+- **Rspack ≤ 1.x leaves webpack-shaped traces.** Rspack ships a deliberately
   webpack-compatible runtime: 0.7 and 1.x emit `webpackChunk*` and
-  `data-webpack` exactly like webpack 5. The `ruid` stamp rescues 1.0+, but an
+  `data-webpack` markers like webpack 5. The `ruid` stamp rescues 1.0+, but an
   Rspack 0.x site is reported as webpack 5 and there is no signal to do better.
   Rspack 2's ESM chunks are the opposite case: no chunk global and no
   `data-rspack`, just the exported `__rspack_esm_id`/`__rspack_esm_ids` names —
@@ -300,7 +300,7 @@ checks they are loadable. That is the whole of it.
    worse than no patterns.
 2. Add an entry to the right file in `src/signatures/`, with `seen:` noting what
    you checked it against. Set `category`, and add a relation at the bottom of
-   the file if it is built on something else.
+   the file if another finding should be absorbed into it.
 3. Put the project's own logo in as `icons/src/<id>.svg` (or `.png` if that is
    all they publish) and run `npm run icons`, which writes `icons/<id>.png` at
    128 px. That one file is what the repo keeps; `npm run build` derives the
