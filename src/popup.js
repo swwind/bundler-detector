@@ -55,10 +55,10 @@
     );
   }
 
-  /** The technologies a detection was folded out of, as a compact strip. */
+  /** The technologies whose evidence was folded into this detection. */
   function renderBuiltOn(d) {
     const strip = el('div', { className: 'built-on' }, [
-      el('span', { className: 'built-on-label', textContent: 'built on' }),
+      el('span', { className: 'built-on-label', textContent: 'absorbed' }),
     ]);
     for (const b of d.builtOn) {
       strip.append(
